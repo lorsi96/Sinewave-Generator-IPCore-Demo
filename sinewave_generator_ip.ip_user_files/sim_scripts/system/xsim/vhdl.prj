@@ -1,0 +1,12 @@
+vhdl xil_defaultlib  \
+"../../../bd/system/ip/system_rst_ps7_0_100M_0/sim/system_rst_ps7_0_100M_0.vhd" \
+"../../../bd/system/sim/system.vhd" \
+"../../../bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd" \
+"../../../bd/system/ipshared/a5a1/src/generic_counter.vhd" \
+"../../../bd/system/ipshared/a5a1/src/sine_gen.vhd" \
+"../../../bd/system/ipshared/a5a1/src/sine_lut.vhd" \
+"../../../bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0.vhd" \
+"../../../bd/system/ip/system_sinewave_gen_periphe_0_0/sim/system_sinewave_gen_periphe_0_0.vhd" \
+"../../../bd/system/ip/system_ila_0_0/sim/system_ila_0_0.vhd" \
+
+nosort

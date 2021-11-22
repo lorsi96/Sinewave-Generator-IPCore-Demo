@@ -1,0 +1,248 @@
+17:50:44 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+
+17:50:44 Build Finished (took 161ms)
+
+17:50:44 **** Incremental Build of configuration Release for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O2 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22020	   1144	  22568	  45732	   b2a4	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+17:50:57 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:52:01 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:31:38 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22168	   1144	  22568	  45880	   b338	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:32:17 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:33:12 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1144	  22568	  45944	   b378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:33:22 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:34:35 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:25:26: warning: unused variable 'j' [-Wunused-variable]
+       for (unsigned long j=0; i<999; i++);
+                          ^
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1144	  22568	  45944	   b378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:34:37 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:25:26: warning: unused variable 'j' [-Wunused-variable]
+       for (unsigned long j=0; i<99; i++);
+                          ^
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1144	  22568	  45944	   b378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:35:00 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:36:00 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:25:26: warning: unused variable 'j' [-Wunused-variable]
+       for (unsigned long j=0; i<9999; i++);
+                          ^
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1144	  22568	  45944	   b378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:36:14 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:36:43 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:25:26: warning: unused variable 'j' [-Wunused-variable]
+       for (unsigned long j=0; i<999999; i++);
+                          ^
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1144	  22568	  45944	   b378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:36:53 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:38:05 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:25:26: warning: unused variable 'j' [-Wunused-variable]
+       for (unsigned long j=0; i<9999999; i++);
+                          ^
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22232	   1144	  22568	  45944	   b378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:39:51 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22296	   1144	  22568	  46008	   b3b8	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:40:09 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

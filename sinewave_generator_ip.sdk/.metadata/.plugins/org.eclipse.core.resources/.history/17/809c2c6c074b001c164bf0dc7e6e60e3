@@ -1,0 +1,29 @@
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "sinewave_gen_peripheral.h"
+
+//====================================================
+
+#define MAX_SINEWAVE_DIV  5
+
+
+void SinewaveGen_SetFrequencyDivider(unsigned int div) {
+	int validated_div = div <= MAX_SINEWAVE_DIV ? (div - 1) : (MAX_SINEWAVE_DIV - 1);
+
+	SINEWAVE_GEN_PERIPHERAL_mWriteReg(XPAR_SINEWAVE_GEN_IP_SW_AXI_BASEADDR, 0, validated_div);
+}
+
+
+//====================================================
+
+
+int main (void) {
+	uint8_t test_count = 0;
+
+    while (1) {
+    	xil_printf("About to update test divider (currently:%x)\r\n", test_count);
+    	SinewaveGen_SetFrequencyDivider(test_count);
+    	test_count = (test_count + 1) % MAX_SINEWAVE_DIV;
+    	for (unsigned long i=0; i<9999999; i++);
+   }
+}
