@@ -1,0 +1,53 @@
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+#include "sinewave_gen_peripheral.h"
+#include "sleep.h"
+#include <stdio.h>
+#include <stdbool.h>
+
+
+//====================================================
+
+#define MAX_SINEWAVE_DIV  5
+
+typedef enum {
+	SW_GEN_ENABLE = 0,
+	SW_GEN_CLK_DIV = 1,
+} sinewave_gen_offset_t;
+//====================================================
+
+static inline void update_clk_div(uint8_t div) {
+	SINEWAVE_GEN_PERIPHERAL_mWriteReg(
+			XPAR_SINEWAVE_GEN_IP_SW_AXI_BASEADDR,
+			SW_GEN_CLK_DIV,
+			div
+	);
+}
+
+static inline void enable_output(bool ena) {
+	SINEWAVE_GEN_PERIPHERAL_mWriteReg(
+				XPAR_SINEWAVE_GEN_IP_SW_AXI_BASEADDR,
+				SW_GEN_ENABLE,
+				ena
+		);
+}
+
+
+int main (void) {
+
+	uint32_t clk_div_sel = 0;
+	xil_printf("Program Start");
+
+	for(;;) {
+		scanf("Enter CLK Divider (1-9 or 0 to disable output): %u", &clk_div_sel);
+		if(clk_div_sel) {
+			enable_output(true);
+			update_clk_div(clk_div_sel);
+			xil_printf("Divider is: %c");
+		} else {
+			enable_output(false);
+			xil_printf("Output disabled");
+		}
+	}
+}

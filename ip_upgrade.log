@@ -1,0 +1,16 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Sun Nov 28 14:19:36 2021
+| Host         : lorsi-ThinkPad-T490 running 64-bit Ubuntu 20.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_sinewave_gen_periphe_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_sinewave_gen_periphe_0_0 (xilinix.com:user:sinewave_gen_peripheral:1.0.0) from (Rev. 1) to (Rev. 2)
+

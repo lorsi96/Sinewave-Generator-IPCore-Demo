@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sun Nov 21 15:08:32 2021
-# Process ID: 151407
-# Current directory: /home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/system_sinewave_gen_periphe_0_0_synth_1
+# Start of session at: Sun Nov 28 14:20:12 2021
+# Process ID: 19092
+# Current directory: /home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_sinewave_gen_periphe_0_0_synth_1
 # Command line: vivado -log system_sinewave_gen_periphe_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_sinewave_gen_periphe_0_0.tcl
-# Log file: /home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/system_sinewave_gen_periphe_0_0_synth_1/system_sinewave_gen_periphe_0_0.vds
-# Journal file: /home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/system_sinewave_gen_periphe_0_0_synth_1/vivado.jou
+# Log file: /home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_sinewave_gen_periphe_0_0_synth_1/system_sinewave_gen_periphe_0_0.vds
+# Journal file: /home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_sinewave_gen_periphe_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source system_sinewave_gen_periphe_0_0.tcl -notrace
 Command: synth_design -top system_sinewave_gen_periphe_0_0 -part xc7z010clg400-1 -mode out_of_context
@@ -15,49 +15,50 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 151517 
+INFO: Helper process launched with PID 19165 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1274.781 ; gain = 88.000 ; free physical = 9335 ; free virtual = 17564
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1273.785 ; gain = 86.000 ; free physical = 14879 ; free virtual = 21081
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'system_sinewave_gen_periphe_0_0' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/synth/system_sinewave_gen_periphe_0_0.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'system_sinewave_gen_periphe_0_0' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/synth/system_sinewave_gen_periphe_0_0.vhd:83]
 	Parameter C_SW_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_SW_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter SINEWAVE_OUT_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'sinewave_gen_peripheral_v1_0_0' declared at '/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0.vhd:5' bound to instance 'U0' of component 'sinewave_gen_peripheral_v1_0_0' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/synth/system_sinewave_gen_periphe_0_0.vhd:149]
-INFO: [Synth 8-638] synthesizing module 'sinewave_gen_peripheral_v1_0_0' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0.vhd:51]
+INFO: [Synth 8-3491] module 'sinewave_gen_peripheral_v1_0_0' declared at '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0.vhd:5' bound to instance 'U0' of component 'sinewave_gen_peripheral_v1_0_0' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/synth/system_sinewave_gen_periphe_0_0.vhd:149]
+INFO: [Synth 8-638] synthesizing module 'sinewave_gen_peripheral_v1_0_0' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0.vhd:51]
 	Parameter C_SW_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_SW_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter SINEWAVE_OUT_WIDTH bound to: 8 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter SINEWAVE_OUT_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'sinewave_gen_peripheral_v1_0_0_SW_AXI' declared at '/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:5' bound to instance 'sinewave_gen_peripheral_v1_0_0_SW_AXI_inst' of component 'sinewave_gen_peripheral_v1_0_0_SW_AXI' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'sinewave_gen_peripheral_v1_0_0_SW_AXI' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:91]
+INFO: [Synth 8-3491] module 'sinewave_gen_peripheral_v1_0_0_SW_AXI' declared at '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:5' bound to instance 'sinewave_gen_peripheral_v1_0_0_SW_AXI_inst' of component 'sinewave_gen_peripheral_v1_0_0_SW_AXI' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'sinewave_gen_peripheral_v1_0_0_SW_AXI' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:91]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter SINEWAVE_OUT_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-226] default block is never used [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:242]
-INFO: [Synth 8-226] default block is never used [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:372]
+INFO: [Synth 8-226] default block is never used [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:242]
+INFO: [Synth 8-226] default block is never used [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:372]
 	Parameter SINE_FREQ_DIV bound to: 3 - type: integer 
-INFO: [Synth 8-3491] module 'sine_gen' declared at '/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_gen.vhd:6' bound to instance 'sine_ge_pl_inst' of component 'sine_gen' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:406]
-INFO: [Synth 8-638] synthesizing module 'sine_gen' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_gen.vhd:20]
+INFO: [Synth 8-3491] module 'sine_gen' declared at '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_gen.vhd:6' bound to instance 'sine_ge_pl_inst' of component 'sine_gen' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:406]
+INFO: [Synth 8-638] synthesizing module 'sine_gen' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_gen.vhd:20]
 	Parameter SINE_FREQ_DIV bound to: 3 - type: integer 
 	Parameter OUTPUT_WIDTH bound to: 10 - type: integer 
 	Parameter COUNT_OFFSET_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-3491] module 'generic_counter' declared at '/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/generic_counter.vhd:5' bound to instance 'counter' of component 'generic_counter' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_gen.vhd:48]
-INFO: [Synth 8-638] synthesizing module 'generic_counter' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/generic_counter.vhd:19]
+INFO: [Synth 8-3491] module 'generic_counter' declared at '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/generic_counter.vhd:5' bound to instance 'counter' of component 'generic_counter' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_gen.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'generic_counter' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/generic_counter.vhd:19]
 	Parameter OUTPUT_WIDTH bound to: 10 - type: integer 
 	Parameter COUNT_OFFSET_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'generic_counter' (1#1) [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/generic_counter.vhd:19]
-INFO: [Synth 8-3491] module 'sine_lut' declared at '/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_lut.vhd:5' bound to instance 'sine' of component 'sine_lut' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_gen.vhd:58]
-INFO: [Synth 8-638] synthesizing module 'sine_lut' [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_lut.vhd:12]
-INFO: [Synth 8-226] default block is never used [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_lut.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'sine_lut' (2#1) [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_lut.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'sine_gen' (3#1) [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/src/sine_gen.vhd:20]
-WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:240]
-INFO: [Synth 8-256] done synthesizing module 'sinewave_gen_peripheral_v1_0_0_SW_AXI' (4#1) [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:91]
-INFO: [Synth 8-256] done synthesizing module 'sinewave_gen_peripheral_v1_0_0' (5#1) [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'system_sinewave_gen_periphe_0_0' (6#1) [/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/synth/system_sinewave_gen_periphe_0_0.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'generic_counter' (1#1) [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/generic_counter.vhd:19]
+INFO: [Synth 8-3491] module 'sine_lut' declared at '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_lut.vhd:5' bound to instance 'sine' of component 'sine_lut' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_gen.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'sine_lut' [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_lut.vhd:13]
+INFO: [Synth 8-226] default block is never used [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_lut.vhd:18]
+WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_lut.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'sine_lut' (2#1) [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_lut.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'sine_gen' (3#1) [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/src/sine_gen.vhd:20]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'sinewave_gen_peripheral_v1_0_0_SW_AXI' (4#1) [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'sinewave_gen_peripheral_v1_0_0' (5#1) [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'system_sinewave_gen_periphe_0_0' (6#1) [/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/synth/system_sinewave_gen_periphe_0_0.vhd:83]
 WARNING: [Synth 8-3331] design sine_gen has unconnected port slv_reg_wren
 WARNING: [Synth 8-3331] design sine_gen has unconnected port S_AXI_WDATA[31]
 WARNING: [Synth 8-3331] design sine_gen has unconnected port S_AXI_WDATA[30]
@@ -95,7 +96,7 @@ WARNING: [Synth 8-3331] design sinewave_gen_peripheral_v1_0_0_SW_AXI has unconne
 WARNING: [Synth 8-3331] design sinewave_gen_peripheral_v1_0_0_SW_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design sinewave_gen_peripheral_v1_0_0_SW_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1320.391 ; gain = 133.609 ; free physical = 9317 ; free virtual = 17546
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1319.395 ; gain = 131.609 ; free physical = 14906 ; free virtual = 21086
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -108,10 +109,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1320.391 ; gain = 133.609 ; free physical = 9291 ; free virtual = 17521
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1319.395 ; gain = 131.609 ; free physical = 14924 ; free virtual = 21086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1320.391 ; gain = 133.609 ; free physical = 9291 ; free virtual = 17520
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1319.395 ; gain = 131.609 ; free physical = 14924 ; free virtual = 21086
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -123,25 +124,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1656.012 ; gain = 0.000 ; free physical = 8654 ; free virtual = 16870
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1655.023 ; gain = 0.000 ; free physical = 14527 ; free virtual = 20749
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8688 ; free virtual = 16947
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14642 ; free virtual = 20812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8688 ; free virtual = 16947
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14642 ; free virtual = 20812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8702 ; free virtual = 16955
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14644 ; free virtual = 20814
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8712 ; free virtual = 16962
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:39 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14638 ; free virtual = 20808
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -161,11 +162,12 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 4     
 	   4 Input     32 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -179,10 +181,17 @@ Detailed RTL Component Info :
 	   3 Input     10 Bit       Adders := 1     
 +---Registers : 
 	               10 Bit    Registers := 1     
+Module sine_lut 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
 Module sine_gen 
 Detailed RTL Component Info : 
 +---Registers : 
 	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 6     
 Module sinewave_gen_peripheral_v1_0_0_SW_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -229,7 +238,7 @@ INFO: [Synth 8-3332] Sequential element (U0/sinewave_gen_peripheral_v1_0_0_SW_AX
 INFO: [Synth 8-3332] Sequential element (U0/sinewave_gen_peripheral_v1_0_0_SW_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module system_sinewave_gen_periphe_0_0.
 INFO: [Synth 8-3332] Sequential element (U0/sinewave_gen_peripheral_v1_0_0_SW_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module system_sinewave_gen_periphe_0_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:53 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8661 ; free virtual = 16914
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14603 ; free virtual = 20791
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -256,13 +265,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8387 ; free virtual = 16627
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14556 ; free virtual = 20736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8384 ; free virtual = 16624
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14551 ; free virtual = 20731
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -274,7 +283,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8430 ; free virtual = 16670
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14538 ; free virtual = 20718
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -298,7 +307,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8184 ; free virtual = 16422
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14516 ; free virtual = 20696
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -311,7 +320,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8191 ; free virtual = 16429
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14516 ; free virtual = 20696
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -323,25 +332,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8192 ; free virtual = 16430
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14516 ; free virtual = 20696
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8194 ; free virtual = 16432
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14515 ; free virtual = 20695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8191 ; free virtual = 16429
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14515 ; free virtual = 20695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8191 ; free virtual = 16429
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14515 ; free virtual = 20695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -360,13 +369,13 @@ Report Cell Usage:
 |1     |CARRY4 |     3|
 |2     |LUT1   |     1|
 |3     |LUT2   |     5|
-|4     |LUT3   |     7|
+|4     |LUT3   |     8|
 |5     |LUT4   |    20|
-|6     |LUT5   |     5|
-|7     |LUT6   |   142|
-|8     |MUXF7  |    38|
-|9     |MUXF8  |    19|
-|10    |FDRE   |   190|
+|6     |LUT5   |     6|
+|7     |LUT6   |   149|
+|8     |MUXF7  |    35|
+|9     |MUXF8  |     8|
+|10    |FDRE   |   191|
 |11    |FDSE   |     2|
 +------+-------+------+
 
@@ -374,21 +383,21 @@ Report Instance Areas:
 +------+-----------------------------------------------+--------------------------------------+------+
 |      |Instance                                       |Module                                |Cells |
 +------+-----------------------------------------------+--------------------------------------+------+
-|1     |top                                            |                                      |   432|
-|2     |  U0                                           |sinewave_gen_peripheral_v1_0_0        |   432|
-|3     |    sinewave_gen_peripheral_v1_0_0_SW_AXI_inst |sinewave_gen_peripheral_v1_0_0_SW_AXI |   432|
-|4     |      sine_ge_pl_inst                          |sine_gen                              |   203|
-|5     |        counter                                |generic_counter                       |    26|
-|6     |        sine                                   |sine_lut                              |   171|
+|1     |top                                            |                                      |   428|
+|2     |  U0                                           |sinewave_gen_peripheral_v1_0_0        |   428|
+|3     |    sinewave_gen_peripheral_v1_0_0_SW_AXI_inst |sinewave_gen_peripheral_v1_0_0_SW_AXI |   428|
+|4     |      sine_ge_pl_inst                          |sine_gen                              |   199|
+|5     |        counter                                |generic_counter                       |    34|
+|6     |        sine                                   |sine_lut                              |   157|
 +------+-----------------------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8191 ; free virtual = 16429
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:50 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14515 ; free virtual = 20695
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 1656.012 ; gain = 133.609 ; free physical = 8245 ; free virtual = 16483
-Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:01:06 . Memory (MB): peak = 1656.012 ; gain = 469.230 ; free physical = 8245 ; free virtual = 16483
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1655.023 ; gain = 131.609 ; free physical = 14568 ; free virtual = 20748
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1655.023 ; gain = 467.238 ; free physical = 14568 ; free virtual = 20748
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 60 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -396,13 +405,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-43 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:46 ; elapsed = 00:01:07 . Memory (MB): peak = 1656.012 ; gain = 488.688 ; free physical = 8758 ; free virtual = 17010
-INFO: [Common 17-1381] The checkpoint '/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/system_sinewave_gen_periphe_0_0_synth_1/system_sinewave_gen_periphe_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0.xci
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:51 . Memory (MB): peak = 1656.023 ; gain = 487.695 ; free physical = 14547 ; free virtual = 20727
+INFO: [Common 17-1381] The checkpoint '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_sinewave_gen_periphe_0_0_synth_1/system_sinewave_gen_periphe_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/system_sinewave_gen_periphe_0_0_synth_1/system_sinewave_gen_periphe_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_sinewave_gen_periphe_0_0_synth_1/system_sinewave_gen_periphe_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_sinewave_gen_periphe_0_0_utilization_synth.rpt -pb system_sinewave_gen_periphe_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1680.023 ; gain = 0.000 ; free physical = 8757 ; free virtual = 17010
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 21 15:09:48 2021...
+report_utilization: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1680.035 ; gain = 0.000 ; free physical = 14541 ; free virtual = 20722
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 28 14:21:13 2021...

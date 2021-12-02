@@ -554,11 +554,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 21 18:08:28 UTC 2021</spirit:value>
+            <spirit:value>Sun Nov 28 17:19:47 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:06e39088</spirit:value>
+            <spirit:value>8:fe2b465c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -574,11 +574,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 21 18:08:28 UTC 2021</spirit:value>
+            <spirit:value>Sun Nov 28 17:19:47 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:06e39088</spirit:value>
+            <spirit:value>8:fe2b465c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -594,11 +594,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 21 18:08:28 UTC 2021</spirit:value>
+            <spirit:value>Sun Nov 28 17:19:47 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:1e47a563</spirit:value>
+            <spirit:value>8:885cf37e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -614,11 +614,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 21 18:08:28 UTC 2021</spirit:value>
+            <spirit:value>Sun Nov 28 17:19:47 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:1e47a563</spirit:value>
+            <spirit:value>8:885cf37e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -632,11 +632,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Nov 21 18:09:48 UTC 2021</spirit:value>
+            <spirit:value>Sun Nov 28 17:21:13 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:06e39088</spirit:value>
+            <spirit:value>8:fe2b465c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1009,23 +1009,23 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/src/generic_counter.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/src/generic_counter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/src/sine_gen.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/src/sine_gen.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/src/sine_lut.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/src/sine_lut.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1040,23 +1040,23 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0_SW_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/src/generic_counter.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/src/generic_counter.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/src/sine_gen.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/src/sine_gen.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/src/sine_lut.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/src/sine_lut.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/a5a1/hdl/sinewave_gen_peripheral_v1_0_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/d626/hdl/sinewave_gen_peripheral_v1_0_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1170,10 +1170,10 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>sinewave_gen_peripheral_v1.0.0</xilinx:displayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="user.org:user:sinewave_gen_peripheral:1.0.0_ARCHIVE_LOCATION">/home/lorsi/Desktop/VHDL-Sinewave-Generator/ip_sinewave_gen_peripheral/sinewave_gen_peripheral_1.0.0</xilinx:tag>
-        <xilinx:tag xilinx:name="xilinix.com:user:sinewave_gen_peripheral:1.0.0_ARCHIVE_LOCATION">/home/lorsi/Desktop/VHDL-Sinewave-Generator/ip_sinewave_gen_peripheral/sinewave_gen_peripheral_1.0.0</xilinx:tag>
+        <xilinx:tag xilinx:name="xilinix.com:user:sinewave_gen_peripheral:1.0.0_ARCHIVE_LOCATION">/home/lorsi/Desktop/sinewave_generator_ip/ip_sinewave_gen_peripheral/sinewave_gen_peripheral_1.0.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SW_AXI.ADDR_WIDTH" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
@@ -1208,10 +1208,10 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="49bd2f2a"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="35286d82"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="51c76a37"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5335cf3d"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="2f6291b2"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d837c913"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="f27a6775"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="ca5d363b"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="6944991e"/>
     </xilinx:packagingInfo>

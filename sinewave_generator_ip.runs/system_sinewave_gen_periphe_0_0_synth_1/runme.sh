@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave Gen.runs/system_sinewave_gen_periphe_0_0_synth_1'
+HD_PWD='/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_sinewave_gen_periphe_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Sun Nov 21 15:09:48 2021
+-- Date        : Sun Nov 28 14:21:13 2021
 -- Host        : lorsi-ThinkPad-T490 running 64-bit Ubuntu 20.04.2 LTS
--- Command     : write_vhdl -force -mode funcsim {/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave
---               Gen.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0_sim_netlist.vhdl}
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0_sim_netlist.vhdl
 -- Design      : system_sinewave_gen_periphe_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,7 +16,31 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_sinewave_gen_periphe_0_0_generic_counter is
   port (
-    Q : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    sw_sinewave_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    Q : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    sin_en : in STD_LOGIC;
+    \count_reg_rep[8]_0\ : in STD_LOGIC;
+    \count_reg_rep[4]_0\ : in STD_LOGIC;
+    \count_reg_rep[4]_1\ : in STD_LOGIC;
+    \count_reg_rep[8]_1\ : in STD_LOGIC;
+    \count_reg_rep[4]_2\ : in STD_LOGIC;
+    \count_reg_rep[4]_3\ : in STD_LOGIC;
+    \count_reg_rep[8]_2\ : in STD_LOGIC;
+    \count_reg_rep[4]_4\ : in STD_LOGIC;
+    \count_reg_rep[4]_5\ : in STD_LOGIC;
+    \count_reg_rep[8]_3\ : in STD_LOGIC;
+    \count_reg_rep[4]_6\ : in STD_LOGIC;
+    \count_reg_rep[4]_7\ : in STD_LOGIC;
+    \count_reg_rep[8]_4\ : in STD_LOGIC;
+    \count_reg_rep[4]_8\ : in STD_LOGIC;
+    \count_reg_rep[4]_9\ : in STD_LOGIC;
+    \count_reg_rep[8]_5\ : in STD_LOGIC;
+    \count_reg_rep[4]_10\ : in STD_LOGIC;
+    \count_reg_rep[4]_11\ : in STD_LOGIC;
+    \count_reg_rep[8]_6\ : in STD_LOGIC;
+    \count_reg_rep[4]_12\ : in STD_LOGIC;
+    \count_reg_rep[5]_0\ : in STD_LOGIC;
+    \count_reg_rep[6]_0\ : in STD_LOGIC;
     sw_axi_aclk : in STD_LOGIC;
     sw_clk_div : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
@@ -25,6 +49,7 @@ entity system_sinewave_gen_periphe_0_0_generic_counter is
 end system_sinewave_gen_periphe_0_0_generic_counter;
 
 architecture STRUCTURE of system_sinewave_gen_periphe_0_0_generic_counter is
+  signal \^q\ : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal count : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal \count[3]_i_2_n_0\ : STD_LOGIC;
   signal \count[3]_i_3_n_0\ : STD_LOGIC;
@@ -38,6 +63,7 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_generic_counter is
   signal \count_reg[7]_i_1_n_2\ : STD_LOGIC;
   signal \count_reg[7]_i_1_n_3\ : STD_LOGIC;
   signal \count_reg[9]_i_1_n_3\ : STD_LOGIC;
+  signal \count_reg_rep_n_0_[0]\ : STD_LOGIC;
   signal plusOp : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal \NLW_count_reg[9]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \NLW_count_reg[9]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
@@ -53,6 +79,7 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_generic_counter is
   attribute equivalent_register_removal of \count_reg_rep[8]\ : label is "no";
   attribute equivalent_register_removal of \count_reg_rep[9]\ : label is "no";
 begin
+  Q(8 downto 0) <= \^q\(8 downto 0);
 \count[3]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
@@ -238,7 +265,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(0),
-      Q => Q(0),
+      Q => \count_reg_rep_n_0_[0]\,
       R => '0'
     );
 \count_reg_rep[1]\: unisim.vcomponents.FDRE
@@ -249,7 +276,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(1),
-      Q => Q(1),
+      Q => \^q\(0),
       R => '0'
     );
 \count_reg_rep[2]\: unisim.vcomponents.FDRE
@@ -260,7 +287,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(2),
-      Q => Q(2),
+      Q => \^q\(1),
       R => '0'
     );
 \count_reg_rep[3]\: unisim.vcomponents.FDRE
@@ -271,7 +298,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(3),
-      Q => Q(3),
+      Q => \^q\(2),
       R => '0'
     );
 \count_reg_rep[4]\: unisim.vcomponents.FDRE
@@ -282,7 +309,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(4),
-      Q => Q(4),
+      Q => \^q\(3),
       R => '0'
     );
 \count_reg_rep[5]\: unisim.vcomponents.FDRE
@@ -293,7 +320,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(5),
-      Q => Q(5),
+      Q => \^q\(4),
       R => '0'
     );
 \count_reg_rep[6]\: unisim.vcomponents.FDRE
@@ -304,7 +331,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(6),
-      Q => Q(6),
+      Q => \^q\(5),
       R => '0'
     );
 \count_reg_rep[7]\: unisim.vcomponents.FDRE
@@ -315,7 +342,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(7),
-      Q => Q(7),
+      Q => \^q\(6),
       R => '0'
     );
 \count_reg_rep[8]\: unisim.vcomponents.FDRE
@@ -326,7 +353,7 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(8),
-      Q => Q(8),
+      Q => \^q\(7),
       R => '0'
     );
 \count_reg_rep[9]\: unisim.vcomponents.FDRE
@@ -337,8 +364,112 @@ begin
       C => sw_axi_aclk,
       CE => '1',
       D => plusOp(9),
-      Q => Q(9),
+      Q => \^q\(8),
       R => '0'
+    );
+\sw_sinewave_out[0]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8080808A808"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[8]_0\,
+      I2 => \count_reg_rep_n_0_[0]\,
+      I3 => \count_reg_rep[4]_0\,
+      I4 => \^q\(7),
+      I5 => \count_reg_rep[4]_1\,
+      O => sw_sinewave_out(0)
+    );
+\sw_sinewave_out[1]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8080808A808"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[8]_1\,
+      I2 => \count_reg_rep_n_0_[0]\,
+      I3 => \count_reg_rep[4]_2\,
+      I4 => \^q\(7),
+      I5 => \count_reg_rep[4]_3\,
+      O => sw_sinewave_out(1)
+    );
+\sw_sinewave_out[2]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8080808A808"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[8]_2\,
+      I2 => \count_reg_rep_n_0_[0]\,
+      I3 => \count_reg_rep[4]_4\,
+      I4 => \^q\(7),
+      I5 => \count_reg_rep[4]_5\,
+      O => sw_sinewave_out(2)
+    );
+\sw_sinewave_out[3]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8080808A808"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[8]_3\,
+      I2 => \count_reg_rep_n_0_[0]\,
+      I3 => \count_reg_rep[4]_6\,
+      I4 => \^q\(7),
+      I5 => \count_reg_rep[4]_7\,
+      O => sw_sinewave_out(3)
+    );
+\sw_sinewave_out[4]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8080808A808"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[8]_4\,
+      I2 => \count_reg_rep_n_0_[0]\,
+      I3 => \count_reg_rep[4]_8\,
+      I4 => \^q\(7),
+      I5 => \count_reg_rep[4]_9\,
+      O => sw_sinewave_out(4)
+    );
+\sw_sinewave_out[5]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8080808A808"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[8]_5\,
+      I2 => \count_reg_rep_n_0_[0]\,
+      I3 => \count_reg_rep[4]_10\,
+      I4 => \^q\(7),
+      I5 => \count_reg_rep[4]_11\,
+      O => sw_sinewave_out(5)
+    );
+\sw_sinewave_out[6]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"A8A8A8080808A808"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[8]_6\,
+      I2 => \count_reg_rep_n_0_[0]\,
+      I3 => \count_reg_rep[4]_12\,
+      I4 => \^q\(7),
+      I5 => \count_reg_rep[5]_0\,
+      O => sw_sinewave_out(6)
+    );
+\sw_sinewave_out[7]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00AA00AA00AA08A8"
+    )
+        port map (
+      I0 => sin_en,
+      I1 => \count_reg_rep[6]_0\,
+      I2 => \^q\(3),
+      I3 => \^q\(8),
+      I4 => \^q\(7),
+      I5 => \count_reg_rep_n_0_[0]\,
+      O => sw_sinewave_out(7)
     );
 end STRUCTURE;
 library IEEE;
@@ -347,8 +478,29 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity system_sinewave_gen_periphe_0_0_sine_lut is
   port (
-    sw_sinewave_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Q : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    \sw_sinewave_out[0]\ : out STD_LOGIC;
+    \sw_sinewave_out[0]_0\ : out STD_LOGIC;
+    \sw_sinewave_out[1]\ : out STD_LOGIC;
+    \sw_sinewave_out[1]_0\ : out STD_LOGIC;
+    \sw_sinewave_out[1]_1\ : out STD_LOGIC;
+    \sw_sinewave_out[2]\ : out STD_LOGIC;
+    \sw_sinewave_out[2]_0\ : out STD_LOGIC;
+    \sw_sinewave_out[2]_1\ : out STD_LOGIC;
+    \sw_sinewave_out[3]\ : out STD_LOGIC;
+    \sw_sinewave_out[3]_0\ : out STD_LOGIC;
+    \sw_sinewave_out[3]_1\ : out STD_LOGIC;
+    \sw_sinewave_out[4]\ : out STD_LOGIC;
+    \sw_sinewave_out[0]_1\ : out STD_LOGIC;
+    \sw_sinewave_out[5]\ : out STD_LOGIC;
+    \sw_sinewave_out[5]_0\ : out STD_LOGIC;
+    \sw_sinewave_out[4]_0\ : out STD_LOGIC;
+    \sw_sinewave_out[4]_1\ : out STD_LOGIC;
+    \sw_sinewave_out[6]\ : out STD_LOGIC;
+    \sw_sinewave_out[5]_1\ : out STD_LOGIC;
+    \sw_sinewave_out[6]_0\ : out STD_LOGIC;
+    \sw_sinewave_out[6]_1\ : out STD_LOGIC;
+    \sw_sinewave_out[7]\ : out STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_sinewave_gen_periphe_0_0_sine_lut : entity is "sine_lut";
@@ -365,7 +517,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[0]_INST_0_i_17_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_18_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_19_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[0]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_20_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_21_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_22_n_0\ : STD_LOGIC;
@@ -374,9 +525,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[0]_INST_0_i_25_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_26_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_27_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[0]_INST_0_i_28_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[0]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[0]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[0]_INST_0_i_6_n_0\ : STD_LOGIC;
@@ -393,7 +541,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[1]_INST_0_i_17_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_18_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_19_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[1]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_20_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_21_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_22_n_0\ : STD_LOGIC;
@@ -402,9 +549,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[1]_INST_0_i_25_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_26_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_27_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[1]_INST_0_i_28_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[1]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[1]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[1]_INST_0_i_6_n_0\ : STD_LOGIC;
@@ -421,7 +565,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[2]_INST_0_i_17_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_18_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_19_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[2]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_20_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_21_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_22_n_0\ : STD_LOGIC;
@@ -430,9 +573,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[2]_INST_0_i_25_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_26_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_27_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[2]_INST_0_i_28_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[2]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[2]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[2]_INST_0_i_6_n_0\ : STD_LOGIC;
@@ -449,7 +589,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[3]_INST_0_i_17_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_18_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_19_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[3]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_20_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_21_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_22_n_0\ : STD_LOGIC;
@@ -458,9 +597,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[3]_INST_0_i_25_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_26_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_27_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[3]_INST_0_i_28_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[3]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[3]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[3]_INST_0_i_6_n_0\ : STD_LOGIC;
@@ -477,10 +613,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[4]_INST_0_i_17_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[4]_INST_0_i_18_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[4]_INST_0_i_19_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[4]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[4]_INST_0_i_20_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[4]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[4]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[4]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[4]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[4]_INST_0_i_6_n_0\ : STD_LOGIC;
@@ -495,9 +627,6 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[5]_INST_0_i_15_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[5]_INST_0_i_16_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[5]_INST_0_i_17_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[5]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[5]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[5]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[5]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[5]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[5]_INST_0_i_6_n_0\ : STD_LOGIC;
@@ -506,1432 +635,1359 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_lut is
   signal \sw_sinewave_out[5]_INST_0_i_9_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_10_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_11_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[6]_INST_0_i_12_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[6]_INST_0_i_13_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[6]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[6]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[6]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_4_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_5_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_6_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_7_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_8_n_0\ : STD_LOGIC;
   signal \sw_sinewave_out[6]_INST_0_i_9_n_0\ : STD_LOGIC;
-  signal \sw_sinewave_out[7]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \sw_sinewave_out[7]_INST_0_i_2_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \sw_sinewave_out[5]_INST_0_i_11\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \sw_sinewave_out[5]_INST_0_i_11\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \sw_sinewave_out[5]_INST_0_i_12\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \sw_sinewave_out[5]_INST_0_i_7\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \sw_sinewave_out[5]_INST_0_i_8\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \sw_sinewave_out[6]_INST_0_i_9\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sw_sinewave_out[6]_INST_0_i_9\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \sw_sinewave_out[7]_INST_0_i_2\ : label is "soft_lutpair2";
 begin
-\sw_sinewave_out[0]_INST_0\: unisim.vcomponents.LUT6
+\sw_sinewave_out[0]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_1_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_2_n_0\,
-      I2 => Q(0),
-      I3 => \sw_sinewave_out[0]_INST_0_i_3_n_0\,
-      I4 => Q(8),
-      I5 => \sw_sinewave_out[0]_INST_0_i_4_n_0\,
-      O => sw_sinewave_out(0)
-    );
-\sw_sinewave_out[0]_INST_0_i_1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_5_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_6_n_0\,
-      O => \sw_sinewave_out[0]_INST_0_i_1_n_0\,
-      S => Q(4)
+      I0 => \sw_sinewave_out[0]_INST_0_i_4_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_5_n_0\,
+      I2 => Q(7),
+      I3 => \sw_sinewave_out[0]_INST_0_i_6_n_0\,
+      I4 => Q(3),
+      I5 => \sw_sinewave_out[0]_INST_0_i_7_n_0\,
+      O => \sw_sinewave_out[0]\
     );
 \sw_sinewave_out[0]_INST_0_i_10\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_23_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_24_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_24_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_25_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_10_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[0]_INST_0_i_11\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_25_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_26_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_26_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_27_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_11_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
-\sw_sinewave_out[0]_INST_0_i_12\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_27_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_28_n_0\,
-      O => \sw_sinewave_out[0]_INST_0_i_12_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[0]_INST_0_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"B53844880B63BB7F"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(2),
-      I3 => Q(1),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_13_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"D2ED3E007F0E21D7"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_14_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_15\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7E590366C3A67C59"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(1),
-      I3 => Q(5),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_15_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_16\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FA3E0DD11CF1A6CA"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_16_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_17\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BE0D43F0C3B08D3E"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[0]_INST_0_i_17_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_18\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"6F60921D539DAC53"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[0]_INST_0_i_18_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_19\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BFCC403241B08C7F"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[0]_INST_0_i_19_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_2\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_7_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_8_n_0\,
-      O => \sw_sinewave_out[0]_INST_0_i_2_n_0\,
-      S => Q(4)
-    );
-\sw_sinewave_out[0]_INST_0_i_20\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"262B113ED9F6CFD1"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_20_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_21\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"6D1240D0826D2F6F"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(1),
-      I2 => Q(7),
-      I3 => Q(2),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_21_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_22\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"01CEB3FDF27DCC02"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_22_n_0\
-    );
-\sw_sinewave_out[0]_INST_0_i_23\: unisim.vcomponents.LUT6
+\sw_sinewave_out[0]_INST_0_i_12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3547CAB646F93509"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_23_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_12_n_0\
     );
-\sw_sinewave_out[0]_INST_0_i_24\: unisim.vcomponents.LUT6
+\sw_sinewave_out[0]_INST_0_i_13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"834EF23CF03D4F82"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[0]_INST_0_i_24_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[0]_INST_0_i_13_n_0\
     );
-\sw_sinewave_out[0]_INST_0_i_25\: unisim.vcomponents.LUT6
+\sw_sinewave_out[0]_INST_0_i_14\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AC9A744F70C783A1"
+      INIT => X"6D1240D0826D2F6F"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[0]_INST_0_i_25_n_0\
+      I0 => Q(2),
+      I1 => Q(0),
+      I2 => Q(6),
+      I3 => Q(1),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_14_n_0\
     );
-\sw_sinewave_out[0]_INST_0_i_26\: unisim.vcomponents.LUT6
+\sw_sinewave_out[0]_INST_0_i_15\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"788745B88768B745"
+      INIT => X"01CEB3FDF27DCC02"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(5),
-      I2 => Q(7),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_26_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_15_n_0\
     );
-\sw_sinewave_out[0]_INST_0_i_27\: unisim.vcomponents.LUT6
+\sw_sinewave_out[0]_INST_0_i_16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"147B8F01FF8348B4"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_27_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_16_n_0\
     );
-\sw_sinewave_out[0]_INST_0_i_28\: unisim.vcomponents.LUT6
+\sw_sinewave_out[0]_INST_0_i_17\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0319222FEEE3D5D2"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_17_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_18\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AC9A744F70C783A1"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[0]_INST_0_i_18_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_19\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"788745B88768B745"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(4),
+      I2 => Q(6),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_19_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_2\: unisim.vcomponents.MUXF8
+     port map (
+      I0 => \sw_sinewave_out[0]_INST_0_i_8_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_9_n_0\,
+      O => \sw_sinewave_out[0]_1\,
+      S => Q(3)
+    );
+\sw_sinewave_out[0]_INST_0_i_20\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BE0D43F0C3B08D3E"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[0]_INST_0_i_20_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_21\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6F60921D539DAC53"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[0]_INST_0_i_21_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_22\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BFCC403241B08C7F"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[0]_INST_0_i_22_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_23\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"262B113ED9F6CFD1"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_23_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_24\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"B53844880B63BB7F"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_24_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_25\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"D2ED3E007F0E21D7"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
       I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[0]_INST_0_i_28_n_0\
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_25_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_26\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7E590366C3A67C59"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(0),
+      I3 => Q(4),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_26_n_0\
+    );
+\sw_sinewave_out[0]_INST_0_i_27\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FA3E0DD11CF1A6CA"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[0]_INST_0_i_27_n_0\
     );
 \sw_sinewave_out[0]_INST_0_i_3\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_9_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_10_n_0\,
-      O => \sw_sinewave_out[0]_INST_0_i_3_n_0\,
-      S => Q(4)
+      I0 => \sw_sinewave_out[0]_INST_0_i_10_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_11_n_0\,
+      O => \sw_sinewave_out[0]_0\,
+      S => Q(3)
     );
-\sw_sinewave_out[0]_INST_0_i_4\: unisim.vcomponents.MUXF8
+\sw_sinewave_out[0]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_11_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_12_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_12_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_13_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_4_n_0\,
-      S => Q(4)
+      S => Q(5)
     );
 \sw_sinewave_out[0]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_13_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_14_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_14_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_15_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_5_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[0]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_15_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_16_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_16_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_17_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_6_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[0]_INST_0_i_7\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_17_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_18_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_18_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_19_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_7_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[0]_INST_0_i_8\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_19_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_20_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_20_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_21_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_8_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[0]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[0]_INST_0_i_21_n_0\,
-      I1 => \sw_sinewave_out[0]_INST_0_i_22_n_0\,
+      I0 => \sw_sinewave_out[0]_INST_0_i_22_n_0\,
+      I1 => \sw_sinewave_out[0]_INST_0_i_23_n_0\,
       O => \sw_sinewave_out[0]_INST_0_i_9_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
-\sw_sinewave_out[1]_INST_0\: unisim.vcomponents.LUT6
+\sw_sinewave_out[1]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_1_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_2_n_0\,
-      I2 => Q(0),
-      I3 => \sw_sinewave_out[1]_INST_0_i_3_n_0\,
-      I4 => Q(8),
-      I5 => \sw_sinewave_out[1]_INST_0_i_4_n_0\,
-      O => sw_sinewave_out(1)
-    );
-\sw_sinewave_out[1]_INST_0_i_1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_5_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_6_n_0\,
-      O => \sw_sinewave_out[1]_INST_0_i_1_n_0\,
-      S => Q(4)
+      I0 => \sw_sinewave_out[1]_INST_0_i_4_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_5_n_0\,
+      I2 => Q(7),
+      I3 => \sw_sinewave_out[1]_INST_0_i_6_n_0\,
+      I4 => Q(3),
+      I5 => \sw_sinewave_out[1]_INST_0_i_7_n_0\,
+      O => \sw_sinewave_out[1]\
     );
 \sw_sinewave_out[1]_INST_0_i_10\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_23_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_24_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_24_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_25_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_10_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[1]_INST_0_i_11\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_25_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_26_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_26_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_27_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_11_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
-\sw_sinewave_out[1]_INST_0_i_12\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_27_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_28_n_0\,
-      O => \sw_sinewave_out[1]_INST_0_i_12_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[1]_INST_0_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E755870079AA78FF"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(1),
-      I2 => Q(2),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_13_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8A6779B97588466E"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_14_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_15\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"955A68E462A59F1B"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(2),
-      I3 => Q(1),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_15_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_16\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"897A84AB77852B70"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_16_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_17\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E32EDD211ED1A3EE"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_17_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_18\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"261A0978DBE5F696"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_18_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_19\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2A2E9ED1D5D1622E"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(2),
-      I3 => Q(5),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_19_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_2\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_7_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_8_n_0\,
-      O => \sw_sinewave_out[1]_INST_0_i_2_n_0\,
-      S => Q(4)
-    );
-\sw_sinewave_out[1]_INST_0_i_20\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1D2A3B09E2F7C5E6"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_20_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_21\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"9257B20049A8C9FF"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_21_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_22\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8BB9754478468ABB"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_22_n_0\
-    );
-\sw_sinewave_out[1]_INST_0_i_23\: unisim.vcomponents.LUT6
+\sw_sinewave_out[1]_INST_0_i_12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"99526084E6A91F7B"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(2),
-      I3 => Q(1),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_23_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_12_n_0\
     );
-\sw_sinewave_out[1]_INST_0_i_24\: unisim.vcomponents.LUT6
+\sw_sinewave_out[1]_INST_0_i_13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"883A7B4474878B38"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[1]_INST_0_i_24_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[1]_INST_0_i_13_n_0\
     );
-\sw_sinewave_out[1]_INST_0_i_25\: unisim.vcomponents.LUT6
+\sw_sinewave_out[1]_INST_0_i_14\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F12B2ADE5E11A16F"
+      INIT => X"9257B20049A8C9FF"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[1]_INST_0_i_25_n_0\
+      I0 => Q(2),
+      I1 => Q(1),
+      I2 => Q(0),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_14_n_0\
     );
-\sw_sinewave_out[1]_INST_0_i_26\: unisim.vcomponents.LUT6
+\sw_sinewave_out[1]_INST_0_i_15\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"257A0B69DA85E596"
+      INIT => X"8BB9754478468ABB"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_26_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_15_n_0\
     );
-\sw_sinewave_out[1]_INST_0_i_27\: unisim.vcomponents.LUT6
+\sw_sinewave_out[1]_INST_0_i_16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"89EE9D51621961AE"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[1]_INST_0_i_27_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_16_n_0\
     );
-\sw_sinewave_out[1]_INST_0_i_28\: unisim.vcomponents.LUT6
+\sw_sinewave_out[1]_INST_0_i_17\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3908C4F62A19D5E4"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[1]_INST_0_i_28_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[1]_INST_0_i_17_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_18\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F12B2ADE5E11A16F"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[1]_INST_0_i_18_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_19\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"257A0B69DA85E596"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_19_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_2\: unisim.vcomponents.MUXF8
+     port map (
+      I0 => \sw_sinewave_out[1]_INST_0_i_8_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_9_n_0\,
+      O => \sw_sinewave_out[1]_0\,
+      S => Q(3)
+    );
+\sw_sinewave_out[1]_INST_0_i_20\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E32EDD211ED1A3EE"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_20_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_21\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"261A0978DBE5F696"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_21_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_22\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"2A2E9ED1D5D1622E"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(1),
+      I3 => Q(4),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_22_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_23\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"1D2A3B09E2F7C5E6"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_23_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_24\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E755870079AA78FF"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(0),
+      I2 => Q(1),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_24_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_25\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8A6779B97588466E"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_25_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_26\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"955A68E462A59F1B"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_26_n_0\
+    );
+\sw_sinewave_out[1]_INST_0_i_27\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"897A84AB77852B70"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[1]_INST_0_i_27_n_0\
     );
 \sw_sinewave_out[1]_INST_0_i_3\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_9_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_10_n_0\,
-      O => \sw_sinewave_out[1]_INST_0_i_3_n_0\,
-      S => Q(4)
+      I0 => \sw_sinewave_out[1]_INST_0_i_10_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_11_n_0\,
+      O => \sw_sinewave_out[1]_1\,
+      S => Q(3)
     );
-\sw_sinewave_out[1]_INST_0_i_4\: unisim.vcomponents.MUXF8
+\sw_sinewave_out[1]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_11_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_12_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_12_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_13_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_4_n_0\,
-      S => Q(4)
+      S => Q(5)
     );
 \sw_sinewave_out[1]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_13_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_14_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_14_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_15_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_5_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[1]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_15_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_16_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_16_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_17_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_6_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[1]_INST_0_i_7\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_17_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_18_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_18_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_19_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_7_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[1]_INST_0_i_8\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_19_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_20_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_20_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_21_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_8_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[1]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[1]_INST_0_i_21_n_0\,
-      I1 => \sw_sinewave_out[1]_INST_0_i_22_n_0\,
+      I0 => \sw_sinewave_out[1]_INST_0_i_22_n_0\,
+      I1 => \sw_sinewave_out[1]_INST_0_i_23_n_0\,
       O => \sw_sinewave_out[1]_INST_0_i_9_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
-\sw_sinewave_out[2]_INST_0\: unisim.vcomponents.LUT6
+\sw_sinewave_out[2]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_1_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_2_n_0\,
-      I2 => Q(0),
-      I3 => \sw_sinewave_out[2]_INST_0_i_3_n_0\,
-      I4 => Q(8),
-      I5 => \sw_sinewave_out[2]_INST_0_i_4_n_0\,
-      O => sw_sinewave_out(2)
-    );
-\sw_sinewave_out[2]_INST_0_i_1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_5_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_6_n_0\,
-      O => \sw_sinewave_out[2]_INST_0_i_1_n_0\,
-      S => Q(4)
+      I0 => \sw_sinewave_out[2]_INST_0_i_4_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_5_n_0\,
+      I2 => Q(7),
+      I3 => \sw_sinewave_out[2]_INST_0_i_6_n_0\,
+      I4 => Q(3),
+      I5 => \sw_sinewave_out[2]_INST_0_i_7_n_0\,
+      O => \sw_sinewave_out[2]\
     );
 \sw_sinewave_out[2]_INST_0_i_10\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_23_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_24_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_24_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_25_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_10_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[2]_INST_0_i_11\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_25_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_26_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_26_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_27_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_11_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
-\sw_sinewave_out[2]_INST_0_i_12\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_27_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_28_n_0\,
-      O => \sw_sinewave_out[2]_INST_0_i_12_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[2]_INST_0_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3C4BC0C0C3B43F3F"
-    )
-        port map (
-      I0 => Q(1),
-      I1 => Q(3),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_13_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"67021A9A98ED6565"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_14_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_15\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"BD572B0062A8D4FF"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_15_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_16\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAD4AE55552B01AE"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_16_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_17\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"88AA7B7575D484AA"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_17_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_18\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"31CA11B9CE15EF46"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(1),
-      I3 => Q(5),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_18_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_19\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"66F56502990A9AF5"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(5),
-      I2 => Q(1),
-      I3 => Q(7),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_19_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_2\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_7_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_8_n_0\,
-      O => \sw_sinewave_out[2]_INST_0_i_2_n_0\,
-      S => Q(4)
-    );
-\sw_sinewave_out[2]_INST_0_i_20\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"21253416DEDBE9E9"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_20_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_21\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"661988809C66777F"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(5),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_21_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_22\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"619D62AE9E62DD51"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_22_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_23\: unisim.vcomponents.LUT6
+\sw_sinewave_out[2]_INST_0_i_12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9D572B0063A854FF"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_23_n_0\
+      I0 => Q(2),
+      I1 => Q(1),
+      I2 => Q(0),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_12_n_0\
     );
-\sw_sinewave_out[2]_INST_0_i_24\: unisim.vcomponents.LUT6
+\sw_sinewave_out[2]_INST_0_i_13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AAD451AADE5121EE"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[2]_INST_0_i_24_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_25\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8A7F558A2B55D4AB"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[2]_INST_0_i_25_n_0\
-    );
-\sw_sinewave_out[2]_INST_0_i_26\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3E1A1B09C1E4E4F6"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
       I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_26_n_0\
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[2]_INST_0_i_13_n_0\
     );
-\sw_sinewave_out[2]_INST_0_i_27\: unisim.vcomponents.LUT6
+\sw_sinewave_out[2]_INST_0_i_14\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"661988809C66777F"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(4),
+      I2 => Q(0),
+      I3 => Q(1),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_14_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_15\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"619D62AE9E62DD51"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(0),
+      I3 => Q(1),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_15_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"595948E6A6A7BF19"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_27_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_16_n_0\
     );
-\sw_sinewave_out[2]_INST_0_i_28\: unisim.vcomponents.LUT6
+\sw_sinewave_out[2]_INST_0_i_17\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"25341616DACBE9E9"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_17_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_18\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8A7F558A2B55D4AB"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
       I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[2]_INST_0_i_28_n_0\
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[2]_INST_0_i_18_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_19\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3E1A1B09C1E4E4F6"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_19_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_2\: unisim.vcomponents.MUXF8
+     port map (
+      I0 => \sw_sinewave_out[2]_INST_0_i_8_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_9_n_0\,
+      O => \sw_sinewave_out[2]_0\,
+      S => Q(3)
+    );
+\sw_sinewave_out[2]_INST_0_i_20\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"88AA7B7575D484AA"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_20_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_21\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"31CA11B9CE15EF46"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(0),
+      I3 => Q(4),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_21_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_22\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"66F56502990A9AF5"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(4),
+      I2 => Q(0),
+      I3 => Q(6),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_22_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_23\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"21253416DEDBE9E9"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_23_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_24\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3C4BC0C0C3B43F3F"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => Q(2),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_24_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_25\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"67021A9A98ED6565"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_25_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_26\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"BD572B0062A8D4FF"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(1),
+      I2 => Q(0),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_26_n_0\
+    );
+\sw_sinewave_out[2]_INST_0_i_27\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAD4AE55552B01AE"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[2]_INST_0_i_27_n_0\
     );
 \sw_sinewave_out[2]_INST_0_i_3\: unisim.vcomponents.MUXF8
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_9_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_10_n_0\,
-      O => \sw_sinewave_out[2]_INST_0_i_3_n_0\,
-      S => Q(4)
+      I0 => \sw_sinewave_out[2]_INST_0_i_10_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_11_n_0\,
+      O => \sw_sinewave_out[2]_1\,
+      S => Q(3)
     );
-\sw_sinewave_out[2]_INST_0_i_4\: unisim.vcomponents.MUXF8
+\sw_sinewave_out[2]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_11_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_12_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_12_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_13_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_4_n_0\,
-      S => Q(4)
+      S => Q(5)
     );
 \sw_sinewave_out[2]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_13_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_14_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_14_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_15_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_5_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[2]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_15_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_16_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_16_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_17_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_6_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[2]_INST_0_i_7\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_17_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_18_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_18_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_19_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_7_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[2]_INST_0_i_8\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_19_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_20_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_20_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_21_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_8_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[2]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[2]_INST_0_i_21_n_0\,
-      I1 => \sw_sinewave_out[2]_INST_0_i_22_n_0\,
+      I0 => \sw_sinewave_out[2]_INST_0_i_22_n_0\,
+      I1 => \sw_sinewave_out[2]_INST_0_i_23_n_0\,
       O => \sw_sinewave_out[2]_INST_0_i_9_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
-\sw_sinewave_out[3]_INST_0\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_1_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_2_n_0\,
-      I2 => Q(0),
-      I3 => \sw_sinewave_out[3]_INST_0_i_3_n_0\,
-      I4 => Q(8),
-      I5 => \sw_sinewave_out[3]_INST_0_i_4_n_0\,
-      O => sw_sinewave_out(3)
-    );
-\sw_sinewave_out[3]_INST_0_i_1\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_5_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_6_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_1_n_0\,
-      S => Q(4)
+      I0 => \sw_sinewave_out[3]_INST_0_i_4_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_5_n_0\,
+      I2 => Q(7),
+      I3 => \sw_sinewave_out[3]_INST_0_i_6_n_0\,
+      I4 => Q(3),
+      I5 => \sw_sinewave_out[3]_INST_0_i_7_n_0\,
+      O => \sw_sinewave_out[3]\
     );
 \sw_sinewave_out[3]_INST_0_i_10\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_23_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_24_n_0\,
+      I0 => \sw_sinewave_out[3]_INST_0_i_24_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_25_n_0\,
       O => \sw_sinewave_out[3]_INST_0_i_10_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
 \sw_sinewave_out[3]_INST_0_i_11\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_25_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_26_n_0\,
+      I0 => \sw_sinewave_out[3]_INST_0_i_26_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_27_n_0\,
       O => \sw_sinewave_out[3]_INST_0_i_11_n_0\,
-      S => Q(6)
+      S => Q(5)
     );
-\sw_sinewave_out[3]_INST_0_i_12\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_27_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_28_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_12_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[3]_INST_0_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3F7C0000C083FFFF"
-    )
-        port map (
-      I0 => Q(1),
-      I1 => Q(3),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_13_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"776EBB33891144CC"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_14_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_15\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E88988801776777F"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(5),
-      I2 => Q(2),
-      I3 => Q(1),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_15_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_16\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C094C4953F6B6B6A"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_16_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_17\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A0F0E01F7F1F1FE0"
-    )
-        port map (
-      I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(3),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_17_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_18\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"20001557DFFEEAA8"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(2),
-      I3 => Q(1),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_18_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_19\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F837F37C07C80C83"
-    )
-        port map (
-      I0 => Q(1),
-      I1 => Q(3),
-      I2 => Q(7),
-      I3 => Q(5),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_19_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_2\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_7_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_8_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_2_n_0\,
-      S => Q(4)
-    );
-\sw_sinewave_out[3]_INST_0_i_20\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"13131232ECEDCDCD"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_20_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_21\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"776E00008911FFFF"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(5),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_21_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_22\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"76EABB37891544C8"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_22_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_23\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"E88988803776777F"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(5),
-      I2 => Q(2),
-      I3 => Q(1),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_23_n_0\
+      I0 => Q(2),
+      I1 => Q(4),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_12_n_0\
     );
-\sw_sinewave_out[3]_INST_0_i_24\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"C0943B6A94956B6A"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[3]_INST_0_i_24_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_25\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A92956DC2903D6FD"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[3]_INST_0_i_25_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_26\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"20011557DFFEEAA8"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(2),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
       I3 => Q(1),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_26_n_0\
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[3]_INST_0_i_13_n_0\
     );
-\sw_sinewave_out[3]_INST_0_i_27\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_14\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"776E00008911FFFF"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(4),
+      I2 => Q(0),
+      I3 => Q(1),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_14_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_15\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"76EABB37891544C8"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(0),
+      I3 => Q(1),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_15_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_16\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"C7C7D6DE38392121"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_27_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_16_n_0\
     );
-\sw_sinewave_out[3]_INST_0_i_28\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_17\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"13123232ECEDCDCD"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[3]_INST_0_i_28_n_0\
-    );
-\sw_sinewave_out[3]_INST_0_i_3\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_9_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_10_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_3_n_0\,
-      S => Q(4)
-    );
-\sw_sinewave_out[3]_INST_0_i_4\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_11_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_12_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_4_n_0\,
-      S => Q(4)
-    );
-\sw_sinewave_out[3]_INST_0_i_5\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_13_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_14_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_5_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[3]_INST_0_i_6\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_15_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_16_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_6_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[3]_INST_0_i_7\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_17_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_18_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_7_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[3]_INST_0_i_8\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_19_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_20_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_8_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[3]_INST_0_i_9\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[3]_INST_0_i_21_n_0\,
-      I1 => \sw_sinewave_out[3]_INST_0_i_22_n_0\,
-      O => \sw_sinewave_out[3]_INST_0_i_9_n_0\,
-      S => Q(6)
-    );
-\sw_sinewave_out[4]_INST_0\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[4]_INST_0_i_1_n_0\,
-      I1 => \sw_sinewave_out[4]_INST_0_i_2_n_0\,
-      O => sw_sinewave_out(4),
-      S => Q(0)
-    );
-\sw_sinewave_out[4]_INST_0_i_1\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[4]_INST_0_i_3_n_0\,
-      I1 => \sw_sinewave_out[4]_INST_0_i_4_n_0\,
-      O => \sw_sinewave_out[4]_INST_0_i_1_n_0\,
-      S => Q(8)
-    );
-\sw_sinewave_out[4]_INST_0_i_10\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"6BEB941CEBC3143D"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
-      O => \sw_sinewave_out[4]_INST_0_i_10_n_0\
-    );
-\sw_sinewave_out[4]_INST_0_i_11\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"C3D7D7D638292829"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
       I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_11_n_0\
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_17_n_0\
     );
-\sw_sinewave_out[4]_INST_0_i_12\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_18\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33320000CCCDFFFF"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(5),
-      I2 => Q(2),
-      I3 => Q(1),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_12_n_0\
-    );
-\sw_sinewave_out[4]_INST_0_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"88FFFE00770001FF"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(2),
-      I2 => Q(1),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_13_n_0\
-    );
-\sw_sinewave_out[4]_INST_0_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1F000000A0FFFFFF"
+      INIT => X"A92956DC2903D6FD"
     )
         port map (
       I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(3),
-      I3 => Q(5),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_14_n_0\
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[3]_INST_0_i_18_n_0\
     );
-\sw_sinewave_out[4]_INST_0_i_15\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_19\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"03030202FCFDFDFD"
+      INIT => X"20011557DFFEEAA8"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_15_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_19_n_0\
     );
-\sw_sinewave_out[4]_INST_0_i_16\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_2\: unisim.vcomponents.MUXF8
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_8_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_9_n_0\,
+      O => \sw_sinewave_out[3]_0\,
+      S => Q(3)
+    );
+\sw_sinewave_out[3]_INST_0_i_20\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"07F00FF3F80FF00C"
+      INIT => X"A0F0E01F7F1F1FE0"
     )
         port map (
       I0 => Q(1),
-      I1 => Q(3),
-      I2 => Q(7),
-      I3 => Q(5),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_16_n_0\
+      I1 => Q(0),
+      I2 => Q(2),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_20_n_0\
     );
-\sw_sinewave_out[4]_INST_0_i_17\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_21\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"5FF0E0FF801F1F00"
+      INIT => X"20001557DFFEEAA8"
     )
         port map (
       I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(3),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_17_n_0\
+      I1 => Q(6),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_21_n_0\
     );
-\sw_sinewave_out[4]_INST_0_i_18\: unisim.vcomponents.LUT6
+\sw_sinewave_out[3]_INST_0_i_22\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F837F37C07C80C83"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => Q(2),
+      I2 => Q(6),
+      I3 => Q(4),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_22_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_23\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"13131232ECEDCDCD"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_23_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_24\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3F7C0000C083FFFF"
+    )
+        port map (
+      I0 => Q(0),
+      I1 => Q(2),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_24_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_25\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"776EBB33891144CC"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(0),
+      I3 => Q(1),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_25_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_26\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"E88988801776777F"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(4),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_26_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_27\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C094C4953F6B6B6A"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[3]_INST_0_i_27_n_0\
+    );
+\sw_sinewave_out[3]_INST_0_i_3\: unisim.vcomponents.MUXF8
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_10_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_11_n_0\,
+      O => \sw_sinewave_out[3]_1\,
+      S => Q(3)
+    );
+\sw_sinewave_out[3]_INST_0_i_4\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_12_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_13_n_0\,
+      O => \sw_sinewave_out[3]_INST_0_i_4_n_0\,
+      S => Q(5)
+    );
+\sw_sinewave_out[3]_INST_0_i_5\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_14_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_15_n_0\,
+      O => \sw_sinewave_out[3]_INST_0_i_5_n_0\,
+      S => Q(5)
+    );
+\sw_sinewave_out[3]_INST_0_i_6\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_16_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_17_n_0\,
+      O => \sw_sinewave_out[3]_INST_0_i_6_n_0\,
+      S => Q(5)
+    );
+\sw_sinewave_out[3]_INST_0_i_7\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_18_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_19_n_0\,
+      O => \sw_sinewave_out[3]_INST_0_i_7_n_0\,
+      S => Q(5)
+    );
+\sw_sinewave_out[3]_INST_0_i_8\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_20_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_21_n_0\,
+      O => \sw_sinewave_out[3]_INST_0_i_8_n_0\,
+      S => Q(5)
+    );
+\sw_sinewave_out[3]_INST_0_i_9\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \sw_sinewave_out[3]_INST_0_i_22_n_0\,
+      I1 => \sw_sinewave_out[3]_INST_0_i_23_n_0\,
+      O => \sw_sinewave_out[3]_INST_0_i_9_n_0\,
+      S => Q(5)
+    );
+\sw_sinewave_out[4]_INST_0_i_1\: unisim.vcomponents.MUXF7
+     port map (
+      I0 => \sw_sinewave_out[4]_INST_0_i_4_n_0\,
+      I1 => \sw_sinewave_out[4]_INST_0_i_5_n_0\,
+      O => \sw_sinewave_out[4]\,
+      S => Q(7)
+    );
+\sw_sinewave_out[4]_INST_0_i_10\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"C3D7C7D63C282829"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_18_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_10_n_0\
     );
-\sw_sinewave_out[4]_INST_0_i_19\: unisim.vcomponents.LUT6
+\sw_sinewave_out[4]_INST_0_i_11\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"33320000CCCDFFFF"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(4),
+      I2 => Q(1),
+      I3 => Q(0),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_11_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_12\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"E0FFFF005F0000FF"
     )
         port map (
-      I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(3),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_19_n_0\
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(2),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_12_n_0\
     );
-\sw_sinewave_out[4]_INST_0_i_2\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[4]_INST_0_i_5_n_0\,
-      I1 => \sw_sinewave_out[4]_INST_0_i_6_n_0\,
-      O => \sw_sinewave_out[4]_INST_0_i_2_n_0\,
-      S => Q(8)
-    );
-\sw_sinewave_out[4]_INST_0_i_20\: unisim.vcomponents.LUT6
+\sw_sinewave_out[4]_INST_0_i_13\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"1F000000E0FFFFFF"
     )
         port map (
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(2),
+      I3 => Q(4),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_13_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_14\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"03020202FCFDFDFD"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_14_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_15\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3C3C3D3DC3C2C2C2"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_15_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_16\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"6BEB941CEBC3143D"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
+      O => \sw_sinewave_out[4]_INST_0_i_16_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_17\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C3D7D7D638292829"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(0),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_17_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_18\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"88FFFE00770001FF"
+    )
+        port map (
       I0 => Q(2),
       I1 => Q(1),
+      I2 => Q(0),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_18_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_19\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"1F000000A0FFFFFF"
+    )
+        port map (
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(2),
+      I3 => Q(4),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[4]_INST_0_i_19_n_0\
+    );
+\sw_sinewave_out[4]_INST_0_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \sw_sinewave_out[4]_INST_0_i_6_n_0\,
+      I1 => \sw_sinewave_out[4]_INST_0_i_7_n_0\,
       I2 => Q(3),
-      I3 => Q(5),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[4]_INST_0_i_20_n_0\
+      I3 => \sw_sinewave_out[4]_INST_0_i_8_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[4]_INST_0_i_9_n_0\,
+      O => \sw_sinewave_out[4]_1\
     );
 \sw_sinewave_out[4]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[4]_INST_0_i_7_n_0\,
-      I1 => \sw_sinewave_out[4]_INST_0_i_8_n_0\,
-      I2 => Q(4),
-      I3 => \sw_sinewave_out[4]_INST_0_i_9_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[4]_INST_0_i_10_n_0\,
-      O => \sw_sinewave_out[4]_INST_0_i_3_n_0\
+      I0 => \sw_sinewave_out[4]_INST_0_i_10_n_0\,
+      I1 => \sw_sinewave_out[4]_INST_0_i_11_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[4]_INST_0_i_12_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[4]_INST_0_i_13_n_0\,
+      O => \sw_sinewave_out[4]_0\
     );
 \sw_sinewave_out[4]_INST_0_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[4]_INST_0_i_11_n_0\,
-      I1 => \sw_sinewave_out[4]_INST_0_i_12_n_0\,
-      I2 => Q(4),
-      I3 => \sw_sinewave_out[4]_INST_0_i_13_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[4]_INST_0_i_14_n_0\,
+      I0 => \sw_sinewave_out[4]_INST_0_i_14_n_0\,
+      I1 => \sw_sinewave_out[4]_INST_0_i_15_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[4]_INST_0_i_8_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[4]_INST_0_i_16_n_0\,
       O => \sw_sinewave_out[4]_INST_0_i_4_n_0\
     );
 \sw_sinewave_out[4]_INST_0_i_5\: unisim.vcomponents.LUT6
@@ -1939,91 +1995,84 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[4]_INST_0_i_15_n_0\,
-      I1 => \sw_sinewave_out[4]_INST_0_i_16_n_0\,
-      I2 => Q(4),
-      I3 => \sw_sinewave_out[4]_INST_0_i_9_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[4]_INST_0_i_17_n_0\,
+      I0 => \sw_sinewave_out[4]_INST_0_i_17_n_0\,
+      I1 => \sw_sinewave_out[4]_INST_0_i_11_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[4]_INST_0_i_18_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[4]_INST_0_i_19_n_0\,
       O => \sw_sinewave_out[4]_INST_0_i_5_n_0\
     );
 \sw_sinewave_out[4]_INST_0_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
+      INIT => X"03030202FCFDFDFD"
     )
         port map (
-      I0 => \sw_sinewave_out[4]_INST_0_i_18_n_0\,
-      I1 => \sw_sinewave_out[4]_INST_0_i_12_n_0\,
+      I0 => Q(2),
+      I1 => Q(6),
       I2 => Q(4),
-      I3 => \sw_sinewave_out[4]_INST_0_i_19_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[4]_INST_0_i_20_n_0\,
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
       O => \sw_sinewave_out[4]_INST_0_i_6_n_0\
     );
 \sw_sinewave_out[4]_INST_0_i_7\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"03020202FCFDFDFD"
+      INIT => X"07F00FF3F80FF00C"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
+      I0 => Q(0),
+      I1 => Q(2),
+      I2 => Q(6),
+      I3 => Q(4),
+      I4 => Q(1),
+      I5 => Q(8),
       O => \sw_sinewave_out[4]_INST_0_i_7_n_0\
     );
 \sw_sinewave_out[4]_INST_0_i_8\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"3C3C3D3DC3C2C2C2"
+      INIT => X"007F0000FF80FFFF"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
+      I0 => Q(0),
+      I1 => Q(1),
+      I2 => Q(2),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
       O => \sw_sinewave_out[4]_INST_0_i_8_n_0\
     );
 \sw_sinewave_out[4]_INST_0_i_9\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"007F0000FF80FFFF"
+      INIT => X"5FF0E0FF801F1F00"
     )
         port map (
       I0 => Q(1),
-      I1 => Q(2),
-      I2 => Q(3),
-      I3 => Q(7),
-      I4 => Q(5),
-      I5 => Q(9),
+      I1 => Q(0),
+      I2 => Q(2),
+      I3 => Q(6),
+      I4 => Q(4),
+      I5 => Q(8),
       O => \sw_sinewave_out[4]_INST_0_i_9_n_0\
-    );
-\sw_sinewave_out[5]_INST_0\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[5]_INST_0_i_1_n_0\,
-      I1 => \sw_sinewave_out[5]_INST_0_i_2_n_0\,
-      O => sw_sinewave_out(5),
-      S => Q(0)
     );
 \sw_sinewave_out[5]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[5]_INST_0_i_3_n_0\,
-      I1 => \sw_sinewave_out[5]_INST_0_i_4_n_0\,
-      O => \sw_sinewave_out[5]_INST_0_i_1_n_0\,
-      S => Q(8)
+      I0 => \sw_sinewave_out[5]_INST_0_i_4_n_0\,
+      I1 => \sw_sinewave_out[5]_INST_0_i_5_n_0\,
+      O => \sw_sinewave_out[5]\,
+      S => Q(7)
     );
 \sw_sinewave_out[5]_INST_0_i_10\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEEEC88801117777"
+      INIT => X"FFEEC88801113777"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(5),
-      I5 => Q(9),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(0),
+      I3 => Q(1),
+      I4 => Q(4),
+      I5 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_10_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_11\: unisim.vcomponents.LUT3
@@ -2031,9 +2080,9 @@ begin
       INIT => X"4B"
     )
         port map (
-      I0 => Q(5),
-      I1 => Q(7),
-      I2 => Q(9),
+      I0 => Q(4),
+      I1 => Q(6),
+      I2 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_11_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_12\: unisim.vcomponents.LUT3
@@ -2041,107 +2090,113 @@ begin
       INIT => X"87"
     )
         port map (
-      I0 => Q(5),
-      I1 => Q(7),
-      I2 => Q(9),
+      I0 => Q(4),
+      I1 => Q(6),
+      I2 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_12_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_13\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1FFF0000A000FFFF"
+      INIT => X"1FFF0000E000FFFF"
     )
         port map (
-      I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(5),
-      I3 => Q(3),
-      I4 => Q(7),
-      I5 => Q(9),
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(4),
+      I3 => Q(2),
+      I4 => Q(6),
+      I5 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_13_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_14\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"33333232CCCDCDCD"
+      INIT => X"33323232CCCDCDCD"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_14_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_15\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"001F0FFFFFE0E000"
+      INIT => X"1717E8E0173FE8C1"
     )
         port map (
       I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(3),
-      I3 => Q(5),
-      I4 => Q(7),
-      I5 => Q(9),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
       O => \sw_sinewave_out[5]_INST_0_i_15_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_16\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFEEC88801113777"
+      INIT => X"FEEEC88801117777"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(1),
-      I3 => Q(2),
-      I4 => Q(5),
-      I5 => Q(9),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(0),
+      I3 => Q(1),
+      I4 => Q(4),
+      I5 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_16_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_17\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1FFF0000E000FFFF"
+      INIT => X"1FFF0000A000FFFF"
     )
         port map (
-      I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(5),
-      I3 => Q(3),
-      I4 => Q(7),
-      I5 => Q(9),
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(4),
+      I3 => Q(2),
+      I4 => Q(6),
+      I5 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_17_n_0\
     );
-\sw_sinewave_out[5]_INST_0_i_2\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[5]_INST_0_i_5_n_0\,
-      I1 => \sw_sinewave_out[5]_INST_0_i_6_n_0\,
-      O => \sw_sinewave_out[5]_INST_0_i_2_n_0\,
-      S => Q(8)
+\sw_sinewave_out[5]_INST_0_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \sw_sinewave_out[5]_INST_0_i_6_n_0\,
+      I1 => \sw_sinewave_out[5]_INST_0_i_7_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[5]_INST_0_i_8_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[5]_INST_0_i_9_n_0\,
+      O => \sw_sinewave_out[5]_1\
     );
 \sw_sinewave_out[5]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[5]_INST_0_i_7_n_0\,
-      I1 => \sw_sinewave_out[6]_INST_0_i_9_n_0\,
-      I2 => Q(4),
-      I3 => \sw_sinewave_out[5]_INST_0_i_8_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[5]_INST_0_i_9_n_0\,
-      O => \sw_sinewave_out[5]_INST_0_i_3_n_0\
+      I0 => \sw_sinewave_out[5]_INST_0_i_10_n_0\,
+      I1 => \sw_sinewave_out[5]_INST_0_i_11_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[5]_INST_0_i_12_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[5]_INST_0_i_13_n_0\,
+      O => \sw_sinewave_out[5]_0\
     );
 \sw_sinewave_out[5]_INST_0_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[5]_INST_0_i_10_n_0\,
-      I1 => \sw_sinewave_out[5]_INST_0_i_11_n_0\,
-      I2 => Q(4),
-      I3 => \sw_sinewave_out[5]_INST_0_i_12_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[5]_INST_0_i_13_n_0\,
+      I0 => \sw_sinewave_out[5]_INST_0_i_14_n_0\,
+      I1 => \sw_sinewave_out[5]_INST_0_i_7_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[5]_INST_0_i_8_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[5]_INST_0_i_15_n_0\,
       O => \sw_sinewave_out[5]_INST_0_i_4_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_5\: unisim.vcomponents.LUT6
@@ -2149,38 +2204,35 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \sw_sinewave_out[5]_INST_0_i_14_n_0\,
-      I1 => \sw_sinewave_out[6]_INST_0_i_9_n_0\,
-      I2 => Q(4),
-      I3 => \sw_sinewave_out[5]_INST_0_i_8_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[5]_INST_0_i_15_n_0\,
+      I0 => \sw_sinewave_out[5]_INST_0_i_16_n_0\,
+      I1 => \sw_sinewave_out[5]_INST_0_i_11_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[5]_INST_0_i_12_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[5]_INST_0_i_17_n_0\,
       O => \sw_sinewave_out[5]_INST_0_i_5_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
+      INIT => X"33333232CCCDCDCD"
     )
         port map (
-      I0 => \sw_sinewave_out[5]_INST_0_i_16_n_0\,
-      I1 => \sw_sinewave_out[5]_INST_0_i_11_n_0\,
+      I0 => Q(2),
+      I1 => Q(6),
       I2 => Q(4),
-      I3 => \sw_sinewave_out[5]_INST_0_i_12_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[5]_INST_0_i_17_n_0\,
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_6_n_0\
     );
-\sw_sinewave_out[5]_INST_0_i_7\: unisim.vcomponents.LUT6
+\sw_sinewave_out[5]_INST_0_i_7\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"33323232CCCDCDCD"
+      INIT => X"1E"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
+      I0 => Q(6),
+      I1 => Q(4),
+      I2 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_7_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_8\: unisim.vcomponents.LUT3
@@ -2188,49 +2240,42 @@ begin
       INIT => X"4B"
     )
         port map (
-      I0 => Q(7),
-      I1 => Q(5),
-      I2 => Q(9),
+      I0 => Q(6),
+      I1 => Q(4),
+      I2 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_8_n_0\
     );
 \sw_sinewave_out[5]_INST_0_i_9\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1717E8E0173FE8C1"
+      INIT => X"001F0FFFFFE0E000"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(2),
+      I3 => Q(4),
+      I4 => Q(6),
+      I5 => Q(8),
       O => \sw_sinewave_out[5]_INST_0_i_9_n_0\
-    );
-\sw_sinewave_out[6]_INST_0\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \sw_sinewave_out[6]_INST_0_i_1_n_0\,
-      I1 => \sw_sinewave_out[6]_INST_0_i_2_n_0\,
-      O => sw_sinewave_out(6),
-      S => Q(0)
     );
 \sw_sinewave_out[6]_INST_0_i_1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \sw_sinewave_out[6]_INST_0_i_3_n_0\,
-      I1 => \sw_sinewave_out[6]_INST_0_i_4_n_0\,
-      O => \sw_sinewave_out[6]_INST_0_i_1_n_0\,
-      S => Q(8)
+      I0 => \sw_sinewave_out[6]_INST_0_i_4_n_0\,
+      I1 => \sw_sinewave_out[6]_INST_0_i_5_n_0\,
+      O => \sw_sinewave_out[6]_0\,
+      S => Q(7)
     );
 \sw_sinewave_out[6]_INST_0_i_10\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"3333CCCC3333CCCD"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(9),
-      I5 => Q(1),
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(1),
+      I4 => Q(8),
+      I5 => Q(0),
       O => \sw_sinewave_out[6]_INST_0_i_10_n_0\
     );
 \sw_sinewave_out[6]_INST_0_i_11\: unisim.vcomponents.LUT6
@@ -2238,156 +2283,136 @@ begin
       INIT => X"E00000005FFFFFFF"
     )
         port map (
-      I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(5),
-      I3 => Q(7),
-      I4 => Q(3),
-      I5 => Q(9),
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(4),
+      I3 => Q(6),
+      I4 => Q(2),
+      I5 => Q(8),
       O => \sw_sinewave_out[6]_INST_0_i_11_n_0\
     );
-\sw_sinewave_out[6]_INST_0_i_12\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000101FFFEFEFE"
-    )
-        port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[6]_INST_0_i_12_n_0\
-    );
-\sw_sinewave_out[6]_INST_0_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"E00000001FFFFFFF"
-    )
-        port map (
-      I0 => Q(2),
-      I1 => Q(1),
-      I2 => Q(5),
-      I3 => Q(7),
-      I4 => Q(3),
-      I5 => Q(9),
-      O => \sw_sinewave_out[6]_INST_0_i_13_n_0\
-    );
-\sw_sinewave_out[6]_INST_0_i_2\: unisim.vcomponents.MUXF7
-     port map (
-      I0 => \sw_sinewave_out[6]_INST_0_i_5_n_0\,
-      I1 => \sw_sinewave_out[6]_INST_0_i_6_n_0\,
-      O => \sw_sinewave_out[6]_INST_0_i_2_n_0\,
-      S => Q(8)
-    );
-\sw_sinewave_out[6]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \sw_sinewave_out[6]_INST_0_i_7_n_0\,
-      I1 => \sw_sinewave_out[6]_INST_0_i_8_n_0\,
-      I2 => Q(4),
-      I3 => \sw_sinewave_out[6]_INST_0_i_9_n_0\,
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[6]_INST_0_i_10_n_0\,
-      O => \sw_sinewave_out[6]_INST_0_i_3_n_0\
-    );
-\sw_sinewave_out[6]_INST_0_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F00FB37FF00F804C"
-    )
-        port map (
-      I0 => Q(5),
-      I1 => Q(4),
-      I2 => Q(7),
-      I3 => Q(9),
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[6]_INST_0_i_11_n_0\,
-      O => \sw_sinewave_out[6]_INST_0_i_4_n_0\
-    );
-\sw_sinewave_out[6]_INST_0_i_5\: unisim.vcomponents.LUT6
+\sw_sinewave_out[6]_INST_0_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"88008BFFBBFFB800"
     )
         port map (
-      I0 => \sw_sinewave_out[6]_INST_0_i_12_n_0\,
-      I1 => Q(4),
-      I2 => Q(5),
-      I3 => Q(6),
-      I4 => Q(7),
-      I5 => Q(9),
-      O => \sw_sinewave_out[6]_INST_0_i_5_n_0\
+      I0 => \sw_sinewave_out[6]_INST_0_i_6_n_0\,
+      I1 => Q(3),
+      I2 => Q(4),
+      I3 => Q(5),
+      I4 => Q(6),
+      I5 => Q(8),
+      O => \sw_sinewave_out[6]_1\
     );
-\sw_sinewave_out[6]_INST_0_i_6\: unisim.vcomponents.LUT6
+\sw_sinewave_out[6]_INST_0_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"F00FB37FF00F804C"
     )
         port map (
-      I0 => Q(5),
-      I1 => Q(4),
-      I2 => Q(7),
-      I3 => Q(9),
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[6]_INST_0_i_13_n_0\,
+      I0 => Q(4),
+      I1 => Q(3),
+      I2 => Q(6),
+      I3 => Q(8),
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[6]_INST_0_i_7_n_0\,
+      O => \sw_sinewave_out[6]\
+    );
+\sw_sinewave_out[6]_INST_0_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \sw_sinewave_out[6]_INST_0_i_8_n_0\,
+      I1 => \sw_sinewave_out[6]_INST_0_i_9_n_0\,
+      I2 => Q(3),
+      I3 => \sw_sinewave_out[5]_INST_0_i_7_n_0\,
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[6]_INST_0_i_10_n_0\,
+      O => \sw_sinewave_out[6]_INST_0_i_4_n_0\
+    );
+\sw_sinewave_out[6]_INST_0_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F00FB37FF00F804C"
+    )
+        port map (
+      I0 => Q(4),
+      I1 => Q(3),
+      I2 => Q(6),
+      I3 => Q(8),
+      I4 => Q(5),
+      I5 => \sw_sinewave_out[6]_INST_0_i_11_n_0\,
+      O => \sw_sinewave_out[6]_INST_0_i_5_n_0\
+    );
+\sw_sinewave_out[6]_INST_0_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000101FFFEFEFE"
+    )
+        port map (
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
       O => \sw_sinewave_out[6]_INST_0_i_6_n_0\
     );
 \sw_sinewave_out[6]_INST_0_i_7\: unisim.vcomponents.LUT6
     generic map(
+      INIT => X"E00000001FFFFFFF"
+    )
+        port map (
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(4),
+      I3 => Q(6),
+      I4 => Q(2),
+      I5 => Q(8),
+      O => \sw_sinewave_out[6]_INST_0_i_7_n_0\
+    );
+\sw_sinewave_out[6]_INST_0_i_8\: unisim.vcomponents.LUT6
+    generic map(
       INIT => X"00010101FFFEFEFE"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(1),
-      I4 => Q(2),
-      I5 => Q(9),
-      O => \sw_sinewave_out[6]_INST_0_i_7_n_0\
+      I0 => Q(2),
+      I1 => Q(6),
+      I2 => Q(4),
+      I3 => Q(0),
+      I4 => Q(1),
+      I5 => Q(8),
+      O => \sw_sinewave_out[6]_INST_0_i_8_n_0\
     );
-\sw_sinewave_out[6]_INST_0_i_8\: unisim.vcomponents.LUT2
+\sw_sinewave_out[6]_INST_0_i_9\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
-      I0 => Q(7),
-      I1 => Q(9),
-      O => \sw_sinewave_out[6]_INST_0_i_8_n_0\
-    );
-\sw_sinewave_out[6]_INST_0_i_9\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"1E"
-    )
-        port map (
-      I0 => Q(7),
-      I1 => Q(5),
-      I2 => Q(9),
+      I0 => Q(6),
+      I1 => Q(8),
       O => \sw_sinewave_out[6]_INST_0_i_9_n_0\
     );
-\sw_sinewave_out[7]_INST_0\: unisim.vcomponents.LUT6
+\sw_sinewave_out[7]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"00FF01FF00FF00FE"
     )
         port map (
-      I0 => Q(0),
-      I1 => Q(8),
-      I2 => Q(4),
-      I3 => Q(9),
-      I4 => Q(6),
-      I5 => \sw_sinewave_out[7]_INST_0_i_1_n_0\,
-      O => sw_sinewave_out(7)
+      I0 => Q(5),
+      I1 => Q(2),
+      I2 => Q(6),
+      I3 => Q(8),
+      I4 => Q(4),
+      I5 => \sw_sinewave_out[7]_INST_0_i_2_n_0\,
+      O => \sw_sinewave_out[7]\
     );
-\sw_sinewave_out[7]_INST_0_i_1\: unisim.vcomponents.LUT6
+\sw_sinewave_out[7]_INST_0_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"00000000FFFFFFFE"
+      INIT => X"0E"
     )
         port map (
-      I0 => Q(3),
-      I1 => Q(7),
-      I2 => Q(5),
-      I3 => Q(2),
-      I4 => Q(1),
-      I5 => Q(9),
-      O => \sw_sinewave_out[7]_INST_0_i_1_n_0\
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(8),
+      O => \sw_sinewave_out[7]_INST_0_i_2_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -2397,26 +2422,49 @@ use UNISIM.VCOMPONENTS.ALL;
 entity system_sinewave_gen_periphe_0_0_sine_gen is
   port (
     sw_sinewave_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    sw_axi_aclk : in STD_LOGIC;
     sw_axi_wdata : in STD_LOGIC_VECTOR ( 2 downto 0 );
     sw_axi_aresetn : in STD_LOGIC;
-    axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    sw_axi_aclk : in STD_LOGIC
+    axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of system_sinewave_gen_periphe_0_0_sine_gen : entity is "sine_gen";
 end system_sinewave_gen_periphe_0_0_sine_gen;
 
 architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_gen is
-  signal counter_n_0 : STD_LOGIC;
-  signal counter_n_1 : STD_LOGIC;
-  signal counter_n_2 : STD_LOGIC;
-  signal counter_n_3 : STD_LOGIC;
-  signal counter_n_4 : STD_LOGIC;
-  signal counter_n_5 : STD_LOGIC;
-  signal counter_n_6 : STD_LOGIC;
-  signal counter_n_7 : STD_LOGIC;
+  signal counter_n_10 : STD_LOGIC;
+  signal counter_n_11 : STD_LOGIC;
+  signal counter_n_12 : STD_LOGIC;
+  signal counter_n_13 : STD_LOGIC;
+  signal counter_n_14 : STD_LOGIC;
+  signal counter_n_15 : STD_LOGIC;
+  signal counter_n_16 : STD_LOGIC;
   signal counter_n_8 : STD_LOGIC;
   signal counter_n_9 : STD_LOGIC;
+  signal sin_en : STD_LOGIC;
+  signal sin_en_i_1_n_0 : STD_LOGIC;
+  signal sine_n_0 : STD_LOGIC;
+  signal sine_n_1 : STD_LOGIC;
+  signal sine_n_10 : STD_LOGIC;
+  signal sine_n_11 : STD_LOGIC;
+  signal sine_n_12 : STD_LOGIC;
+  signal sine_n_13 : STD_LOGIC;
+  signal sine_n_14 : STD_LOGIC;
+  signal sine_n_15 : STD_LOGIC;
+  signal sine_n_16 : STD_LOGIC;
+  signal sine_n_17 : STD_LOGIC;
+  signal sine_n_18 : STD_LOGIC;
+  signal sine_n_19 : STD_LOGIC;
+  signal sine_n_2 : STD_LOGIC;
+  signal sine_n_20 : STD_LOGIC;
+  signal sine_n_21 : STD_LOGIC;
+  signal sine_n_3 : STD_LOGIC;
+  signal sine_n_4 : STD_LOGIC;
+  signal sine_n_5 : STD_LOGIC;
+  signal sine_n_6 : STD_LOGIC;
+  signal sine_n_7 : STD_LOGIC;
+  signal sine_n_8 : STD_LOGIC;
+  signal sine_n_9 : STD_LOGIC;
   signal sw_clk_div : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \sw_clk_div[0]_i_1_n_0\ : STD_LOGIC;
   signal \sw_clk_div[1]_i_1_n_0\ : STD_LOGIC;
@@ -2424,32 +2472,98 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sine_gen is
 begin
 counter: entity work.system_sinewave_gen_periphe_0_0_generic_counter
      port map (
-      Q(9) => counter_n_0,
-      Q(8) => counter_n_1,
-      Q(7) => counter_n_2,
-      Q(6) => counter_n_3,
-      Q(5) => counter_n_4,
-      Q(4) => counter_n_5,
-      Q(3) => counter_n_6,
-      Q(2) => counter_n_7,
-      Q(1) => counter_n_8,
-      Q(0) => counter_n_9,
+      Q(8) => counter_n_8,
+      Q(7) => counter_n_9,
+      Q(6) => counter_n_10,
+      Q(5) => counter_n_11,
+      Q(4) => counter_n_12,
+      Q(3) => counter_n_13,
+      Q(2) => counter_n_14,
+      Q(1) => counter_n_15,
+      Q(0) => counter_n_16,
+      \count_reg_rep[4]_0\ => sine_n_12,
+      \count_reg_rep[4]_1\ => sine_n_1,
+      \count_reg_rep[4]_10\ => sine_n_18,
+      \count_reg_rep[4]_11\ => sine_n_14,
+      \count_reg_rep[4]_12\ => sine_n_20,
+      \count_reg_rep[4]_2\ => sine_n_3,
+      \count_reg_rep[4]_3\ => sine_n_4,
+      \count_reg_rep[4]_4\ => sine_n_6,
+      \count_reg_rep[4]_5\ => sine_n_7,
+      \count_reg_rep[4]_6\ => sine_n_9,
+      \count_reg_rep[4]_7\ => sine_n_10,
+      \count_reg_rep[4]_8\ => sine_n_16,
+      \count_reg_rep[4]_9\ => sine_n_15,
+      \count_reg_rep[5]_0\ => sine_n_17,
+      \count_reg_rep[6]_0\ => sine_n_21,
+      \count_reg_rep[8]_0\ => sine_n_0,
+      \count_reg_rep[8]_1\ => sine_n_2,
+      \count_reg_rep[8]_2\ => sine_n_5,
+      \count_reg_rep[8]_3\ => sine_n_8,
+      \count_reg_rep[8]_4\ => sine_n_11,
+      \count_reg_rep[8]_5\ => sine_n_13,
+      \count_reg_rep[8]_6\ => sine_n_19,
+      sin_en => sin_en,
       sw_axi_aclk => sw_axi_aclk,
-      sw_clk_div(2 downto 0) => sw_clk_div(2 downto 0)
+      sw_clk_div(2 downto 0) => sw_clk_div(2 downto 0),
+      sw_sinewave_out(7 downto 0) => sw_sinewave_out(7 downto 0)
+    );
+sin_en_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"33BF0080"
+    )
+        port map (
+      I0 => sw_axi_wdata(0),
+      I1 => sw_axi_aresetn,
+      I2 => axi_awaddr(0),
+      I3 => axi_awaddr(1),
+      I4 => sin_en,
+      O => sin_en_i_1_n_0
+    );
+sin_en_reg: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => sw_axi_aclk,
+      CE => '1',
+      D => sin_en_i_1_n_0,
+      Q => sin_en,
+      R => '0'
     );
 sine: entity work.system_sinewave_gen_periphe_0_0_sine_lut
      port map (
-      Q(9) => counter_n_0,
-      Q(8) => counter_n_1,
-      Q(7) => counter_n_2,
-      Q(6) => counter_n_3,
-      Q(5) => counter_n_4,
-      Q(4) => counter_n_5,
-      Q(3) => counter_n_6,
-      Q(2) => counter_n_7,
-      Q(1) => counter_n_8,
-      Q(0) => counter_n_9,
-      sw_sinewave_out(7 downto 0) => sw_sinewave_out(7 downto 0)
+      Q(8) => counter_n_8,
+      Q(7) => counter_n_9,
+      Q(6) => counter_n_10,
+      Q(5) => counter_n_11,
+      Q(4) => counter_n_12,
+      Q(3) => counter_n_13,
+      Q(2) => counter_n_14,
+      Q(1) => counter_n_15,
+      Q(0) => counter_n_16,
+      \sw_sinewave_out[0]\ => sine_n_0,
+      \sw_sinewave_out[0]_0\ => sine_n_1,
+      \sw_sinewave_out[0]_1\ => sine_n_12,
+      \sw_sinewave_out[1]\ => sine_n_2,
+      \sw_sinewave_out[1]_0\ => sine_n_3,
+      \sw_sinewave_out[1]_1\ => sine_n_4,
+      \sw_sinewave_out[2]\ => sine_n_5,
+      \sw_sinewave_out[2]_0\ => sine_n_6,
+      \sw_sinewave_out[2]_1\ => sine_n_7,
+      \sw_sinewave_out[3]\ => sine_n_8,
+      \sw_sinewave_out[3]_0\ => sine_n_9,
+      \sw_sinewave_out[3]_1\ => sine_n_10,
+      \sw_sinewave_out[4]\ => sine_n_11,
+      \sw_sinewave_out[4]_0\ => sine_n_15,
+      \sw_sinewave_out[4]_1\ => sine_n_16,
+      \sw_sinewave_out[5]\ => sine_n_13,
+      \sw_sinewave_out[5]_0\ => sine_n_14,
+      \sw_sinewave_out[5]_1\ => sine_n_18,
+      \sw_sinewave_out[6]\ => sine_n_17,
+      \sw_sinewave_out[6]_0\ => sine_n_19,
+      \sw_sinewave_out[6]_1\ => sine_n_20,
+      \sw_sinewave_out[7]\ => sine_n_21
     );
 \sw_clk_div[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -2458,8 +2572,8 @@ sine: entity work.system_sinewave_gen_periphe_0_0_sine_lut
         port map (
       I0 => sw_axi_wdata(0),
       I1 => sw_axi_aresetn,
-      I2 => axi_awaddr(1),
-      I3 => axi_awaddr(0),
+      I2 => axi_awaddr(0),
+      I3 => axi_awaddr(1),
       I4 => sw_clk_div(0),
       O => \sw_clk_div[0]_i_1_n_0\
     );
@@ -2470,8 +2584,8 @@ sine: entity work.system_sinewave_gen_periphe_0_0_sine_lut
         port map (
       I0 => sw_axi_wdata(1),
       I1 => sw_axi_aresetn,
-      I2 => axi_awaddr(1),
-      I3 => axi_awaddr(0),
+      I2 => axi_awaddr(0),
+      I3 => axi_awaddr(1),
       I4 => sw_clk_div(1),
       O => \sw_clk_div[1]_i_1_n_0\
     );
@@ -2482,8 +2596,8 @@ sine: entity work.system_sinewave_gen_periphe_0_0_sine_lut
         port map (
       I0 => sw_axi_wdata(2),
       I1 => sw_axi_aresetn,
-      I2 => axi_awaddr(1),
-      I3 => axi_awaddr(0),
+      I2 => axi_awaddr(0),
+      I3 => axi_awaddr(1),
       I4 => sw_clk_div(2),
       O => \sw_clk_div[2]_i_1_n_0\
     );
@@ -2534,14 +2648,14 @@ entity system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI is
     sw_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     sw_axi_rvalid : out STD_LOGIC;
     sw_axi_bvalid : out STD_LOGIC;
-    sw_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    sw_axi_aresetn : in STD_LOGIC;
     sw_axi_aclk : in STD_LOGIC;
     sw_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sw_axi_wvalid : in STD_LOGIC;
     sw_axi_awvalid : in STD_LOGIC;
     sw_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sw_axi_arvalid : in STD_LOGIC;
+    sw_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    sw_axi_aresetn : in STD_LOGIC;
     sw_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sw_axi_bready : in STD_LOGIC;
     sw_axi_rready : in STD_LOGIC
@@ -2589,12 +2703,12 @@ architecture STRUCTURE of system_sinewave_gen_periphe_0_0_sinewave_gen_periphera
   signal \^sw_axi_bvalid\ : STD_LOGIC;
   signal \^sw_axi_rvalid\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \axi_awaddr[2]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \slv_reg3[31]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \axi_awaddr[2]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of axi_rvalid_i_1 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \slv_reg3[31]_i_2\ : label is "soft_lutpair4";
 begin
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
@@ -4695,14 +4809,14 @@ entity system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0 is
     sw_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     sw_axi_rvalid : out STD_LOGIC;
     sw_axi_bvalid : out STD_LOGIC;
-    sw_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    sw_axi_aresetn : in STD_LOGIC;
     sw_axi_aclk : in STD_LOGIC;
     sw_axi_awaddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sw_axi_wvalid : in STD_LOGIC;
     sw_axi_awvalid : in STD_LOGIC;
     sw_axi_araddr : in STD_LOGIC_VECTOR ( 1 downto 0 );
     sw_axi_arvalid : in STD_LOGIC;
+    sw_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    sw_axi_aresetn : in STD_LOGIC;
     sw_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sw_axi_bready : in STD_LOGIC;
     sw_axi_rready : in STD_LOGIC

@@ -246,3 +246,1505 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+14:41:28 **** Auto Build of project sinewave_gen_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_6/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sinewave_gen_peripheral_v1_0/src
+make -C ps7_cortexa9_0/libsrc/sinewave_gen_peripheral_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_6/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/sinewave_gen_peripheral_v1_0/src
+make -C ps7_cortexa9_0/libsrc/sinewave_gen_peripheral_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sinewave_gen_peripheral...
+sinewave_gen_peripheral_selftest.c: In function 'SINEWAVE_GEN_PERIPHERAL_Reg_SelfTest':
+sinewave_gen_peripheral_selftest.c:52:72: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( SINEWAVE_GEN_PERIPHERAL_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                        ^~
+sinewave_gen_peripheral_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+14:41:33 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22296	   1144	  22568	  46008	   b3b8	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+14:43:10 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22296	   1144	  22568	  46008	   b3b8	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:14:52 **** Build of configuration Debug for project sinewave_gen_bsp_xuartps_intr_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/xuartps_intr_example.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_intr_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xuartps_intr_example.d" -MT"src/xuartps_intr_example.o" -o "src/xuartps_intr_example.o" "../src/xuartps_intr_example.c"
+Finished building: ../src/xuartps_intr_example.c
+ 
+Building target: sinewave_gen_bsp_xuartps_intr_example_1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen_bsp_xuartps_intr_example_1.elf"  ./src/xuartps_intr_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen_bsp_xuartps_intr_example_1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen_bsp_xuartps_intr_example_1.elf  |tee "sinewave_gen_bsp_xuartps_intr_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31568	   2768	  22904	  57240	   df98	sinewave_gen_bsp_xuartps_intr_example_1.elf
+Finished building: sinewave_gen_bsp_xuartps_intr_example_1.elf.size
+ 
+21:14:54 **** Auto Build of configuration Debug for project sinewave_gen_bsp_xuartps_intr_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:23:59 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22296	   1144	  22568	  46008	   b3b8	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:24:26 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:23:6: error: expected ';' before 'xil_printf'
+      xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+      ^~~~~~~~~~
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:24:47 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:24:44: error: expected expression before ')' token
+      scanf("Enter CLK Divider (1-9): %d", &);
+                                            ^
+../src/sinewave_gen_top.c:20:10: warning: unused variable 'clk_div_sel' [-Wunused-variable]
+  uint8_t clk_div_sel = 0;
+          ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:24:53 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:24:39: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'uint8_t * {aka unsigned char *}' [-Wformat=]
+      scanf("Enter CLK Divider (1-9): %d", &clk_div_sel);
+                                      ~^   ~~~~~~~~~~~~
+                                      %hhd
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102032	   2576	  23328	 127936	  1f3c0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:25:18 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:24:39: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t * {aka unsigned char *}' [-Wformat=]
+      scanf("Enter CLK Divider (1-9): %us", &clk_div_sel);
+                                      ~^    ~~~~~~~~~~~~
+                                      %hhu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102032	   2576	  23328	 127936	  1f3c0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:25:31 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:24:39: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t * {aka unsigned char *}' [-Wformat=]
+      scanf("Enter CLK Divider (1-9): %uc", &clk_div_sel);
+                                      ~^    ~~~~~~~~~~~~
+                                      %hhu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102032	   2576	  23328	 127936	  1f3c0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:25:44 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102032	   2576	  23328	 127936	  1f3c0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:28:48 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:30:4: error: too few arguments to function 'update_clk_div'
+    update_clk_div()
+    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:16:20: note: declared here
+ static inline void update_clk_div(uint8_t div) {
+                    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:31:3: error: expected ';' before '}' token
+   }
+   ^
+../src/sinewave_gen_top.c:32:65: error: 'test_count' undeclared (first use in this function); did you mean 'stdout'?
+   xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+                                                                 ^~~~~~~~~~
+                                                                 stdout
+../src/sinewave_gen_top.c:32:65: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:29:02 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:30:4: error: too few arguments to function 'update_clk_div'
+    update_clk_div()
+    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:16:20: note: declared here
+ static inline void update_clk_div(uint8_t div) {
+                    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:31:3: error: expected ';' before '}' token
+   }
+   ^
+../src/sinewave_gen_top.c:32:65: error: 'test_count' undeclared (first use in this function); did you mean 'stdout'?
+   xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+                                                                 ^~~~~~~~~~
+                                                                 stdout
+../src/sinewave_gen_top.c:32:65: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:29:51 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:33:4: error: too few arguments to function 'update_clk_div'
+    update_clk_div()
+    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:19:20: note: declared here
+ static inline void update_clk_div(uint8_t div) {
+                    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:34:3: error: expected ';' before '}' token
+   }
+   ^
+../src/sinewave_gen_top.c:35:65: error: 'test_count' undeclared (first use in this function); did you mean 'stdout'?
+   xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+                                                                 ^~~~~~~~~~
+                                                                 stdout
+../src/sinewave_gen_top.c:35:65: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:30:28 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:36:4: error: too few arguments to function 'update_clk_div'
+    update_clk_div()
+    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:19:20: note: declared here
+ static inline void update_clk_div(uint8_t div) {
+                    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:37:3: error: expected ';' before '}' token
+   }
+   ^
+../src/sinewave_gen_top.c:38:65: error: 'test_count' undeclared (first use in this function); did you mean 'stdout'?
+   xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+                                                                 ^~~~~~~~~~
+                                                                 stdout
+../src/sinewave_gen_top.c:38:65: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:31:11 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'enable_output':
+../src/sinewave_gen_top.c:31:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ int main (void) {
+                 ^
+../src/sinewave_gen_top.c:45:1: error: expected '{' at end of input
+ }
+ ^
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:31:40 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:45:4: error: too few arguments to function 'update_clk_div'
+    update_clk_div()
+    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:20:20: note: declared here
+ static inline void update_clk_div(uint8_t div) {
+                    ^~~~~~~~~~~~~~
+../src/sinewave_gen_top.c:46:3: error: expected ';' before '}' token
+   }
+   ^
+../src/sinewave_gen_top.c:47:65: error: 'test_count' undeclared (first use in this function); did you mean 'stdout'?
+   xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+                                                                 ^~~~~~~~~~
+                                                                 stdout
+../src/sinewave_gen_top.c:47:65: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:32:05 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:48:65: error: 'test_count' undeclared (first use in this function); did you mean 'stdout'?
+   xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+                                                                 ^~~~~~~~~~
+                                                                 stdout
+../src/sinewave_gen_top.c:48:65: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:32:14 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:50:65: error: 'test_count' undeclared (first use in this function); did you mean 'stdout'?
+   xil_printf("About to update test divider (currently:%x)\r\n", test_count+1);
+                                                                 ^~~~~~~~~~
+                                                                 stdout
+../src/sinewave_gen_top.c:50:65: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+21:45:49 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101912	   2576	  23328	 127816	  1f348	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:47:31 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:48:59 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101896	   2576	  23328	 127800	  1f338	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:49:39 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:53:00 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:43:59: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'uint16_t * {aka short unsigned int *}' [-Wformat=]
+   scanf("Enter CLK Divider (1-9 or 0 to disable output): %d", &clk_div_sel);
+                                                          ~^   ~~~~~~~~~~~~
+                                                          %hd
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101960	   2576	  23328	 127864	  1f378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:54:50 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:43:59: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint16_t * {aka short unsigned int *}' [-Wformat=]
+   scanf("Enter CLK Divider (1-9 or 0 to disable output): %u", &clk_div_sel);
+                                                          ~^   ~~~~~~~~~~~~
+                                                          %hu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101960	   2576	  23328	 127864	  1f378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:55:04 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:43:59: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+   scanf("Enter CLK Divider (1-9 or 0 to disable output): %u", &clk_div_sel);
+                                                          ~^   ~~~~~~~~~~~~
+                                                          %lu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101960	   2576	  23328	 127864	  1f378	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:55:13 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:43:59: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+   scanf("Enter CLK Divider (1-9 or 0 to disable output): %u", &clk_div_sel);
+                                                          ~^   ~~~~~~~~~~~~
+                                                          %lu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101912	   2576	  23328	 127816	  1f348	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:56:08 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:43:11: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+   scanf("%u", &clk_div_sel);
+          ~^   ~~~~~~~~~~~~
+          %lu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101864	   2576	  23328	 127768	  1f318	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:56:27 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:44:11: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint32_t * {aka long unsigned int *}' [-Wformat=]
+   scanf("%u", &clk_div_sel);
+          ~^   ~~~~~~~~~~~~
+          %lu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101912	   2576	  23328	 127816	  1f348	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:56:40 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:44:11: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint16_t * {aka short unsigned int *}' [-Wformat=]
+   scanf("%u", &clk_div_sel);
+          ~^   ~~~~~~~~~~~~
+          %hu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101912	   2576	  23328	 127816	  1f348	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:56:52 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101912	   2576	  23328	 127816	  1f348	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:57:16 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:59:58 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+22:05:12 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c:7:10: fatal error: platform.h: No such file or directory
+ #include "platform.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:05:14 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c:6:10: fatal error: platform.h: No such file or directory
+ #include "platform.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:05:18 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101912	   2576	  23328	 127816	  1f348	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:06:03 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 101912	   2576	  23328	 127816	  1f348	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:07:52 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c:25:23: error: unknown type name 'UartScanner_t'; did you mean 'UartScaner_t'?
+ void UartScanner_init(UartScanner_t* self) {
+                       ^~~~~~~~~~~~~
+                       UartScaner_t
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:07:54 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c:25:23: error: unknown type name 'UartScanner_t'; did you mean 'UartScaner_t'?
+ void UartScanner_init(UartScanner_t* self) {
+                       ^~~~~~~~~~~~~
+                       UartScaner_t
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:07:56 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c:25:23: error: unknown type name 'UartScanner_t'; did you mean 'UartScaner_t'?
+ void UartScanner_init(UartScanner_t* self) {
+                       ^~~~~~~~~~~~~
+                       UartScaner_t
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:08:23 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:8: error: 'UartScanner_t {aka struct <anonymous>}' has no member named 'config'; did you mean 'Config'?
+  self->config = XUartPs_LookupConfig(UART_DEVICE_ID);
+        ^~~~~~
+        Config
+../src/sinewave_gen_top.c:26:38: error: 'UART_DEVICE_ID' undeclared (first use in this function); did you mean 'XST_DEVICE_BUSY'?
+  self->config = XUartPs_LookupConfig(UART_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+                                      XST_DEVICE_BUSY
+../src/sinewave_gen_top.c:26:38: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:08:43 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:38: error: 'UART_DEVICE_ID' undeclared (first use in this function); did you mean 'XST_DEVICE_BUSY'?
+  self->config = XUartPs_LookupConfig(UART_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+                                      XST_DEVICE_BUSY
+../src/sinewave_gen_top.c:26:38: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:09:10 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c:12:10: fatal error: platform.h: No such file or directory
+ #include "platform.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:09:20 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:38: error: 'UART_DEVICE_ID' undeclared (first use in this function); did you mean 'XST_DEVICE_BUSY'?
+  self->config = XUartPs_LookupConfig(UART_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+                                      XST_DEVICE_BUSY
+../src/sinewave_gen_top.c:26:38: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:10:42 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:17: error: too few arguments to function 'XUartPs_LookupConfig'
+  self->config = XUartPs_LookupConfig();
+                 ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/sinewave_gen_top.c:5:0:
+../../sinewave_gen_bsp/ps7_cortexa9_0/include/xuartps.h:459:17: note: declared here
+ XUartPs_Config *XUartPs_LookupConfig(u16 DeviceId);
+                 ^~~~~~~~~~~~~~~~~~~~
+../src/sinewave_gen_top.c: In function 'UartScanner_recv_byte':
+../src/sinewave_gen_top.c:30:26: warning: passing argument 1 of 'XUartPs_RecvByte' makes integer from pointer without a cast [-Wint-conversion]
+  return XUartPs_RecvByte(self->config);
+                          ^~~~
+In file included from ../../sinewave_gen_bsp/ps7_cortexa9_0/include/xuartps.h:190:0,
+                 from ../src/sinewave_gen_top.c:5:
+../../sinewave_gen_bsp/ps7_cortexa9_0/include/xuartps_hw.h:440:4: note: expected 'u32 {aka long unsigned int}' but argument is of type 'XUartPs_Config * {aka struct <anonymous> *}'
+ u8 XUartPs_RecvByte(u32 BaseAddress);
+    ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:11:11 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:17: error: too few arguments to function 'XUartPs_LookupConfig'
+  self->config = XUartPs_LookupConfig();
+                 ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/sinewave_gen_top.c:5:0:
+../../sinewave_gen_bsp/ps7_cortexa9_0/include/xuartps.h:459:17: note: declared here
+ XUartPs_Config *XUartPs_LookupConfig(u16 DeviceId);
+                 ^~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+22:12:15 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102040	   2592	  23328	 127960	  1f3d8	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:12:51 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:58:2: warning: useless type name in empty declaration
+  static UartScanner_t;
+  ^~~~~~
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102040	   2592	  23328	 127960	  1f3d8	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:13:03 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102104	   2592	  23408	 128104	  1f468	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:13:32 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:67:11: warning: format '%u' expects argument of type 'unsigned int *', but argument 2 has type 'uint8_t * {aka unsigned char *}' [-Wformat=]
+   scanf("%u", &clk_div_sel);
+          ~^   ~~~~~~~~~~~~
+          %hhu
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 102104	   2592	  23408	 128104	  1f468	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:13:59 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22396	   1160	  22648	  46204	   b47c	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:14:17 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22396	   1160	  22648	  46204	   b47c	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+22:16:03 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+23:55:11 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+00:02:52 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:53: error: 'Config' undeclared (first use in this function)
+  XUartPs_CfgInitialize(self->uart_ps, self->config, Config->BaseAddress);
+                                                     ^~~~~~
+../src/sinewave_gen_top.c:26:53: note: each undeclared identifier is reported only once for each function it appears in
+../src/sinewave_gen_top.c:26:24: error: incompatible type for argument 1 of 'XUartPs_CfgInitialize'
+  XUartPs_CfgInitialize(self->uart_ps, self->config, Config->BaseAddress);
+                        ^~~~
+In file included from ../src/sinewave_gen_top.c:5:0:
+../../sinewave_gen_bsp/ps7_cortexa9_0/include/xuartps.h:462:5: note: expected 'XUartPs * {aka struct <anonymous> *}' but argument is of type 'XUartPs {aka struct <anonymous>}'
+ s32 XUartPs_CfgInitialize(XUartPs *InstancePtr,
+     ^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+00:02:56 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:24: error: incompatible type for argument 1 of 'XUartPs_CfgInitialize'
+  XUartPs_CfgInitialize(self->uart_ps, self->config, self->config->BaseAddress);
+                        ^~~~
+In file included from ../src/sinewave_gen_top.c:5:0:
+../../sinewave_gen_bsp/ps7_cortexa9_0/include/xuartps.h:462:5: note: expected 'XUartPs * {aka struct <anonymous> *}' but argument is of type 'XUartPs {aka struct <anonymous>}'
+ s32 XUartPs_CfgInitialize(XUartPs *InstancePtr,
+     ^~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+00:03:12 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'UartScanner_init':
+../src/sinewave_gen_top.c:26:40: warning: passing argument 2 of 'XUartPs_CfgInitialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  XUartPs_CfgInitialize(&self->uart_ps, &self->config, self->config->BaseAddress);
+                                        ^
+In file included from ../src/sinewave_gen_top.c:5:0:
+../../sinewave_gen_bsp/ps7_cortexa9_0/include/xuartps.h:462:5: note: expected 'XUartPs_Config * {aka struct <anonymous> *}' but argument is of type 'XUartPs_Config ** {aka struct <anonymous> **}'
+ s32 XUartPs_CfgInitialize(XUartPs *InstancePtr,
+     ^~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24008	   1168	  22664	  47840	   bae0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+00:03:19 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24008	   1168	  22664	  47840	   bae0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+00:07:11 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24072	   1168	  22664	  47904	   bb20	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+00:08:04 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:30:11 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:36:52 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24088	   1168	  22664	  47920	   bb30	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:37:12 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:41:35 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:41:46 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:51:06 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24144	   1168	  22664	  47976	   bb68	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:38:07 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:39:43 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24236	   1168	  22664	  48068	   bbc4	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:40:19 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24236	   1168	  22664	  48068	   bbc4	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:47:25 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24236	   1168	  22664	  48068	   bbc4	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:48:51 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:51:45 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:52:02 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:03:23 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24136	   1168	  22664	  47968	   bb60	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:04:06 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:04:29 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:16:09 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:17:01 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:17:05 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:17:35 **** Incremental Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:19:04 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+20:19:26 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+../src/sinewave_gen_top.c: In function 'main':
+../src/sinewave_gen_top.c:70:43: error: 'clk_div_se' undeclared (first use in this function); did you mean 'clk_div_sel'?
+    xil_printf(">> Divider value: %d\n\r", clk_div_se - 1l);
+                                           ^~~~~~~~~~
+                                           clk_div_sel
+../src/sinewave_gen_top.c:70:43: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/sinewave_gen_top.o] Error 1
+20:19:31 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:23:25 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:30:08 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 
+21:31:08 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 

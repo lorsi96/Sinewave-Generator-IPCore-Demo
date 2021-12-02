@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Sun Nov 21 15:09:48 2021
+// Date        : Sun Nov 28 14:21:13 2021
 // Host        : lorsi-ThinkPad-T490 running 64-bit Ubuntu 20.04.2 LTS
-// Command     : write_verilog -force -mode synth_stub {/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave
-//               Gen.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0_stub.v}
+// Command     : write_verilog -force -mode synth_stub
+//               /home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0_stub.v
 // Design      : system_sinewave_gen_periphe_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

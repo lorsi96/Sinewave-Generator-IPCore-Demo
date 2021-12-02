@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date             : Mon Nov 22 18:31:01 2021
+| Date             : Sun Nov 28 14:24:36 2021
 | Host             : lorsi-ThinkPad-T490 running 64-bit Ubuntu 20.04.2 LTS
 | Command          : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
 | Design           : system_wrapper
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.010 |        4 |       --- |             --- |
-| Slice Logic              |     0.004 |     4758 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     1448 |     17600 |            8.23 |
-|   Register               |    <0.001 |     2408 |     35200 |            6.84 |
-|   F7/F8 Muxes            |    <0.001 |       67 |     17600 |            0.38 |
+| Slice Logic              |     0.004 |     4754 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     1457 |     17600 |            8.28 |
+|   Register               |    <0.001 |     2409 |     35200 |            6.84 |
+|   F7/F8 Muxes            |    <0.001 |       53 |     17600 |            0.30 |
 |   CARRY4                 |    <0.001 |       34 |      4400 |            0.77 |
 |   LUT as Shift Register  |    <0.001 |      124 |      6000 |            2.07 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
 |   Others                 |     0.000 |      374 |       --- |             --- |
-| Signals                  |     0.005 |     3467 |       --- |             --- |
+| Signals                  |     0.005 |     3493 |       --- |             --- |
 | Block RAM                |    <0.001 |      0.5 |        60 |            0.83 |
 | PS7                      |     1.253 |        1 |       --- |             --- |
 | Static Power             |     0.112 |          |           |                 |
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.026 |       0.019 |      0.006 |
+| Vccint    |       1.000 |     0.025 |       0.019 |      0.006 |
 | Vccaux    |       1.800 |     0.008 |       0.000 |      0.008 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -234,10 +234,10 @@ Table of Contents
 |           U_SYNC                                                                   |    <0.001 |
 |         SWITCH_N_EXT_BSCAN.bscan_inst                                              |    <0.001 |
 |         SWITCH_N_EXT_BSCAN.bscan_switch                                            |    <0.001 |
-|   system_i                                                                         |     1.270 |
-|     ila_0                                                                          |     0.007 |
-|       U0                                                                           |     0.007 |
-|         ila_core_inst                                                              |     0.007 |
+|   system_i                                                                         |     1.269 |
+|     ila_0                                                                          |     0.006 |
+|       U0                                                                           |     0.006 |
+|         ila_core_inst                                                              |     0.006 |
 |           ila_trace_memory_inst                                                    |    <0.001 |
 |             SUBCORE_RAM_BLK_MEM_1.trace_block_memory                               |    <0.001 |
 |               inst_blk_mem_gen                                                     |    <0.001 |

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1637616426">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1638120011">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="system_wrapper.drc"/>
   <File Type="BG-BGN" Name="system_wrapper.bgn"/>
@@ -102,9 +102,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -115,8 +113,9 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="system_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_sinewave_gen_periphe_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
 </GenRun>

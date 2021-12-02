@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Sun Nov 21 15:09:48 2021
+// Date        : Sun Nov 28 14:21:13 2021
 // Host        : lorsi-ThinkPad-T490 running 64-bit Ubuntu 20.04.2 LTS
-// Command     : write_verilog -force -mode funcsim {/home/lorsi/Desktop/VHDL-Sinewave-Generator/vivado/Sinewave
-//               Gen.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0_sim_netlist.v}
+// Command     : write_verilog -force -mode funcsim
+//               /home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.srcs/sources_1/bd/system/ip/system_sinewave_gen_periphe_0_0/system_sinewave_gen_periphe_0_0_sim_netlist.v
 // Design      : system_sinewave_gen_periphe_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -109,14 +109,62 @@ endmodule
 
 (* ORIG_REF_NAME = "generic_counter" *) 
 module system_sinewave_gen_periphe_0_0_generic_counter
-   (Q,
+   (sw_sinewave_out,
+    Q,
+    sin_en,
+    \count_reg_rep[8]_0 ,
+    \count_reg_rep[4]_0 ,
+    \count_reg_rep[4]_1 ,
+    \count_reg_rep[8]_1 ,
+    \count_reg_rep[4]_2 ,
+    \count_reg_rep[4]_3 ,
+    \count_reg_rep[8]_2 ,
+    \count_reg_rep[4]_4 ,
+    \count_reg_rep[4]_5 ,
+    \count_reg_rep[8]_3 ,
+    \count_reg_rep[4]_6 ,
+    \count_reg_rep[4]_7 ,
+    \count_reg_rep[8]_4 ,
+    \count_reg_rep[4]_8 ,
+    \count_reg_rep[4]_9 ,
+    \count_reg_rep[8]_5 ,
+    \count_reg_rep[4]_10 ,
+    \count_reg_rep[4]_11 ,
+    \count_reg_rep[8]_6 ,
+    \count_reg_rep[4]_12 ,
+    \count_reg_rep[5]_0 ,
+    \count_reg_rep[6]_0 ,
     sw_axi_aclk,
     sw_clk_div);
-  output [9:0]Q;
+  output [7:0]sw_sinewave_out;
+  output [8:0]Q;
+  input sin_en;
+  input \count_reg_rep[8]_0 ;
+  input \count_reg_rep[4]_0 ;
+  input \count_reg_rep[4]_1 ;
+  input \count_reg_rep[8]_1 ;
+  input \count_reg_rep[4]_2 ;
+  input \count_reg_rep[4]_3 ;
+  input \count_reg_rep[8]_2 ;
+  input \count_reg_rep[4]_4 ;
+  input \count_reg_rep[4]_5 ;
+  input \count_reg_rep[8]_3 ;
+  input \count_reg_rep[4]_6 ;
+  input \count_reg_rep[4]_7 ;
+  input \count_reg_rep[8]_4 ;
+  input \count_reg_rep[4]_8 ;
+  input \count_reg_rep[4]_9 ;
+  input \count_reg_rep[8]_5 ;
+  input \count_reg_rep[4]_10 ;
+  input \count_reg_rep[4]_11 ;
+  input \count_reg_rep[8]_6 ;
+  input \count_reg_rep[4]_12 ;
+  input \count_reg_rep[5]_0 ;
+  input \count_reg_rep[6]_0 ;
   input sw_axi_aclk;
   input [2:0]sw_clk_div;
 
-  wire [9:0]Q;
+  wire [8:0]Q;
   wire [9:0]count;
   wire \count[3]_i_2_n_0 ;
   wire \count[3]_i_3_n_0 ;
@@ -130,9 +178,34 @@ module system_sinewave_gen_periphe_0_0_generic_counter
   wire \count_reg[7]_i_1_n_2 ;
   wire \count_reg[7]_i_1_n_3 ;
   wire \count_reg[9]_i_1_n_3 ;
+  wire \count_reg_rep[4]_0 ;
+  wire \count_reg_rep[4]_1 ;
+  wire \count_reg_rep[4]_10 ;
+  wire \count_reg_rep[4]_11 ;
+  wire \count_reg_rep[4]_12 ;
+  wire \count_reg_rep[4]_2 ;
+  wire \count_reg_rep[4]_3 ;
+  wire \count_reg_rep[4]_4 ;
+  wire \count_reg_rep[4]_5 ;
+  wire \count_reg_rep[4]_6 ;
+  wire \count_reg_rep[4]_7 ;
+  wire \count_reg_rep[4]_8 ;
+  wire \count_reg_rep[4]_9 ;
+  wire \count_reg_rep[5]_0 ;
+  wire \count_reg_rep[6]_0 ;
+  wire \count_reg_rep[8]_0 ;
+  wire \count_reg_rep[8]_1 ;
+  wire \count_reg_rep[8]_2 ;
+  wire \count_reg_rep[8]_3 ;
+  wire \count_reg_rep[8]_4 ;
+  wire \count_reg_rep[8]_5 ;
+  wire \count_reg_rep[8]_6 ;
+  wire \count_reg_rep_n_0_[0] ;
   wire [9:0]plusOp;
+  wire sin_en;
   wire sw_axi_aclk;
   wire [2:0]sw_clk_div;
+  wire [7:0]sw_sinewave_out;
   wire [3:1]\NLW_count_reg[9]_i_1_CO_UNCONNECTED ;
   wire [3:2]\NLW_count_reg[9]_i_1_O_UNCONNECTED ;
 
@@ -262,7 +335,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[0]),
-        .Q(Q[0]),
+        .Q(\count_reg_rep_n_0_[0] ),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -271,7 +344,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[1]),
-        .Q(Q[1]),
+        .Q(Q[0]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -280,7 +353,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[2]),
-        .Q(Q[2]),
+        .Q(Q[1]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -289,7 +362,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[3]),
-        .Q(Q[3]),
+        .Q(Q[2]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -298,7 +371,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[4]),
-        .Q(Q[4]),
+        .Q(Q[3]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -307,7 +380,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[5]),
-        .Q(Q[5]),
+        .Q(Q[4]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -316,7 +389,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[6]),
-        .Q(Q[6]),
+        .Q(Q[5]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -325,7 +398,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[7]),
-        .Q(Q[7]),
+        .Q(Q[6]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -334,7 +407,7 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[8]),
-        .Q(Q[8]),
+        .Q(Q[7]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE #(
@@ -343,34 +416,137 @@ module system_sinewave_gen_periphe_0_0_generic_counter
        (.C(sw_axi_aclk),
         .CE(1'b1),
         .D(plusOp[9]),
-        .Q(Q[9]),
+        .Q(Q[8]),
         .R(1'b0));
+  LUT6 #(
+    .INIT(64'hA8A8A8080808A808)) 
+    \sw_sinewave_out[0]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[8]_0 ),
+        .I2(\count_reg_rep_n_0_[0] ),
+        .I3(\count_reg_rep[4]_0 ),
+        .I4(Q[7]),
+        .I5(\count_reg_rep[4]_1 ),
+        .O(sw_sinewave_out[0]));
+  LUT6 #(
+    .INIT(64'hA8A8A8080808A808)) 
+    \sw_sinewave_out[1]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[8]_1 ),
+        .I2(\count_reg_rep_n_0_[0] ),
+        .I3(\count_reg_rep[4]_2 ),
+        .I4(Q[7]),
+        .I5(\count_reg_rep[4]_3 ),
+        .O(sw_sinewave_out[1]));
+  LUT6 #(
+    .INIT(64'hA8A8A8080808A808)) 
+    \sw_sinewave_out[2]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[8]_2 ),
+        .I2(\count_reg_rep_n_0_[0] ),
+        .I3(\count_reg_rep[4]_4 ),
+        .I4(Q[7]),
+        .I5(\count_reg_rep[4]_5 ),
+        .O(sw_sinewave_out[2]));
+  LUT6 #(
+    .INIT(64'hA8A8A8080808A808)) 
+    \sw_sinewave_out[3]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[8]_3 ),
+        .I2(\count_reg_rep_n_0_[0] ),
+        .I3(\count_reg_rep[4]_6 ),
+        .I4(Q[7]),
+        .I5(\count_reg_rep[4]_7 ),
+        .O(sw_sinewave_out[3]));
+  LUT6 #(
+    .INIT(64'hA8A8A8080808A808)) 
+    \sw_sinewave_out[4]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[8]_4 ),
+        .I2(\count_reg_rep_n_0_[0] ),
+        .I3(\count_reg_rep[4]_8 ),
+        .I4(Q[7]),
+        .I5(\count_reg_rep[4]_9 ),
+        .O(sw_sinewave_out[4]));
+  LUT6 #(
+    .INIT(64'hA8A8A8080808A808)) 
+    \sw_sinewave_out[5]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[8]_5 ),
+        .I2(\count_reg_rep_n_0_[0] ),
+        .I3(\count_reg_rep[4]_10 ),
+        .I4(Q[7]),
+        .I5(\count_reg_rep[4]_11 ),
+        .O(sw_sinewave_out[5]));
+  LUT6 #(
+    .INIT(64'hA8A8A8080808A808)) 
+    \sw_sinewave_out[6]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[8]_6 ),
+        .I2(\count_reg_rep_n_0_[0] ),
+        .I3(\count_reg_rep[4]_12 ),
+        .I4(Q[7]),
+        .I5(\count_reg_rep[5]_0 ),
+        .O(sw_sinewave_out[6]));
+  LUT6 #(
+    .INIT(64'h00AA00AA00AA08A8)) 
+    \sw_sinewave_out[7]_INST_0 
+       (.I0(sin_en),
+        .I1(\count_reg_rep[6]_0 ),
+        .I2(Q[3]),
+        .I3(Q[8]),
+        .I4(Q[7]),
+        .I5(\count_reg_rep_n_0_[0] ),
+        .O(sw_sinewave_out[7]));
 endmodule
 
 (* ORIG_REF_NAME = "sine_gen" *) 
 module system_sinewave_gen_periphe_0_0_sine_gen
    (sw_sinewave_out,
+    sw_axi_aclk,
     sw_axi_wdata,
     sw_axi_aresetn,
-    axi_awaddr,
-    sw_axi_aclk);
+    axi_awaddr);
   output [7:0]sw_sinewave_out;
+  input sw_axi_aclk;
   input [2:0]sw_axi_wdata;
   input sw_axi_aresetn;
   input [1:0]axi_awaddr;
-  input sw_axi_aclk;
 
   wire [1:0]axi_awaddr;
-  wire counter_n_0;
-  wire counter_n_1;
-  wire counter_n_2;
-  wire counter_n_3;
-  wire counter_n_4;
-  wire counter_n_5;
-  wire counter_n_6;
-  wire counter_n_7;
+  wire counter_n_10;
+  wire counter_n_11;
+  wire counter_n_12;
+  wire counter_n_13;
+  wire counter_n_14;
+  wire counter_n_15;
+  wire counter_n_16;
   wire counter_n_8;
   wire counter_n_9;
+  wire sin_en;
+  wire sin_en_i_1_n_0;
+  wire sine_n_0;
+  wire sine_n_1;
+  wire sine_n_10;
+  wire sine_n_11;
+  wire sine_n_12;
+  wire sine_n_13;
+  wire sine_n_14;
+  wire sine_n_15;
+  wire sine_n_16;
+  wire sine_n_17;
+  wire sine_n_18;
+  wire sine_n_19;
+  wire sine_n_2;
+  wire sine_n_20;
+  wire sine_n_21;
+  wire sine_n_3;
+  wire sine_n_4;
+  wire sine_n_5;
+  wire sine_n_6;
+  wire sine_n_7;
+  wire sine_n_8;
+  wire sine_n_9;
   wire sw_axi_aclk;
   wire sw_axi_aresetn;
   wire [2:0]sw_axi_wdata;
@@ -381,19 +557,81 @@ module system_sinewave_gen_periphe_0_0_sine_gen
   wire [7:0]sw_sinewave_out;
 
   system_sinewave_gen_periphe_0_0_generic_counter counter
-       (.Q({counter_n_0,counter_n_1,counter_n_2,counter_n_3,counter_n_4,counter_n_5,counter_n_6,counter_n_7,counter_n_8,counter_n_9}),
+       (.Q({counter_n_8,counter_n_9,counter_n_10,counter_n_11,counter_n_12,counter_n_13,counter_n_14,counter_n_15,counter_n_16}),
+        .\count_reg_rep[4]_0 (sine_n_12),
+        .\count_reg_rep[4]_1 (sine_n_1),
+        .\count_reg_rep[4]_10 (sine_n_18),
+        .\count_reg_rep[4]_11 (sine_n_14),
+        .\count_reg_rep[4]_12 (sine_n_20),
+        .\count_reg_rep[4]_2 (sine_n_3),
+        .\count_reg_rep[4]_3 (sine_n_4),
+        .\count_reg_rep[4]_4 (sine_n_6),
+        .\count_reg_rep[4]_5 (sine_n_7),
+        .\count_reg_rep[4]_6 (sine_n_9),
+        .\count_reg_rep[4]_7 (sine_n_10),
+        .\count_reg_rep[4]_8 (sine_n_16),
+        .\count_reg_rep[4]_9 (sine_n_15),
+        .\count_reg_rep[5]_0 (sine_n_17),
+        .\count_reg_rep[6]_0 (sine_n_21),
+        .\count_reg_rep[8]_0 (sine_n_0),
+        .\count_reg_rep[8]_1 (sine_n_2),
+        .\count_reg_rep[8]_2 (sine_n_5),
+        .\count_reg_rep[8]_3 (sine_n_8),
+        .\count_reg_rep[8]_4 (sine_n_11),
+        .\count_reg_rep[8]_5 (sine_n_13),
+        .\count_reg_rep[8]_6 (sine_n_19),
+        .sin_en(sin_en),
         .sw_axi_aclk(sw_axi_aclk),
-        .sw_clk_div(sw_clk_div));
-  system_sinewave_gen_periphe_0_0_sine_lut sine
-       (.Q({counter_n_0,counter_n_1,counter_n_2,counter_n_3,counter_n_4,counter_n_5,counter_n_6,counter_n_7,counter_n_8,counter_n_9}),
+        .sw_clk_div(sw_clk_div),
         .sw_sinewave_out(sw_sinewave_out));
+  LUT5 #(
+    .INIT(32'h33BF0080)) 
+    sin_en_i_1
+       (.I0(sw_axi_wdata[0]),
+        .I1(sw_axi_aresetn),
+        .I2(axi_awaddr[0]),
+        .I3(axi_awaddr[1]),
+        .I4(sin_en),
+        .O(sin_en_i_1_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    sin_en_reg
+       (.C(sw_axi_aclk),
+        .CE(1'b1),
+        .D(sin_en_i_1_n_0),
+        .Q(sin_en),
+        .R(1'b0));
+  system_sinewave_gen_periphe_0_0_sine_lut sine
+       (.Q({counter_n_8,counter_n_9,counter_n_10,counter_n_11,counter_n_12,counter_n_13,counter_n_14,counter_n_15,counter_n_16}),
+        .\sw_sinewave_out[0] (sine_n_0),
+        .\sw_sinewave_out[0]_0 (sine_n_1),
+        .\sw_sinewave_out[0]_1 (sine_n_12),
+        .\sw_sinewave_out[1] (sine_n_2),
+        .\sw_sinewave_out[1]_0 (sine_n_3),
+        .\sw_sinewave_out[1]_1 (sine_n_4),
+        .\sw_sinewave_out[2] (sine_n_5),
+        .\sw_sinewave_out[2]_0 (sine_n_6),
+        .\sw_sinewave_out[2]_1 (sine_n_7),
+        .\sw_sinewave_out[3] (sine_n_8),
+        .\sw_sinewave_out[3]_0 (sine_n_9),
+        .\sw_sinewave_out[3]_1 (sine_n_10),
+        .\sw_sinewave_out[4] (sine_n_11),
+        .\sw_sinewave_out[4]_0 (sine_n_15),
+        .\sw_sinewave_out[4]_1 (sine_n_16),
+        .\sw_sinewave_out[5] (sine_n_13),
+        .\sw_sinewave_out[5]_0 (sine_n_14),
+        .\sw_sinewave_out[5]_1 (sine_n_18),
+        .\sw_sinewave_out[6] (sine_n_17),
+        .\sw_sinewave_out[6]_0 (sine_n_19),
+        .\sw_sinewave_out[6]_1 (sine_n_20),
+        .\sw_sinewave_out[7] (sine_n_21));
   LUT5 #(
     .INIT(32'hFFFB0008)) 
     \sw_clk_div[0]_i_1 
        (.I0(sw_axi_wdata[0]),
         .I1(sw_axi_aresetn),
-        .I2(axi_awaddr[1]),
-        .I3(axi_awaddr[0]),
+        .I2(axi_awaddr[0]),
+        .I3(axi_awaddr[1]),
         .I4(sw_clk_div[0]),
         .O(\sw_clk_div[0]_i_1_n_0 ));
   LUT5 #(
@@ -401,8 +639,8 @@ module system_sinewave_gen_periphe_0_0_sine_gen
     \sw_clk_div[1]_i_1 
        (.I0(sw_axi_wdata[1]),
         .I1(sw_axi_aresetn),
-        .I2(axi_awaddr[1]),
-        .I3(axi_awaddr[0]),
+        .I2(axi_awaddr[0]),
+        .I3(axi_awaddr[1]),
         .I4(sw_clk_div[1]),
         .O(\sw_clk_div[1]_i_1_n_0 ));
   LUT5 #(
@@ -410,8 +648,8 @@ module system_sinewave_gen_periphe_0_0_sine_gen
     \sw_clk_div[2]_i_1 
        (.I0(sw_axi_wdata[2]),
         .I1(sw_axi_aresetn),
-        .I2(axi_awaddr[1]),
-        .I3(axi_awaddr[0]),
+        .I2(axi_awaddr[0]),
+        .I3(axi_awaddr[1]),
         .I4(sw_clk_div[2]),
         .O(\sw_clk_div[2]_i_1_n_0 ));
   FDRE #(
@@ -442,13 +680,57 @@ endmodule
 
 (* ORIG_REF_NAME = "sine_lut" *) 
 module system_sinewave_gen_periphe_0_0_sine_lut
-   (sw_sinewave_out,
+   (\sw_sinewave_out[0] ,
+    \sw_sinewave_out[0]_0 ,
+    \sw_sinewave_out[1] ,
+    \sw_sinewave_out[1]_0 ,
+    \sw_sinewave_out[1]_1 ,
+    \sw_sinewave_out[2] ,
+    \sw_sinewave_out[2]_0 ,
+    \sw_sinewave_out[2]_1 ,
+    \sw_sinewave_out[3] ,
+    \sw_sinewave_out[3]_0 ,
+    \sw_sinewave_out[3]_1 ,
+    \sw_sinewave_out[4] ,
+    \sw_sinewave_out[0]_1 ,
+    \sw_sinewave_out[5] ,
+    \sw_sinewave_out[5]_0 ,
+    \sw_sinewave_out[4]_0 ,
+    \sw_sinewave_out[4]_1 ,
+    \sw_sinewave_out[6] ,
+    \sw_sinewave_out[5]_1 ,
+    \sw_sinewave_out[6]_0 ,
+    \sw_sinewave_out[6]_1 ,
+    \sw_sinewave_out[7] ,
     Q);
-  output [7:0]sw_sinewave_out;
-  input [9:0]Q;
+  output \sw_sinewave_out[0] ;
+  output \sw_sinewave_out[0]_0 ;
+  output \sw_sinewave_out[1] ;
+  output \sw_sinewave_out[1]_0 ;
+  output \sw_sinewave_out[1]_1 ;
+  output \sw_sinewave_out[2] ;
+  output \sw_sinewave_out[2]_0 ;
+  output \sw_sinewave_out[2]_1 ;
+  output \sw_sinewave_out[3] ;
+  output \sw_sinewave_out[3]_0 ;
+  output \sw_sinewave_out[3]_1 ;
+  output \sw_sinewave_out[4] ;
+  output \sw_sinewave_out[0]_1 ;
+  output \sw_sinewave_out[5] ;
+  output \sw_sinewave_out[5]_0 ;
+  output \sw_sinewave_out[4]_0 ;
+  output \sw_sinewave_out[4]_1 ;
+  output \sw_sinewave_out[6] ;
+  output \sw_sinewave_out[5]_1 ;
+  output \sw_sinewave_out[6]_0 ;
+  output \sw_sinewave_out[6]_1 ;
+  output \sw_sinewave_out[7] ;
+  input [8:0]Q;
 
-  wire [9:0]Q;
-  wire [7:0]sw_sinewave_out;
+  wire [8:0]Q;
+  wire \sw_sinewave_out[0] ;
+  wire \sw_sinewave_out[0]_0 ;
+  wire \sw_sinewave_out[0]_1 ;
   wire \sw_sinewave_out[0]_INST_0_i_10_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_11_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_12_n_0 ;
@@ -459,7 +741,6 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[0]_INST_0_i_17_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_18_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_19_n_0 ;
-  wire \sw_sinewave_out[0]_INST_0_i_1_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_20_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_21_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_22_n_0 ;
@@ -468,15 +749,15 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[0]_INST_0_i_25_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_26_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_27_n_0 ;
-  wire \sw_sinewave_out[0]_INST_0_i_28_n_0 ;
-  wire \sw_sinewave_out[0]_INST_0_i_2_n_0 ;
-  wire \sw_sinewave_out[0]_INST_0_i_3_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_4_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_5_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_6_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_7_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_8_n_0 ;
   wire \sw_sinewave_out[0]_INST_0_i_9_n_0 ;
+  wire \sw_sinewave_out[1] ;
+  wire \sw_sinewave_out[1]_0 ;
+  wire \sw_sinewave_out[1]_1 ;
   wire \sw_sinewave_out[1]_INST_0_i_10_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_11_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_12_n_0 ;
@@ -487,7 +768,6 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[1]_INST_0_i_17_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_18_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_19_n_0 ;
-  wire \sw_sinewave_out[1]_INST_0_i_1_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_20_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_21_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_22_n_0 ;
@@ -496,15 +776,15 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[1]_INST_0_i_25_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_26_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_27_n_0 ;
-  wire \sw_sinewave_out[1]_INST_0_i_28_n_0 ;
-  wire \sw_sinewave_out[1]_INST_0_i_2_n_0 ;
-  wire \sw_sinewave_out[1]_INST_0_i_3_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_4_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_5_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_6_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_7_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_8_n_0 ;
   wire \sw_sinewave_out[1]_INST_0_i_9_n_0 ;
+  wire \sw_sinewave_out[2] ;
+  wire \sw_sinewave_out[2]_0 ;
+  wire \sw_sinewave_out[2]_1 ;
   wire \sw_sinewave_out[2]_INST_0_i_10_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_11_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_12_n_0 ;
@@ -515,7 +795,6 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[2]_INST_0_i_17_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_18_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_19_n_0 ;
-  wire \sw_sinewave_out[2]_INST_0_i_1_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_20_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_21_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_22_n_0 ;
@@ -524,15 +803,15 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[2]_INST_0_i_25_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_26_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_27_n_0 ;
-  wire \sw_sinewave_out[2]_INST_0_i_28_n_0 ;
-  wire \sw_sinewave_out[2]_INST_0_i_2_n_0 ;
-  wire \sw_sinewave_out[2]_INST_0_i_3_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_4_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_5_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_6_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_7_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_8_n_0 ;
   wire \sw_sinewave_out[2]_INST_0_i_9_n_0 ;
+  wire \sw_sinewave_out[3] ;
+  wire \sw_sinewave_out[3]_0 ;
+  wire \sw_sinewave_out[3]_1 ;
   wire \sw_sinewave_out[3]_INST_0_i_10_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_11_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_12_n_0 ;
@@ -543,7 +822,6 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[3]_INST_0_i_17_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_18_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_19_n_0 ;
-  wire \sw_sinewave_out[3]_INST_0_i_1_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_20_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_21_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_22_n_0 ;
@@ -552,15 +830,15 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[3]_INST_0_i_25_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_26_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_27_n_0 ;
-  wire \sw_sinewave_out[3]_INST_0_i_28_n_0 ;
-  wire \sw_sinewave_out[3]_INST_0_i_2_n_0 ;
-  wire \sw_sinewave_out[3]_INST_0_i_3_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_4_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_5_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_6_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_7_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_8_n_0 ;
   wire \sw_sinewave_out[3]_INST_0_i_9_n_0 ;
+  wire \sw_sinewave_out[4] ;
+  wire \sw_sinewave_out[4]_0 ;
+  wire \sw_sinewave_out[4]_1 ;
   wire \sw_sinewave_out[4]_INST_0_i_10_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_11_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_12_n_0 ;
@@ -571,16 +849,15 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[4]_INST_0_i_17_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_18_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_19_n_0 ;
-  wire \sw_sinewave_out[4]_INST_0_i_1_n_0 ;
-  wire \sw_sinewave_out[4]_INST_0_i_20_n_0 ;
-  wire \sw_sinewave_out[4]_INST_0_i_2_n_0 ;
-  wire \sw_sinewave_out[4]_INST_0_i_3_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_4_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_5_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_6_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_7_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_8_n_0 ;
   wire \sw_sinewave_out[4]_INST_0_i_9_n_0 ;
+  wire \sw_sinewave_out[5] ;
+  wire \sw_sinewave_out[5]_0 ;
+  wire \sw_sinewave_out[5]_1 ;
   wire \sw_sinewave_out[5]_INST_0_i_10_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_11_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_12_n_0 ;
@@ -589,1443 +866,1368 @@ module system_sinewave_gen_periphe_0_0_sine_lut
   wire \sw_sinewave_out[5]_INST_0_i_15_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_16_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_17_n_0 ;
-  wire \sw_sinewave_out[5]_INST_0_i_1_n_0 ;
-  wire \sw_sinewave_out[5]_INST_0_i_2_n_0 ;
-  wire \sw_sinewave_out[5]_INST_0_i_3_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_4_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_5_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_6_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_7_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_8_n_0 ;
   wire \sw_sinewave_out[5]_INST_0_i_9_n_0 ;
+  wire \sw_sinewave_out[6] ;
+  wire \sw_sinewave_out[6]_0 ;
+  wire \sw_sinewave_out[6]_1 ;
   wire \sw_sinewave_out[6]_INST_0_i_10_n_0 ;
   wire \sw_sinewave_out[6]_INST_0_i_11_n_0 ;
-  wire \sw_sinewave_out[6]_INST_0_i_12_n_0 ;
-  wire \sw_sinewave_out[6]_INST_0_i_13_n_0 ;
-  wire \sw_sinewave_out[6]_INST_0_i_1_n_0 ;
-  wire \sw_sinewave_out[6]_INST_0_i_2_n_0 ;
-  wire \sw_sinewave_out[6]_INST_0_i_3_n_0 ;
   wire \sw_sinewave_out[6]_INST_0_i_4_n_0 ;
   wire \sw_sinewave_out[6]_INST_0_i_5_n_0 ;
   wire \sw_sinewave_out[6]_INST_0_i_6_n_0 ;
   wire \sw_sinewave_out[6]_INST_0_i_7_n_0 ;
   wire \sw_sinewave_out[6]_INST_0_i_8_n_0 ;
   wire \sw_sinewave_out[6]_INST_0_i_9_n_0 ;
-  wire \sw_sinewave_out[7]_INST_0_i_1_n_0 ;
+  wire \sw_sinewave_out[7] ;
+  wire \sw_sinewave_out[7]_INST_0_i_2_n_0 ;
 
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \sw_sinewave_out[0]_INST_0 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_1_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_2_n_0 ),
-        .I2(Q[0]),
-        .I3(\sw_sinewave_out[0]_INST_0_i_3_n_0 ),
-        .I4(Q[8]),
-        .I5(\sw_sinewave_out[0]_INST_0_i_4_n_0 ),
-        .O(sw_sinewave_out[0]));
-  MUXF8 \sw_sinewave_out[0]_INST_0_i_1 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_5_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_6_n_0 ),
-        .O(\sw_sinewave_out[0]_INST_0_i_1_n_0 ),
-        .S(Q[4]));
-  MUXF7 \sw_sinewave_out[0]_INST_0_i_10 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_23_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_24_n_0 ),
-        .O(\sw_sinewave_out[0]_INST_0_i_10_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[0]_INST_0_i_11 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_25_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_26_n_0 ),
-        .O(\sw_sinewave_out[0]_INST_0_i_11_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[0]_INST_0_i_12 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_27_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_28_n_0 ),
-        .O(\sw_sinewave_out[0]_INST_0_i_12_n_0 ),
-        .S(Q[6]));
-  LUT6 #(
-    .INIT(64'hB53844880B63BB7F)) 
-    \sw_sinewave_out[0]_INST_0_i_13 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[2]),
-        .I3(Q[1]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'hD2ED3E007F0E21D7)) 
-    \sw_sinewave_out[0]_INST_0_i_14 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'h7E590366C3A67C59)) 
-    \sw_sinewave_out[0]_INST_0_i_15 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[1]),
-        .I3(Q[5]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'hFA3E0DD11CF1A6CA)) 
-    \sw_sinewave_out[0]_INST_0_i_16 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'hBE0D43F0C3B08D3E)) 
-    \sw_sinewave_out[0]_INST_0_i_17 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[0]_INST_0_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'h6F60921D539DAC53)) 
-    \sw_sinewave_out[0]_INST_0_i_18 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[0]_INST_0_i_18_n_0 ));
-  LUT6 #(
-    .INIT(64'hBFCC403241B08C7F)) 
-    \sw_sinewave_out[0]_INST_0_i_19 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[0]_INST_0_i_19_n_0 ));
-  MUXF8 \sw_sinewave_out[0]_INST_0_i_2 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_7_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_8_n_0 ),
-        .O(\sw_sinewave_out[0]_INST_0_i_2_n_0 ),
-        .S(Q[4]));
-  LUT6 #(
-    .INIT(64'h262B113ED9F6CFD1)) 
-    \sw_sinewave_out[0]_INST_0_i_20 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'h6D1240D0826D2F6F)) 
-    \sw_sinewave_out[0]_INST_0_i_21 
-       (.I0(Q[3]),
-        .I1(Q[1]),
+    \sw_sinewave_out[0]_INST_0_i_1 
+       (.I0(\sw_sinewave_out[0]_INST_0_i_4_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_5_n_0 ),
         .I2(Q[7]),
-        .I3(Q[2]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_21_n_0 ));
-  LUT6 #(
-    .INIT(64'h01CEB3FDF27DCC02)) 
-    \sw_sinewave_out[0]_INST_0_i_22 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_22_n_0 ));
+        .I3(\sw_sinewave_out[0]_INST_0_i_6_n_0 ),
+        .I4(Q[3]),
+        .I5(\sw_sinewave_out[0]_INST_0_i_7_n_0 ),
+        .O(\sw_sinewave_out[0] ));
+  MUXF7 \sw_sinewave_out[0]_INST_0_i_10 
+       (.I0(\sw_sinewave_out[0]_INST_0_i_24_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_25_n_0 ),
+        .O(\sw_sinewave_out[0]_INST_0_i_10_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[0]_INST_0_i_11 
+       (.I0(\sw_sinewave_out[0]_INST_0_i_26_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_27_n_0 ),
+        .O(\sw_sinewave_out[0]_INST_0_i_11_n_0 ),
+        .S(Q[5]));
   LUT6 #(
     .INIT(64'h3547CAB646F93509)) 
-    \sw_sinewave_out[0]_INST_0_i_23 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_23_n_0 ));
+    \sw_sinewave_out[0]_INST_0_i_12 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_12_n_0 ));
   LUT6 #(
     .INIT(64'h834EF23CF03D4F82)) 
-    \sw_sinewave_out[0]_INST_0_i_24 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[0]_INST_0_i_24_n_0 ));
+    \sw_sinewave_out[0]_INST_0_i_13 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[0]_INST_0_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'hAC9A744F70C783A1)) 
-    \sw_sinewave_out[0]_INST_0_i_25 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[0]_INST_0_i_25_n_0 ));
+    .INIT(64'h6D1240D0826D2F6F)) 
+    \sw_sinewave_out[0]_INST_0_i_14 
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[6]),
+        .I3(Q[1]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_14_n_0 ));
   LUT6 #(
-    .INIT(64'h788745B88768B745)) 
-    \sw_sinewave_out[0]_INST_0_i_26 
-       (.I0(Q[3]),
-        .I1(Q[5]),
-        .I2(Q[7]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_26_n_0 ));
+    .INIT(64'h01CEB3FDF27DCC02)) 
+    \sw_sinewave_out[0]_INST_0_i_15 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_15_n_0 ));
   LUT6 #(
     .INIT(64'h147B8F01FF8348B4)) 
-    \sw_sinewave_out[0]_INST_0_i_27 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_27_n_0 ));
+    \sw_sinewave_out[0]_INST_0_i_16 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_16_n_0 ));
   LUT6 #(
     .INIT(64'h0319222FEEE3D5D2)) 
-    \sw_sinewave_out[0]_INST_0_i_28 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
+    \sw_sinewave_out[0]_INST_0_i_17 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_17_n_0 ));
+  LUT6 #(
+    .INIT(64'hAC9A744F70C783A1)) 
+    \sw_sinewave_out[0]_INST_0_i_18 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[0]_INST_0_i_18_n_0 ));
+  LUT6 #(
+    .INIT(64'h788745B88768B745)) 
+    \sw_sinewave_out[0]_INST_0_i_19 
+       (.I0(Q[2]),
+        .I1(Q[4]),
+        .I2(Q[6]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_19_n_0 ));
+  MUXF8 \sw_sinewave_out[0]_INST_0_i_2 
+       (.I0(\sw_sinewave_out[0]_INST_0_i_8_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_9_n_0 ),
+        .O(\sw_sinewave_out[0]_1 ),
+        .S(Q[3]));
+  LUT6 #(
+    .INIT(64'hBE0D43F0C3B08D3E)) 
+    \sw_sinewave_out[0]_INST_0_i_20 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[0]_INST_0_i_20_n_0 ));
+  LUT6 #(
+    .INIT(64'h6F60921D539DAC53)) 
+    \sw_sinewave_out[0]_INST_0_i_21 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[0]_INST_0_i_21_n_0 ));
+  LUT6 #(
+    .INIT(64'hBFCC403241B08C7F)) 
+    \sw_sinewave_out[0]_INST_0_i_22 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[0]_INST_0_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'h262B113ED9F6CFD1)) 
+    \sw_sinewave_out[0]_INST_0_i_23 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_23_n_0 ));
+  LUT6 #(
+    .INIT(64'hB53844880B63BB7F)) 
+    \sw_sinewave_out[0]_INST_0_i_24 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_24_n_0 ));
+  LUT6 #(
+    .INIT(64'hD2ED3E007F0E21D7)) 
+    \sw_sinewave_out[0]_INST_0_i_25 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
         .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[0]_INST_0_i_28_n_0 ));
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_25_n_0 ));
+  LUT6 #(
+    .INIT(64'h7E590366C3A67C59)) 
+    \sw_sinewave_out[0]_INST_0_i_26 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[0]),
+        .I3(Q[4]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_26_n_0 ));
+  LUT6 #(
+    .INIT(64'hFA3E0DD11CF1A6CA)) 
+    \sw_sinewave_out[0]_INST_0_i_27 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[0]_INST_0_i_27_n_0 ));
   MUXF8 \sw_sinewave_out[0]_INST_0_i_3 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_9_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_10_n_0 ),
-        .O(\sw_sinewave_out[0]_INST_0_i_3_n_0 ),
-        .S(Q[4]));
-  MUXF8 \sw_sinewave_out[0]_INST_0_i_4 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_11_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_12_n_0 ),
+       (.I0(\sw_sinewave_out[0]_INST_0_i_10_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_11_n_0 ),
+        .O(\sw_sinewave_out[0]_0 ),
+        .S(Q[3]));
+  MUXF7 \sw_sinewave_out[0]_INST_0_i_4 
+       (.I0(\sw_sinewave_out[0]_INST_0_i_12_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_13_n_0 ),
         .O(\sw_sinewave_out[0]_INST_0_i_4_n_0 ),
-        .S(Q[4]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[0]_INST_0_i_5 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_13_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_14_n_0 ),
+       (.I0(\sw_sinewave_out[0]_INST_0_i_14_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_15_n_0 ),
         .O(\sw_sinewave_out[0]_INST_0_i_5_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[0]_INST_0_i_6 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_15_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_16_n_0 ),
+       (.I0(\sw_sinewave_out[0]_INST_0_i_16_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_17_n_0 ),
         .O(\sw_sinewave_out[0]_INST_0_i_6_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[0]_INST_0_i_7 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_17_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_18_n_0 ),
+       (.I0(\sw_sinewave_out[0]_INST_0_i_18_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_19_n_0 ),
         .O(\sw_sinewave_out[0]_INST_0_i_7_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[0]_INST_0_i_8 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_19_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_20_n_0 ),
+       (.I0(\sw_sinewave_out[0]_INST_0_i_20_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_21_n_0 ),
         .O(\sw_sinewave_out[0]_INST_0_i_8_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[0]_INST_0_i_9 
-       (.I0(\sw_sinewave_out[0]_INST_0_i_21_n_0 ),
-        .I1(\sw_sinewave_out[0]_INST_0_i_22_n_0 ),
+       (.I0(\sw_sinewave_out[0]_INST_0_i_22_n_0 ),
+        .I1(\sw_sinewave_out[0]_INST_0_i_23_n_0 ),
         .O(\sw_sinewave_out[0]_INST_0_i_9_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \sw_sinewave_out[1]_INST_0 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_1_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_2_n_0 ),
-        .I2(Q[0]),
-        .I3(\sw_sinewave_out[1]_INST_0_i_3_n_0 ),
-        .I4(Q[8]),
-        .I5(\sw_sinewave_out[1]_INST_0_i_4_n_0 ),
-        .O(sw_sinewave_out[1]));
-  MUXF8 \sw_sinewave_out[1]_INST_0_i_1 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_5_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_6_n_0 ),
-        .O(\sw_sinewave_out[1]_INST_0_i_1_n_0 ),
-        .S(Q[4]));
+    \sw_sinewave_out[1]_INST_0_i_1 
+       (.I0(\sw_sinewave_out[1]_INST_0_i_4_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_5_n_0 ),
+        .I2(Q[7]),
+        .I3(\sw_sinewave_out[1]_INST_0_i_6_n_0 ),
+        .I4(Q[3]),
+        .I5(\sw_sinewave_out[1]_INST_0_i_7_n_0 ),
+        .O(\sw_sinewave_out[1] ));
   MUXF7 \sw_sinewave_out[1]_INST_0_i_10 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_23_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_24_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_24_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_25_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_10_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[1]_INST_0_i_11 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_25_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_26_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_26_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_27_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_11_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[1]_INST_0_i_12 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_27_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_28_n_0 ),
-        .O(\sw_sinewave_out[1]_INST_0_i_12_n_0 ),
-        .S(Q[6]));
-  LUT6 #(
-    .INIT(64'hE755870079AA78FF)) 
-    \sw_sinewave_out[1]_INST_0_i_13 
-       (.I0(Q[3]),
-        .I1(Q[1]),
-        .I2(Q[2]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'h8A6779B97588466E)) 
-    \sw_sinewave_out[1]_INST_0_i_14 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'h955A68E462A59F1B)) 
-    \sw_sinewave_out[1]_INST_0_i_15 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[2]),
-        .I3(Q[1]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'h897A84AB77852B70)) 
-    \sw_sinewave_out[1]_INST_0_i_16 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'hE32EDD211ED1A3EE)) 
-    \sw_sinewave_out[1]_INST_0_i_17 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'h261A0978DBE5F696)) 
-    \sw_sinewave_out[1]_INST_0_i_18 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_18_n_0 ));
-  LUT6 #(
-    .INIT(64'h2A2E9ED1D5D1622E)) 
-    \sw_sinewave_out[1]_INST_0_i_19 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[2]),
-        .I3(Q[5]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_19_n_0 ));
-  MUXF8 \sw_sinewave_out[1]_INST_0_i_2 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_7_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_8_n_0 ),
-        .O(\sw_sinewave_out[1]_INST_0_i_2_n_0 ),
-        .S(Q[4]));
-  LUT6 #(
-    .INIT(64'h1D2A3B09E2F7C5E6)) 
-    \sw_sinewave_out[1]_INST_0_i_20 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'h9257B20049A8C9FF)) 
-    \sw_sinewave_out[1]_INST_0_i_21 
-       (.I0(Q[3]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_21_n_0 ));
-  LUT6 #(
-    .INIT(64'h8BB9754478468ABB)) 
-    \sw_sinewave_out[1]_INST_0_i_22 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_22_n_0 ));
+        .S(Q[5]));
   LUT6 #(
     .INIT(64'h99526084E6A91F7B)) 
-    \sw_sinewave_out[1]_INST_0_i_23 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[2]),
-        .I3(Q[1]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_23_n_0 ));
+    \sw_sinewave_out[1]_INST_0_i_12 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_12_n_0 ));
   LUT6 #(
     .INIT(64'h883A7B4474878B38)) 
-    \sw_sinewave_out[1]_INST_0_i_24 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[1]_INST_0_i_24_n_0 ));
+    \sw_sinewave_out[1]_INST_0_i_13 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[1]_INST_0_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'hF12B2ADE5E11A16F)) 
-    \sw_sinewave_out[1]_INST_0_i_25 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[1]_INST_0_i_25_n_0 ));
+    .INIT(64'h9257B20049A8C9FF)) 
+    \sw_sinewave_out[1]_INST_0_i_14 
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_14_n_0 ));
   LUT6 #(
-    .INIT(64'h257A0B69DA85E596)) 
-    \sw_sinewave_out[1]_INST_0_i_26 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_26_n_0 ));
+    .INIT(64'h8BB9754478468ABB)) 
+    \sw_sinewave_out[1]_INST_0_i_15 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_15_n_0 ));
   LUT6 #(
     .INIT(64'h89EE9D51621961AE)) 
-    \sw_sinewave_out[1]_INST_0_i_27 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[1]_INST_0_i_27_n_0 ));
+    \sw_sinewave_out[1]_INST_0_i_16 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_16_n_0 ));
   LUT6 #(
     .INIT(64'h3908C4F62A19D5E4)) 
-    \sw_sinewave_out[1]_INST_0_i_28 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[1]_INST_0_i_28_n_0 ));
+    \sw_sinewave_out[1]_INST_0_i_17 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[1]_INST_0_i_17_n_0 ));
+  LUT6 #(
+    .INIT(64'hF12B2ADE5E11A16F)) 
+    \sw_sinewave_out[1]_INST_0_i_18 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[1]_INST_0_i_18_n_0 ));
+  LUT6 #(
+    .INIT(64'h257A0B69DA85E596)) 
+    \sw_sinewave_out[1]_INST_0_i_19 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_19_n_0 ));
+  MUXF8 \sw_sinewave_out[1]_INST_0_i_2 
+       (.I0(\sw_sinewave_out[1]_INST_0_i_8_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_9_n_0 ),
+        .O(\sw_sinewave_out[1]_0 ),
+        .S(Q[3]));
+  LUT6 #(
+    .INIT(64'hE32EDD211ED1A3EE)) 
+    \sw_sinewave_out[1]_INST_0_i_20 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_20_n_0 ));
+  LUT6 #(
+    .INIT(64'h261A0978DBE5F696)) 
+    \sw_sinewave_out[1]_INST_0_i_21 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_21_n_0 ));
+  LUT6 #(
+    .INIT(64'h2A2E9ED1D5D1622E)) 
+    \sw_sinewave_out[1]_INST_0_i_22 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[1]),
+        .I3(Q[4]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'h1D2A3B09E2F7C5E6)) 
+    \sw_sinewave_out[1]_INST_0_i_23 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_23_n_0 ));
+  LUT6 #(
+    .INIT(64'hE755870079AA78FF)) 
+    \sw_sinewave_out[1]_INST_0_i_24 
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_24_n_0 ));
+  LUT6 #(
+    .INIT(64'h8A6779B97588466E)) 
+    \sw_sinewave_out[1]_INST_0_i_25 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_25_n_0 ));
+  LUT6 #(
+    .INIT(64'h955A68E462A59F1B)) 
+    \sw_sinewave_out[1]_INST_0_i_26 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_26_n_0 ));
+  LUT6 #(
+    .INIT(64'h897A84AB77852B70)) 
+    \sw_sinewave_out[1]_INST_0_i_27 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[1]_INST_0_i_27_n_0 ));
   MUXF8 \sw_sinewave_out[1]_INST_0_i_3 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_9_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_10_n_0 ),
-        .O(\sw_sinewave_out[1]_INST_0_i_3_n_0 ),
-        .S(Q[4]));
-  MUXF8 \sw_sinewave_out[1]_INST_0_i_4 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_11_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_12_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_10_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_11_n_0 ),
+        .O(\sw_sinewave_out[1]_1 ),
+        .S(Q[3]));
+  MUXF7 \sw_sinewave_out[1]_INST_0_i_4 
+       (.I0(\sw_sinewave_out[1]_INST_0_i_12_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_13_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_4_n_0 ),
-        .S(Q[4]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[1]_INST_0_i_5 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_13_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_14_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_14_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_15_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_5_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[1]_INST_0_i_6 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_15_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_16_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_16_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_17_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_6_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[1]_INST_0_i_7 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_17_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_18_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_18_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_19_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_7_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[1]_INST_0_i_8 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_19_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_20_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_20_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_21_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_8_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[1]_INST_0_i_9 
-       (.I0(\sw_sinewave_out[1]_INST_0_i_21_n_0 ),
-        .I1(\sw_sinewave_out[1]_INST_0_i_22_n_0 ),
+       (.I0(\sw_sinewave_out[1]_INST_0_i_22_n_0 ),
+        .I1(\sw_sinewave_out[1]_INST_0_i_23_n_0 ),
         .O(\sw_sinewave_out[1]_INST_0_i_9_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \sw_sinewave_out[2]_INST_0 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_1_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_2_n_0 ),
-        .I2(Q[0]),
-        .I3(\sw_sinewave_out[2]_INST_0_i_3_n_0 ),
-        .I4(Q[8]),
-        .I5(\sw_sinewave_out[2]_INST_0_i_4_n_0 ),
-        .O(sw_sinewave_out[2]));
-  MUXF8 \sw_sinewave_out[2]_INST_0_i_1 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_5_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_6_n_0 ),
-        .O(\sw_sinewave_out[2]_INST_0_i_1_n_0 ),
-        .S(Q[4]));
+    \sw_sinewave_out[2]_INST_0_i_1 
+       (.I0(\sw_sinewave_out[2]_INST_0_i_4_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_5_n_0 ),
+        .I2(Q[7]),
+        .I3(\sw_sinewave_out[2]_INST_0_i_6_n_0 ),
+        .I4(Q[3]),
+        .I5(\sw_sinewave_out[2]_INST_0_i_7_n_0 ),
+        .O(\sw_sinewave_out[2] ));
   MUXF7 \sw_sinewave_out[2]_INST_0_i_10 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_23_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_24_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_24_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_25_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_10_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[2]_INST_0_i_11 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_25_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_26_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_26_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_27_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_11_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[2]_INST_0_i_12 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_27_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_28_n_0 ),
-        .O(\sw_sinewave_out[2]_INST_0_i_12_n_0 ),
-        .S(Q[6]));
-  LUT6 #(
-    .INIT(64'h3C4BC0C0C3B43F3F)) 
-    \sw_sinewave_out[2]_INST_0_i_13 
-       (.I0(Q[1]),
-        .I1(Q[3]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'h67021A9A98ED6565)) 
-    \sw_sinewave_out[2]_INST_0_i_14 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'hBD572B0062A8D4FF)) 
-    \sw_sinewave_out[2]_INST_0_i_15 
-       (.I0(Q[3]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAD4AE55552B01AE)) 
-    \sw_sinewave_out[2]_INST_0_i_16 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'h88AA7B7575D484AA)) 
-    \sw_sinewave_out[2]_INST_0_i_17 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'h31CA11B9CE15EF46)) 
-    \sw_sinewave_out[2]_INST_0_i_18 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[1]),
-        .I3(Q[5]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_18_n_0 ));
-  LUT6 #(
-    .INIT(64'h66F56502990A9AF5)) 
-    \sw_sinewave_out[2]_INST_0_i_19 
-       (.I0(Q[3]),
-        .I1(Q[5]),
-        .I2(Q[1]),
-        .I3(Q[7]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_19_n_0 ));
-  MUXF8 \sw_sinewave_out[2]_INST_0_i_2 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_7_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_8_n_0 ),
-        .O(\sw_sinewave_out[2]_INST_0_i_2_n_0 ),
-        .S(Q[4]));
-  LUT6 #(
-    .INIT(64'h21253416DEDBE9E9)) 
-    \sw_sinewave_out[2]_INST_0_i_20 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'h661988809C66777F)) 
-    \sw_sinewave_out[2]_INST_0_i_21 
-       (.I0(Q[3]),
-        .I1(Q[5]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_21_n_0 ));
-  LUT6 #(
-    .INIT(64'h619D62AE9E62DD51)) 
-    \sw_sinewave_out[2]_INST_0_i_22 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_22_n_0 ));
+        .S(Q[5]));
   LUT6 #(
     .INIT(64'h9D572B0063A854FF)) 
-    \sw_sinewave_out[2]_INST_0_i_23 
-       (.I0(Q[3]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_23_n_0 ));
+    \sw_sinewave_out[2]_INST_0_i_12 
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_12_n_0 ));
   LUT6 #(
     .INIT(64'hAAD451AADE5121EE)) 
-    \sw_sinewave_out[2]_INST_0_i_24 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[2]_INST_0_i_24_n_0 ));
-  LUT6 #(
-    .INIT(64'h8A7F558A2B55D4AB)) 
-    \sw_sinewave_out[2]_INST_0_i_25 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[2]_INST_0_i_25_n_0 ));
-  LUT6 #(
-    .INIT(64'h3E1A1B09C1E4E4F6)) 
-    \sw_sinewave_out[2]_INST_0_i_26 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
+    \sw_sinewave_out[2]_INST_0_i_13 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
         .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_26_n_0 ));
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[2]_INST_0_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'h661988809C66777F)) 
+    \sw_sinewave_out[2]_INST_0_i_14 
+       (.I0(Q[2]),
+        .I1(Q[4]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_14_n_0 ));
+  LUT6 #(
+    .INIT(64'h619D62AE9E62DD51)) 
+    \sw_sinewave_out[2]_INST_0_i_15 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_15_n_0 ));
   LUT6 #(
     .INIT(64'h595948E6A6A7BF19)) 
-    \sw_sinewave_out[2]_INST_0_i_27 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_27_n_0 ));
+    \sw_sinewave_out[2]_INST_0_i_16 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_16_n_0 ));
   LUT6 #(
     .INIT(64'h25341616DACBE9E9)) 
-    \sw_sinewave_out[2]_INST_0_i_28 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
+    \sw_sinewave_out[2]_INST_0_i_17 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_17_n_0 ));
+  LUT6 #(
+    .INIT(64'h8A7F558A2B55D4AB)) 
+    \sw_sinewave_out[2]_INST_0_i_18 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
         .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[2]_INST_0_i_28_n_0 ));
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[2]_INST_0_i_18_n_0 ));
+  LUT6 #(
+    .INIT(64'h3E1A1B09C1E4E4F6)) 
+    \sw_sinewave_out[2]_INST_0_i_19 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_19_n_0 ));
+  MUXF8 \sw_sinewave_out[2]_INST_0_i_2 
+       (.I0(\sw_sinewave_out[2]_INST_0_i_8_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_9_n_0 ),
+        .O(\sw_sinewave_out[2]_0 ),
+        .S(Q[3]));
+  LUT6 #(
+    .INIT(64'h88AA7B7575D484AA)) 
+    \sw_sinewave_out[2]_INST_0_i_20 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_20_n_0 ));
+  LUT6 #(
+    .INIT(64'h31CA11B9CE15EF46)) 
+    \sw_sinewave_out[2]_INST_0_i_21 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[0]),
+        .I3(Q[4]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_21_n_0 ));
+  LUT6 #(
+    .INIT(64'h66F56502990A9AF5)) 
+    \sw_sinewave_out[2]_INST_0_i_22 
+       (.I0(Q[2]),
+        .I1(Q[4]),
+        .I2(Q[0]),
+        .I3(Q[6]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'h21253416DEDBE9E9)) 
+    \sw_sinewave_out[2]_INST_0_i_23 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_23_n_0 ));
+  LUT6 #(
+    .INIT(64'h3C4BC0C0C3B43F3F)) 
+    \sw_sinewave_out[2]_INST_0_i_24 
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_24_n_0 ));
+  LUT6 #(
+    .INIT(64'h67021A9A98ED6565)) 
+    \sw_sinewave_out[2]_INST_0_i_25 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_25_n_0 ));
+  LUT6 #(
+    .INIT(64'hBD572B0062A8D4FF)) 
+    \sw_sinewave_out[2]_INST_0_i_26 
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_26_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAD4AE55552B01AE)) 
+    \sw_sinewave_out[2]_INST_0_i_27 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[2]_INST_0_i_27_n_0 ));
   MUXF8 \sw_sinewave_out[2]_INST_0_i_3 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_9_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_10_n_0 ),
-        .O(\sw_sinewave_out[2]_INST_0_i_3_n_0 ),
-        .S(Q[4]));
-  MUXF8 \sw_sinewave_out[2]_INST_0_i_4 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_11_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_12_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_10_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_11_n_0 ),
+        .O(\sw_sinewave_out[2]_1 ),
+        .S(Q[3]));
+  MUXF7 \sw_sinewave_out[2]_INST_0_i_4 
+       (.I0(\sw_sinewave_out[2]_INST_0_i_12_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_13_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_4_n_0 ),
-        .S(Q[4]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[2]_INST_0_i_5 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_13_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_14_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_14_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_15_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_5_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[2]_INST_0_i_6 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_15_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_16_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_16_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_17_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_6_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[2]_INST_0_i_7 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_17_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_18_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_18_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_19_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_7_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[2]_INST_0_i_8 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_19_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_20_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_20_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_21_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_8_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   MUXF7 \sw_sinewave_out[2]_INST_0_i_9 
-       (.I0(\sw_sinewave_out[2]_INST_0_i_21_n_0 ),
-        .I1(\sw_sinewave_out[2]_INST_0_i_22_n_0 ),
+       (.I0(\sw_sinewave_out[2]_INST_0_i_22_n_0 ),
+        .I1(\sw_sinewave_out[2]_INST_0_i_23_n_0 ),
         .O(\sw_sinewave_out[2]_INST_0_i_9_n_0 ),
-        .S(Q[6]));
+        .S(Q[5]));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \sw_sinewave_out[3]_INST_0 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_1_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_2_n_0 ),
-        .I2(Q[0]),
-        .I3(\sw_sinewave_out[3]_INST_0_i_3_n_0 ),
-        .I4(Q[8]),
-        .I5(\sw_sinewave_out[3]_INST_0_i_4_n_0 ),
-        .O(sw_sinewave_out[3]));
-  MUXF8 \sw_sinewave_out[3]_INST_0_i_1 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_5_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_6_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_1_n_0 ),
-        .S(Q[4]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_10 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_23_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_24_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_10_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_11 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_25_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_26_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_11_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_12 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_27_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_28_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_12_n_0 ),
-        .S(Q[6]));
-  LUT6 #(
-    .INIT(64'h3F7C0000C083FFFF)) 
-    \sw_sinewave_out[3]_INST_0_i_13 
-       (.I0(Q[1]),
-        .I1(Q[3]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'h776EBB33891144CC)) 
-    \sw_sinewave_out[3]_INST_0_i_14 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'hE88988801776777F)) 
-    \sw_sinewave_out[3]_INST_0_i_15 
-       (.I0(Q[3]),
-        .I1(Q[5]),
-        .I2(Q[2]),
-        .I3(Q[1]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'hC094C4953F6B6B6A)) 
-    \sw_sinewave_out[3]_INST_0_i_16 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_16_n_0 ));
-  LUT6 #(
-    .INIT(64'hA0F0E01F7F1F1FE0)) 
-    \sw_sinewave_out[3]_INST_0_i_17 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[3]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_17_n_0 ));
-  LUT6 #(
-    .INIT(64'h20001557DFFEEAA8)) 
-    \sw_sinewave_out[3]_INST_0_i_18 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[2]),
-        .I3(Q[1]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_18_n_0 ));
-  LUT6 #(
-    .INIT(64'hF837F37C07C80C83)) 
-    \sw_sinewave_out[3]_INST_0_i_19 
-       (.I0(Q[1]),
-        .I1(Q[3]),
+    \sw_sinewave_out[3]_INST_0_i_1 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_4_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_5_n_0 ),
         .I2(Q[7]),
-        .I3(Q[5]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_19_n_0 ));
-  MUXF8 \sw_sinewave_out[3]_INST_0_i_2 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_7_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_8_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_2_n_0 ),
-        .S(Q[4]));
-  LUT6 #(
-    .INIT(64'h13131232ECEDCDCD)) 
-    \sw_sinewave_out[3]_INST_0_i_20 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'h776E00008911FFFF)) 
-    \sw_sinewave_out[3]_INST_0_i_21 
-       (.I0(Q[3]),
-        .I1(Q[5]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_21_n_0 ));
-  LUT6 #(
-    .INIT(64'h76EABB37891544C8)) 
-    \sw_sinewave_out[3]_INST_0_i_22 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_22_n_0 ));
+        .I3(\sw_sinewave_out[3]_INST_0_i_6_n_0 ),
+        .I4(Q[3]),
+        .I5(\sw_sinewave_out[3]_INST_0_i_7_n_0 ),
+        .O(\sw_sinewave_out[3] ));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_10 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_24_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_25_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_10_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_11 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_26_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_27_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_11_n_0 ),
+        .S(Q[5]));
   LUT6 #(
     .INIT(64'hE88988803776777F)) 
-    \sw_sinewave_out[3]_INST_0_i_23 
-       (.I0(Q[3]),
-        .I1(Q[5]),
-        .I2(Q[2]),
-        .I3(Q[1]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_23_n_0 ));
+    \sw_sinewave_out[3]_INST_0_i_12 
+       (.I0(Q[2]),
+        .I1(Q[4]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_12_n_0 ));
   LUT6 #(
     .INIT(64'hC0943B6A94956B6A)) 
-    \sw_sinewave_out[3]_INST_0_i_24 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[3]_INST_0_i_24_n_0 ));
-  LUT6 #(
-    .INIT(64'hA92956DC2903D6FD)) 
-    \sw_sinewave_out[3]_INST_0_i_25 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[3]_INST_0_i_25_n_0 ));
-  LUT6 #(
-    .INIT(64'h20011557DFFEEAA8)) 
-    \sw_sinewave_out[3]_INST_0_i_26 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[2]),
+    \sw_sinewave_out[3]_INST_0_i_13 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
         .I3(Q[1]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_26_n_0 ));
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[3]_INST_0_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'h776E00008911FFFF)) 
+    \sw_sinewave_out[3]_INST_0_i_14 
+       (.I0(Q[2]),
+        .I1(Q[4]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_14_n_0 ));
+  LUT6 #(
+    .INIT(64'h76EABB37891544C8)) 
+    \sw_sinewave_out[3]_INST_0_i_15 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_15_n_0 ));
   LUT6 #(
     .INIT(64'hC7C7D6DE38392121)) 
-    \sw_sinewave_out[3]_INST_0_i_27 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_27_n_0 ));
+    \sw_sinewave_out[3]_INST_0_i_16 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_16_n_0 ));
   LUT6 #(
     .INIT(64'h13123232ECEDCDCD)) 
-    \sw_sinewave_out[3]_INST_0_i_28 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[3]_INST_0_i_28_n_0 ));
-  MUXF8 \sw_sinewave_out[3]_INST_0_i_3 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_9_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_10_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_3_n_0 ),
-        .S(Q[4]));
-  MUXF8 \sw_sinewave_out[3]_INST_0_i_4 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_11_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_12_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_4_n_0 ),
-        .S(Q[4]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_5 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_13_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_14_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_5_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_6 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_15_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_16_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_6_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_7 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_17_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_18_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_7_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_8 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_19_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_20_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_8_n_0 ),
-        .S(Q[6]));
-  MUXF7 \sw_sinewave_out[3]_INST_0_i_9 
-       (.I0(\sw_sinewave_out[3]_INST_0_i_21_n_0 ),
-        .I1(\sw_sinewave_out[3]_INST_0_i_22_n_0 ),
-        .O(\sw_sinewave_out[3]_INST_0_i_9_n_0 ),
-        .S(Q[6]));
-  MUXF8 \sw_sinewave_out[4]_INST_0 
-       (.I0(\sw_sinewave_out[4]_INST_0_i_1_n_0 ),
-        .I1(\sw_sinewave_out[4]_INST_0_i_2_n_0 ),
-        .O(sw_sinewave_out[4]),
-        .S(Q[0]));
-  MUXF7 \sw_sinewave_out[4]_INST_0_i_1 
-       (.I0(\sw_sinewave_out[4]_INST_0_i_3_n_0 ),
-        .I1(\sw_sinewave_out[4]_INST_0_i_4_n_0 ),
-        .O(\sw_sinewave_out[4]_INST_0_i_1_n_0 ),
-        .S(Q[8]));
-  LUT6 #(
-    .INIT(64'h6BEB941CEBC3143D)) 
-    \sw_sinewave_out[4]_INST_0_i_10 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
-        .O(\sw_sinewave_out[4]_INST_0_i_10_n_0 ));
-  LUT6 #(
-    .INIT(64'hC3D7D7D638292829)) 
-    \sw_sinewave_out[4]_INST_0_i_11 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
+    \sw_sinewave_out[3]_INST_0_i_17 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
         .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_11_n_0 ));
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_17_n_0 ));
   LUT6 #(
-    .INIT(64'h33320000CCCDFFFF)) 
-    \sw_sinewave_out[4]_INST_0_i_12 
-       (.I0(Q[3]),
-        .I1(Q[5]),
-        .I2(Q[2]),
+    .INIT(64'hA92956DC2903D6FD)) 
+    \sw_sinewave_out[3]_INST_0_i_18 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
         .I3(Q[1]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_12_n_0 ));
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[3]_INST_0_i_18_n_0 ));
   LUT6 #(
-    .INIT(64'h88FFFE00770001FF)) 
-    \sw_sinewave_out[4]_INST_0_i_13 
-       (.I0(Q[3]),
-        .I1(Q[2]),
+    .INIT(64'h20011557DFFEEAA8)) 
+    \sw_sinewave_out[3]_INST_0_i_19 
+       (.I0(Q[2]),
+        .I1(Q[6]),
         .I2(Q[1]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_13_n_0 ));
+        .I3(Q[0]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_19_n_0 ));
+  MUXF8 \sw_sinewave_out[3]_INST_0_i_2 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_8_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_9_n_0 ),
+        .O(\sw_sinewave_out[3]_0 ),
+        .S(Q[3]));
   LUT6 #(
-    .INIT(64'h1F000000A0FFFFFF)) 
-    \sw_sinewave_out[4]_INST_0_i_14 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[3]),
-        .I3(Q[5]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'h03030202FCFDFDFD)) 
-    \sw_sinewave_out[4]_INST_0_i_15 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_15_n_0 ));
-  LUT6 #(
-    .INIT(64'h07F00FF3F80FF00C)) 
-    \sw_sinewave_out[4]_INST_0_i_16 
+    .INIT(64'hA0F0E01F7F1F1FE0)) 
+    \sw_sinewave_out[3]_INST_0_i_20 
        (.I0(Q[1]),
-        .I1(Q[3]),
-        .I2(Q[7]),
-        .I3(Q[5]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_16_n_0 ));
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_20_n_0 ));
   LUT6 #(
-    .INIT(64'h5FF0E0FF801F1F00)) 
-    \sw_sinewave_out[4]_INST_0_i_17 
+    .INIT(64'h20001557DFFEEAA8)) 
+    \sw_sinewave_out[3]_INST_0_i_21 
        (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[3]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_17_n_0 ));
+        .I1(Q[6]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_21_n_0 ));
+  LUT6 #(
+    .INIT(64'hF837F37C07C80C83)) 
+    \sw_sinewave_out[3]_INST_0_i_22 
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[6]),
+        .I3(Q[4]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_22_n_0 ));
+  LUT6 #(
+    .INIT(64'h13131232ECEDCDCD)) 
+    \sw_sinewave_out[3]_INST_0_i_23 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_23_n_0 ));
+  LUT6 #(
+    .INIT(64'h3F7C0000C083FFFF)) 
+    \sw_sinewave_out[3]_INST_0_i_24 
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_24_n_0 ));
+  LUT6 #(
+    .INIT(64'h776EBB33891144CC)) 
+    \sw_sinewave_out[3]_INST_0_i_25 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_25_n_0 ));
+  LUT6 #(
+    .INIT(64'hE88988801776777F)) 
+    \sw_sinewave_out[3]_INST_0_i_26 
+       (.I0(Q[2]),
+        .I1(Q[4]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_26_n_0 ));
+  LUT6 #(
+    .INIT(64'hC094C4953F6B6B6A)) 
+    \sw_sinewave_out[3]_INST_0_i_27 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[3]_INST_0_i_27_n_0 ));
+  MUXF8 \sw_sinewave_out[3]_INST_0_i_3 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_10_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_11_n_0 ),
+        .O(\sw_sinewave_out[3]_1 ),
+        .S(Q[3]));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_4 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_12_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_13_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_4_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_5 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_14_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_15_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_5_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_6 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_16_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_17_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_6_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_7 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_18_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_19_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_7_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_8 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_20_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_21_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_8_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[3]_INST_0_i_9 
+       (.I0(\sw_sinewave_out[3]_INST_0_i_22_n_0 ),
+        .I1(\sw_sinewave_out[3]_INST_0_i_23_n_0 ),
+        .O(\sw_sinewave_out[3]_INST_0_i_9_n_0 ),
+        .S(Q[5]));
+  MUXF7 \sw_sinewave_out[4]_INST_0_i_1 
+       (.I0(\sw_sinewave_out[4]_INST_0_i_4_n_0 ),
+        .I1(\sw_sinewave_out[4]_INST_0_i_5_n_0 ),
+        .O(\sw_sinewave_out[4] ),
+        .S(Q[7]));
   LUT6 #(
     .INIT(64'hC3D7C7D63C282829)) 
-    \sw_sinewave_out[4]_INST_0_i_18 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_18_n_0 ));
+    \sw_sinewave_out[4]_INST_0_i_10 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'h33320000CCCDFFFF)) 
+    \sw_sinewave_out[4]_INST_0_i_11 
+       (.I0(Q[2]),
+        .I1(Q[4]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_11_n_0 ));
   LUT6 #(
     .INIT(64'hE0FFFF005F0000FF)) 
-    \sw_sinewave_out[4]_INST_0_i_19 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[3]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_19_n_0 ));
-  MUXF7 \sw_sinewave_out[4]_INST_0_i_2 
-       (.I0(\sw_sinewave_out[4]_INST_0_i_5_n_0 ),
-        .I1(\sw_sinewave_out[4]_INST_0_i_6_n_0 ),
-        .O(\sw_sinewave_out[4]_INST_0_i_2_n_0 ),
-        .S(Q[8]));
+    \sw_sinewave_out[4]_INST_0_i_12 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_12_n_0 ));
   LUT6 #(
     .INIT(64'h1F000000E0FFFFFF)) 
-    \sw_sinewave_out[4]_INST_0_i_20 
+    \sw_sinewave_out[4]_INST_0_i_13 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[4]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_13_n_0 ));
+  LUT6 #(
+    .INIT(64'h03020202FCFDFDFD)) 
+    \sw_sinewave_out[4]_INST_0_i_14 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_14_n_0 ));
+  LUT6 #(
+    .INIT(64'h3C3C3D3DC3C2C2C2)) 
+    \sw_sinewave_out[4]_INST_0_i_15 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_15_n_0 ));
+  LUT6 #(
+    .INIT(64'h6BEB941CEBC3143D)) 
+    \sw_sinewave_out[4]_INST_0_i_16 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
+        .O(\sw_sinewave_out[4]_INST_0_i_16_n_0 ));
+  LUT6 #(
+    .INIT(64'hC3D7D7D638292829)) 
+    \sw_sinewave_out[4]_INST_0_i_17 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_17_n_0 ));
+  LUT6 #(
+    .INIT(64'h88FFFE00770001FF)) 
+    \sw_sinewave_out[4]_INST_0_i_18 
        (.I0(Q[2]),
         .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_18_n_0 ));
+  LUT6 #(
+    .INIT(64'h1F000000A0FFFFFF)) 
+    \sw_sinewave_out[4]_INST_0_i_19 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[4]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[4]_INST_0_i_19_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \sw_sinewave_out[4]_INST_0_i_2 
+       (.I0(\sw_sinewave_out[4]_INST_0_i_6_n_0 ),
+        .I1(\sw_sinewave_out[4]_INST_0_i_7_n_0 ),
         .I2(Q[3]),
-        .I3(Q[5]),
-        .I4(Q[7]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[4]_INST_0_i_20_n_0 ));
+        .I3(\sw_sinewave_out[4]_INST_0_i_8_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[4]_INST_0_i_9_n_0 ),
+        .O(\sw_sinewave_out[4]_1 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \sw_sinewave_out[4]_INST_0_i_3 
-       (.I0(\sw_sinewave_out[4]_INST_0_i_7_n_0 ),
-        .I1(\sw_sinewave_out[4]_INST_0_i_8_n_0 ),
-        .I2(Q[4]),
-        .I3(\sw_sinewave_out[4]_INST_0_i_9_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[4]_INST_0_i_10_n_0 ),
-        .O(\sw_sinewave_out[4]_INST_0_i_3_n_0 ));
+       (.I0(\sw_sinewave_out[4]_INST_0_i_10_n_0 ),
+        .I1(\sw_sinewave_out[4]_INST_0_i_11_n_0 ),
+        .I2(Q[3]),
+        .I3(\sw_sinewave_out[4]_INST_0_i_12_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[4]_INST_0_i_13_n_0 ),
+        .O(\sw_sinewave_out[4]_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \sw_sinewave_out[4]_INST_0_i_4 
-       (.I0(\sw_sinewave_out[4]_INST_0_i_11_n_0 ),
-        .I1(\sw_sinewave_out[4]_INST_0_i_12_n_0 ),
-        .I2(Q[4]),
-        .I3(\sw_sinewave_out[4]_INST_0_i_13_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[4]_INST_0_i_14_n_0 ),
+       (.I0(\sw_sinewave_out[4]_INST_0_i_14_n_0 ),
+        .I1(\sw_sinewave_out[4]_INST_0_i_15_n_0 ),
+        .I2(Q[3]),
+        .I3(\sw_sinewave_out[4]_INST_0_i_8_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[4]_INST_0_i_16_n_0 ),
         .O(\sw_sinewave_out[4]_INST_0_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \sw_sinewave_out[4]_INST_0_i_5 
-       (.I0(\sw_sinewave_out[4]_INST_0_i_15_n_0 ),
-        .I1(\sw_sinewave_out[4]_INST_0_i_16_n_0 ),
-        .I2(Q[4]),
-        .I3(\sw_sinewave_out[4]_INST_0_i_9_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[4]_INST_0_i_17_n_0 ),
+       (.I0(\sw_sinewave_out[4]_INST_0_i_17_n_0 ),
+        .I1(\sw_sinewave_out[4]_INST_0_i_11_n_0 ),
+        .I2(Q[3]),
+        .I3(\sw_sinewave_out[4]_INST_0_i_18_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[4]_INST_0_i_19_n_0 ),
         .O(\sw_sinewave_out[4]_INST_0_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h03030202FCFDFDFD)) 
     \sw_sinewave_out[4]_INST_0_i_6 
-       (.I0(\sw_sinewave_out[4]_INST_0_i_18_n_0 ),
-        .I1(\sw_sinewave_out[4]_INST_0_i_12_n_0 ),
+       (.I0(Q[2]),
+        .I1(Q[6]),
         .I2(Q[4]),
-        .I3(\sw_sinewave_out[4]_INST_0_i_19_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[4]_INST_0_i_20_n_0 ),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[4]_INST_0_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h03020202FCFDFDFD)) 
+    .INIT(64'h07F00FF3F80FF00C)) 
     \sw_sinewave_out[4]_INST_0_i_7 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
+       (.I0(Q[0]),
+        .I1(Q[2]),
+        .I2(Q[6]),
+        .I3(Q[4]),
+        .I4(Q[1]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[4]_INST_0_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h3C3C3D3DC3C2C2C2)) 
+    .INIT(64'h007F0000FF80FFFF)) 
     \sw_sinewave_out[4]_INST_0_i_8 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(Q[2]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[4]_INST_0_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'h007F0000FF80FFFF)) 
+    .INIT(64'h5FF0E0FF801F1F00)) 
     \sw_sinewave_out[4]_INST_0_i_9 
        (.I0(Q[1]),
-        .I1(Q[2]),
-        .I2(Q[3]),
-        .I3(Q[7]),
-        .I4(Q[5]),
-        .I5(Q[9]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[6]),
+        .I4(Q[4]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[4]_INST_0_i_9_n_0 ));
-  MUXF8 \sw_sinewave_out[5]_INST_0 
-       (.I0(\sw_sinewave_out[5]_INST_0_i_1_n_0 ),
-        .I1(\sw_sinewave_out[5]_INST_0_i_2_n_0 ),
-        .O(sw_sinewave_out[5]),
-        .S(Q[0]));
   MUXF7 \sw_sinewave_out[5]_INST_0_i_1 
-       (.I0(\sw_sinewave_out[5]_INST_0_i_3_n_0 ),
-        .I1(\sw_sinewave_out[5]_INST_0_i_4_n_0 ),
-        .O(\sw_sinewave_out[5]_INST_0_i_1_n_0 ),
-        .S(Q[8]));
+       (.I0(\sw_sinewave_out[5]_INST_0_i_4_n_0 ),
+        .I1(\sw_sinewave_out[5]_INST_0_i_5_n_0 ),
+        .O(\sw_sinewave_out[5] ),
+        .S(Q[7]));
   LUT6 #(
-    .INIT(64'hFEEEC88801117777)) 
+    .INIT(64'hFFEEC88801113777)) 
     \sw_sinewave_out[5]_INST_0_i_10 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[5]),
-        .I5(Q[9]),
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[4]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h4B)) 
     \sw_sinewave_out[5]_INST_0_i_11 
-       (.I0(Q[5]),
-        .I1(Q[7]),
-        .I2(Q[9]),
+       (.I0(Q[4]),
+        .I1(Q[6]),
+        .I2(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_11_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'h87)) 
     \sw_sinewave_out[5]_INST_0_i_12 
-       (.I0(Q[5]),
-        .I1(Q[7]),
-        .I2(Q[9]),
+       (.I0(Q[4]),
+        .I1(Q[6]),
+        .I2(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_12_n_0 ));
   LUT6 #(
-    .INIT(64'h1FFF0000A000FFFF)) 
+    .INIT(64'h1FFF0000E000FFFF)) 
     \sw_sinewave_out[5]_INST_0_i_13 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[5]),
-        .I3(Q[3]),
-        .I4(Q[7]),
-        .I5(Q[9]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[4]),
+        .I3(Q[2]),
+        .I4(Q[6]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'h33333232CCCDCDCD)) 
+    .INIT(64'h33323232CCCDCDCD)) 
     \sw_sinewave_out[5]_INST_0_i_14 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_14_n_0 ));
   LUT6 #(
-    .INIT(64'h001F0FFFFFE0E000)) 
+    .INIT(64'h1717E8E0173FE8C1)) 
     \sw_sinewave_out[5]_INST_0_i_15 
        (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[3]),
-        .I3(Q[5]),
-        .I4(Q[7]),
-        .I5(Q[9]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
         .O(\sw_sinewave_out[5]_INST_0_i_15_n_0 ));
   LUT6 #(
-    .INIT(64'hFFEEC88801113777)) 
+    .INIT(64'hFEEEC88801117777)) 
     \sw_sinewave_out[5]_INST_0_i_16 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(Q[5]),
-        .I5(Q[9]),
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[4]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_16_n_0 ));
   LUT6 #(
-    .INIT(64'h1FFF0000E000FFFF)) 
+    .INIT(64'h1FFF0000A000FFFF)) 
     \sw_sinewave_out[5]_INST_0_i_17 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[5]),
-        .I3(Q[3]),
-        .I4(Q[7]),
-        .I5(Q[9]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[4]),
+        .I3(Q[2]),
+        .I4(Q[6]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_17_n_0 ));
-  MUXF7 \sw_sinewave_out[5]_INST_0_i_2 
-       (.I0(\sw_sinewave_out[5]_INST_0_i_5_n_0 ),
-        .I1(\sw_sinewave_out[5]_INST_0_i_6_n_0 ),
-        .O(\sw_sinewave_out[5]_INST_0_i_2_n_0 ),
-        .S(Q[8]));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \sw_sinewave_out[5]_INST_0_i_2 
+       (.I0(\sw_sinewave_out[5]_INST_0_i_6_n_0 ),
+        .I1(\sw_sinewave_out[5]_INST_0_i_7_n_0 ),
+        .I2(Q[3]),
+        .I3(\sw_sinewave_out[5]_INST_0_i_8_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[5]_INST_0_i_9_n_0 ),
+        .O(\sw_sinewave_out[5]_1 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \sw_sinewave_out[5]_INST_0_i_3 
-       (.I0(\sw_sinewave_out[5]_INST_0_i_7_n_0 ),
-        .I1(\sw_sinewave_out[6]_INST_0_i_9_n_0 ),
-        .I2(Q[4]),
-        .I3(\sw_sinewave_out[5]_INST_0_i_8_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[5]_INST_0_i_9_n_0 ),
-        .O(\sw_sinewave_out[5]_INST_0_i_3_n_0 ));
+       (.I0(\sw_sinewave_out[5]_INST_0_i_10_n_0 ),
+        .I1(\sw_sinewave_out[5]_INST_0_i_11_n_0 ),
+        .I2(Q[3]),
+        .I3(\sw_sinewave_out[5]_INST_0_i_12_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[5]_INST_0_i_13_n_0 ),
+        .O(\sw_sinewave_out[5]_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \sw_sinewave_out[5]_INST_0_i_4 
-       (.I0(\sw_sinewave_out[5]_INST_0_i_10_n_0 ),
-        .I1(\sw_sinewave_out[5]_INST_0_i_11_n_0 ),
-        .I2(Q[4]),
-        .I3(\sw_sinewave_out[5]_INST_0_i_12_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[5]_INST_0_i_13_n_0 ),
+       (.I0(\sw_sinewave_out[5]_INST_0_i_14_n_0 ),
+        .I1(\sw_sinewave_out[5]_INST_0_i_7_n_0 ),
+        .I2(Q[3]),
+        .I3(\sw_sinewave_out[5]_INST_0_i_8_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[5]_INST_0_i_15_n_0 ),
         .O(\sw_sinewave_out[5]_INST_0_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \sw_sinewave_out[5]_INST_0_i_5 
-       (.I0(\sw_sinewave_out[5]_INST_0_i_14_n_0 ),
-        .I1(\sw_sinewave_out[6]_INST_0_i_9_n_0 ),
-        .I2(Q[4]),
-        .I3(\sw_sinewave_out[5]_INST_0_i_8_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[5]_INST_0_i_15_n_0 ),
-        .O(\sw_sinewave_out[5]_INST_0_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \sw_sinewave_out[5]_INST_0_i_6 
        (.I0(\sw_sinewave_out[5]_INST_0_i_16_n_0 ),
         .I1(\sw_sinewave_out[5]_INST_0_i_11_n_0 ),
-        .I2(Q[4]),
+        .I2(Q[3]),
         .I3(\sw_sinewave_out[5]_INST_0_i_12_n_0 ),
-        .I4(Q[6]),
+        .I4(Q[5]),
         .I5(\sw_sinewave_out[5]_INST_0_i_17_n_0 ),
-        .O(\sw_sinewave_out[5]_INST_0_i_6_n_0 ));
+        .O(\sw_sinewave_out[5]_INST_0_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h33323232CCCDCDCD)) 
+    .INIT(64'h33333232CCCDCDCD)) 
+    \sw_sinewave_out[5]_INST_0_i_6 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[5]_INST_0_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h1E)) 
     \sw_sinewave_out[5]_INST_0_i_7 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
+       (.I0(Q[6]),
+        .I1(Q[4]),
+        .I2(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_7_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h4B)) 
     \sw_sinewave_out[5]_INST_0_i_8 
-       (.I0(Q[7]),
-        .I1(Q[5]),
-        .I2(Q[9]),
+       (.I0(Q[6]),
+        .I1(Q[4]),
+        .I2(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'h1717E8E0173FE8C1)) 
+    .INIT(64'h001F0FFFFFE0E000)) 
     \sw_sinewave_out[5]_INST_0_i_9 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[4]),
+        .I4(Q[6]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[5]_INST_0_i_9_n_0 ));
-  MUXF8 \sw_sinewave_out[6]_INST_0 
-       (.I0(\sw_sinewave_out[6]_INST_0_i_1_n_0 ),
-        .I1(\sw_sinewave_out[6]_INST_0_i_2_n_0 ),
-        .O(sw_sinewave_out[6]),
-        .S(Q[0]));
   MUXF7 \sw_sinewave_out[6]_INST_0_i_1 
-       (.I0(\sw_sinewave_out[6]_INST_0_i_3_n_0 ),
-        .I1(\sw_sinewave_out[6]_INST_0_i_4_n_0 ),
-        .O(\sw_sinewave_out[6]_INST_0_i_1_n_0 ),
-        .S(Q[8]));
+       (.I0(\sw_sinewave_out[6]_INST_0_i_4_n_0 ),
+        .I1(\sw_sinewave_out[6]_INST_0_i_5_n_0 ),
+        .O(\sw_sinewave_out[6]_0 ),
+        .S(Q[7]));
   LUT6 #(
     .INIT(64'h3333CCCC3333CCCD)) 
     \sw_sinewave_out[6]_INST_0_i_10 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[9]),
-        .I5(Q[1]),
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[1]),
+        .I4(Q[8]),
+        .I5(Q[0]),
         .O(\sw_sinewave_out[6]_INST_0_i_10_n_0 ));
   LUT6 #(
     .INIT(64'hE00000005FFFFFFF)) 
     \sw_sinewave_out[6]_INST_0_i_11 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[5]),
-        .I3(Q[7]),
-        .I4(Q[3]),
-        .I5(Q[9]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[4]),
+        .I3(Q[6]),
+        .I4(Q[2]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[6]_INST_0_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'h00000101FFFEFEFE)) 
-    \sw_sinewave_out[6]_INST_0_i_12 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[6]_INST_0_i_12_n_0 ));
+    .INIT(64'h88008BFFBBFFB800)) 
+    \sw_sinewave_out[6]_INST_0_i_2 
+       (.I0(\sw_sinewave_out[6]_INST_0_i_6_n_0 ),
+        .I1(Q[3]),
+        .I2(Q[4]),
+        .I3(Q[5]),
+        .I4(Q[6]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[6]_1 ));
   LUT6 #(
-    .INIT(64'hE00000001FFFFFFF)) 
-    \sw_sinewave_out[6]_INST_0_i_13 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[5]),
-        .I3(Q[7]),
-        .I4(Q[3]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[6]_INST_0_i_13_n_0 ));
-  MUXF7 \sw_sinewave_out[6]_INST_0_i_2 
-       (.I0(\sw_sinewave_out[6]_INST_0_i_5_n_0 ),
-        .I1(\sw_sinewave_out[6]_INST_0_i_6_n_0 ),
-        .O(\sw_sinewave_out[6]_INST_0_i_2_n_0 ),
-        .S(Q[8]));
+    .INIT(64'hF00FB37FF00F804C)) 
+    \sw_sinewave_out[6]_INST_0_i_3 
+       (.I0(Q[4]),
+        .I1(Q[3]),
+        .I2(Q[6]),
+        .I3(Q[8]),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[6]_INST_0_i_7_n_0 ),
+        .O(\sw_sinewave_out[6] ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \sw_sinewave_out[6]_INST_0_i_3 
-       (.I0(\sw_sinewave_out[6]_INST_0_i_7_n_0 ),
-        .I1(\sw_sinewave_out[6]_INST_0_i_8_n_0 ),
-        .I2(Q[4]),
-        .I3(\sw_sinewave_out[6]_INST_0_i_9_n_0 ),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[6]_INST_0_i_10_n_0 ),
-        .O(\sw_sinewave_out[6]_INST_0_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hF00FB37FF00F804C)) 
     \sw_sinewave_out[6]_INST_0_i_4 
-       (.I0(Q[5]),
-        .I1(Q[4]),
-        .I2(Q[7]),
-        .I3(Q[9]),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[6]_INST_0_i_11_n_0 ),
+       (.I0(\sw_sinewave_out[6]_INST_0_i_8_n_0 ),
+        .I1(\sw_sinewave_out[6]_INST_0_i_9_n_0 ),
+        .I2(Q[3]),
+        .I3(\sw_sinewave_out[5]_INST_0_i_7_n_0 ),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[6]_INST_0_i_10_n_0 ),
         .O(\sw_sinewave_out[6]_INST_0_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h88008BFFBBFFB800)) 
+    .INIT(64'hF00FB37FF00F804C)) 
     \sw_sinewave_out[6]_INST_0_i_5 
-       (.I0(\sw_sinewave_out[6]_INST_0_i_12_n_0 ),
-        .I1(Q[4]),
-        .I2(Q[5]),
-        .I3(Q[6]),
-        .I4(Q[7]),
-        .I5(Q[9]),
+       (.I0(Q[4]),
+        .I1(Q[3]),
+        .I2(Q[6]),
+        .I3(Q[8]),
+        .I4(Q[5]),
+        .I5(\sw_sinewave_out[6]_INST_0_i_11_n_0 ),
         .O(\sw_sinewave_out[6]_INST_0_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hF00FB37FF00F804C)) 
+    .INIT(64'h00000101FFFEFEFE)) 
     \sw_sinewave_out[6]_INST_0_i_6 
-       (.I0(Q[5]),
-        .I1(Q[4]),
-        .I2(Q[7]),
-        .I3(Q[9]),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[6]_INST_0_i_13_n_0 ),
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[6]_INST_0_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h00010101FFFEFEFE)) 
+    .INIT(64'hE00000001FFFFFFF)) 
     \sw_sinewave_out[6]_INST_0_i_7 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[4]),
+        .I3(Q[6]),
         .I4(Q[2]),
-        .I5(Q[9]),
+        .I5(Q[8]),
         .O(\sw_sinewave_out[6]_INST_0_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h00010101FFFEFEFE)) 
+    \sw_sinewave_out[6]_INST_0_i_8 
+       (.I0(Q[2]),
+        .I1(Q[6]),
+        .I2(Q[4]),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .I5(Q[8]),
+        .O(\sw_sinewave_out[6]_INST_0_i_8_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \sw_sinewave_out[6]_INST_0_i_8 
-       (.I0(Q[7]),
-        .I1(Q[9]),
-        .O(\sw_sinewave_out[6]_INST_0_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h1E)) 
     \sw_sinewave_out[6]_INST_0_i_9 
-       (.I0(Q[7]),
-        .I1(Q[5]),
-        .I2(Q[9]),
+       (.I0(Q[6]),
+        .I1(Q[8]),
         .O(\sw_sinewave_out[6]_INST_0_i_9_n_0 ));
   LUT6 #(
     .INIT(64'h00FF01FF00FF00FE)) 
-    \sw_sinewave_out[7]_INST_0 
-       (.I0(Q[0]),
-        .I1(Q[8]),
-        .I2(Q[4]),
-        .I3(Q[9]),
-        .I4(Q[6]),
-        .I5(\sw_sinewave_out[7]_INST_0_i_1_n_0 ),
-        .O(sw_sinewave_out[7]));
-  LUT6 #(
-    .INIT(64'h00000000FFFFFFFE)) 
     \sw_sinewave_out[7]_INST_0_i_1 
-       (.I0(Q[3]),
-        .I1(Q[7]),
-        .I2(Q[5]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[9]),
-        .O(\sw_sinewave_out[7]_INST_0_i_1_n_0 ));
+       (.I0(Q[5]),
+        .I1(Q[2]),
+        .I2(Q[6]),
+        .I3(Q[8]),
+        .I4(Q[4]),
+        .I5(\sw_sinewave_out[7]_INST_0_i_2_n_0 ),
+        .O(\sw_sinewave_out[7] ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT3 #(
+    .INIT(8'h0E)) 
+    \sw_sinewave_out[7]_INST_0_i_2 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[8]),
+        .O(\sw_sinewave_out[7]_INST_0_i_2_n_0 ));
 endmodule
 
 (* ORIG_REF_NAME = "sinewave_gen_peripheral_v1_0_0" *) 
@@ -2037,14 +2239,14 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0
     sw_axi_rdata,
     sw_axi_rvalid,
     sw_axi_bvalid,
-    sw_axi_wdata,
-    sw_axi_aresetn,
     sw_axi_aclk,
     sw_axi_awaddr,
     sw_axi_wvalid,
     sw_axi_awvalid,
     sw_axi_araddr,
     sw_axi_arvalid,
+    sw_axi_wdata,
+    sw_axi_aresetn,
     sw_axi_wstrb,
     sw_axi_bready,
     sw_axi_rready);
@@ -2055,14 +2257,14 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0
   output [31:0]sw_axi_rdata;
   output sw_axi_rvalid;
   output sw_axi_bvalid;
-  input [31:0]sw_axi_wdata;
-  input sw_axi_aresetn;
   input sw_axi_aclk;
   input [1:0]sw_axi_awaddr;
   input sw_axi_wvalid;
   input sw_axi_awvalid;
   input [1:0]sw_axi_araddr;
   input sw_axi_arvalid;
+  input [31:0]sw_axi_wdata;
+  input sw_axi_aresetn;
   input [3:0]sw_axi_wstrb;
   input sw_axi_bready;
   input sw_axi_rready;
@@ -2116,14 +2318,14 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
     sw_axi_rdata,
     sw_axi_rvalid,
     sw_axi_bvalid,
-    sw_axi_wdata,
-    sw_axi_aresetn,
     sw_axi_aclk,
     sw_axi_awaddr,
     sw_axi_wvalid,
     sw_axi_awvalid,
     sw_axi_araddr,
     sw_axi_arvalid,
+    sw_axi_wdata,
+    sw_axi_aresetn,
     sw_axi_wstrb,
     sw_axi_bready,
     sw_axi_rready);
@@ -2134,14 +2336,14 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
   output [31:0]sw_axi_rdata;
   output sw_axi_rvalid;
   output sw_axi_bvalid;
-  input [31:0]sw_axi_wdata;
-  input sw_axi_aresetn;
   input sw_axi_aclk;
   input [1:0]sw_axi_awaddr;
   input sw_axi_wvalid;
   input sw_axi_awvalid;
   input [1:0]sw_axi_araddr;
   input sw_axi_arvalid;
+  input [31:0]sw_axi_wdata;
+  input sw_axi_aresetn;
   input [3:0]sw_axi_wstrb;
   input sw_axi_bready;
   input sw_axi_rready;
@@ -2225,7 +2427,7 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
         .S(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -2238,7 +2440,7 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
         .D(axi_arready0),
         .Q(S_AXI_ARREADY),
         .R(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hFFBF0080)) 
     \axi_awaddr[2]_i_1 
@@ -2274,7 +2476,7 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
     axi_awready_i_1
        (.I0(sw_axi_aresetn),
         .O(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h08)) 
     axi_awready_i_2
@@ -2823,7 +3025,7 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
         .D(reg_data_out[9]),
         .Q(sw_axi_rdata[9]),
         .R(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h08F8)) 
     axi_rvalid_i_1
@@ -2838,7 +3040,7 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(sw_axi_rvalid),
         .R(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h08)) 
     axi_wready_i_1
@@ -3554,7 +3756,7 @@ module system_sinewave_gen_periphe_0_0_sinewave_gen_peripheral_v1_0_0_SW_AXI
         .I2(axi_awaddr[0]),
         .I3(axi_awaddr[1]),
         .O(p_1_in[31]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg3[31]_i_2 

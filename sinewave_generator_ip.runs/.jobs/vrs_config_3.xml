@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="system_sinewave_gen_periphe_0_0_synth_1" LaunchDir="/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_sinewave_gen_periphe_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_auto_pc_0_synth_1" LaunchDir="/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/system_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="system_sinewave_gen_periphe_0_0_synth_1"/>
+		<Parent Id="system_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="system_sinewave_gen_periphe_0_0_synth_1"/>
+		<Parent Id="system_auto_pc_0_synth_1"/>
+	</Run>
+</Runs>
+

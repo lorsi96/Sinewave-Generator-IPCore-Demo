@@ -1,0 +1,8 @@
+21:14:54 **** Auto Build of configuration Debug for project sinewave_gen_bsp_xuartps_intr_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+
+21:14:54 Build Finished (took 160ms)
+
