@@ -49,12 +49,12 @@ directorois de mayor relevancia a continuación:
 - [Top/Main](sinewave_generator_ip.sdk/sinewave_gen/src/sinewave_gen_top.c)
 
 ### Resultados Obtenidos
-Luego de haber empaquetado el *IP Core* y escrito el código del *MCU*, se verificó mediante el ILA (Integrated Logic Analyzer) del hardware en el que se realizó la prueba que la salida efectivamente tuviese forma de onda senoidal y que la frecuencia fuese variable acorde a los comandos envíados. 
+Luego de haber empaquetado el *IP Core* y escrito el código del *MCU*, se verificó mediante el ILA (Integrated Logic Analyzer) del hardware en el que se realizó la prueba que la salida efectivamente tuviese forma de onda senoidal y que la frecuencia fuese variable acorde a los comandos enviados. 
 
 ![Test](doc/images/MyS.gif)
 
 ## Tabla de uso de recursos
-Finalmente se adjunta la tabla de uso de recursos. Notar que del total de recursos utilizados, aproximadamente 1/3 corresponde al *Debug Hub* que comprende el ILA utilizado para validar el diseño, pero que no sería necesario para producción.
+Finalmente se adjunta la tabla de uso de recursos. Notar que del total de recursos utilizados, aproximadamente 1/3 corresponde al *Debug Hub*. Esto se debe principalmente al ILA utilizado para validar el diseño, y que no sería necesario para producción.
 
 | Name              | Slice LUTs | Slice Registers | F7 Muxes | F8 Muxes | Slice  | LUT as Logic | LUT as Memory | LUT Flip Flop Pairs | Block RAM Tile |
 |-------------------|------------|-----------------|----------|----------|--------|--------------|---------------|---------------------|----------------|
