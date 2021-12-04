@@ -1225,3 +1225,4 @@ con
 ----------------End of Script----------------
 
 20:17:55 INFO  : Launch script is exported to file '/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_sinewave_gen.elf_on_local.tcl'
+21:40:45 INFO  : Disconnected from the channel tcfchan#3.

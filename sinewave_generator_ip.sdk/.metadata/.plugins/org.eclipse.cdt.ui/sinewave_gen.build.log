@@ -1,4 +1,4 @@
-21:31:08 **** Auto Build of configuration Debug for project sinewave_gen ****
+21:41:07 **** Auto Build of configuration Debug for project sinewave_gen ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -15,9 +15,9 @@ Finished building target: sinewave_gen.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
+  24252	   1168	  22664	  48084	   bbd4	sinewave_gen.elf
 Finished building: sinewave_gen.elf.size
  
 
-21:31:08 Build Finished (took 212ms)
+21:41:08 Build Finished (took 211ms)
 

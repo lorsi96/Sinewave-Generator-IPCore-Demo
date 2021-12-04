@@ -1748,3 +1748,23 @@ arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
   24216	   1168	  22664	  48048	   bbb0	sinewave_gen.elf
 Finished building: sinewave_gen.elf.size
  
+21:41:07 **** Auto Build of configuration Debug for project sinewave_gen ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sinewave_gen_top.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sinewave_gen_top.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../sinewave_gen_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sinewave_gen_top.d" -MT"src/sinewave_gen_top.o" -o "src/sinewave_gen_top.o" "../src/sinewave_gen_top.c"
+Finished building: ../src/sinewave_gen_top.c
+ 
+Building target: sinewave_gen.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../sinewave_gen_bsp/ps7_cortexa9_0/lib -o "sinewave_gen.elf"  ./src/sinewave_gen_top.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: sinewave_gen.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size sinewave_gen.elf  |tee "sinewave_gen.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24252	   1168	  22664	  48084	   bbd4	sinewave_gen.elf
+Finished building: sinewave_gen.elf.size
+ 

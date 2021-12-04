@@ -2567,3 +2567,9 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2021-12-01 20:17:55.931
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-11
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-12-01 21:40:45.915
+!MESSAGE XSCT Command: [disconnect tcfchan#3], Thread: Thread-200
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-12-01 21:40:45.923
+!MESSAGE XSCT command with result: [disconnect tcfchan#3], Result: [null, ]. Thread: Thread-200

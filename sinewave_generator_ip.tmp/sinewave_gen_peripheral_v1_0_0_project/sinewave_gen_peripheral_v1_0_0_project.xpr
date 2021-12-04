@@ -6,7 +6,7 @@
 <Project Version="7" Minor="36" Path="/home/lorsi/Desktop/sinewave_generator_ip/sinewave_generator_ip.tmp/sinewave_gen_peripheral_v1_0_0_project/sinewave_gen_peripheral_v1_0_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="1708d6e7ac444bcd99fd6cadf1759a31"/>
+    <Option Name="Id" Val="f386e6f3243947fa9923d17af8e20c8d"/>
     <Option Name="Part" Val="xc7z010clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
