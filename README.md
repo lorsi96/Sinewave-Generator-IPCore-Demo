@@ -51,7 +51,7 @@ directorois de mayor relevancia a continuación:
 ### Resultados Obtenidos
 Luego de haber empaquetado el *IP Core* y escrito el código del *MCU*, se verificó mediante el ILA (Integrated Logic Analyzer) del hardware en el que se realizó la prueba que la salida efectivamente tuviese forma de onda senoidal y que la frecuencia fuese variable acorde a los comandos envíados. 
 
-- ![Test](doc/images/MyS.gif)
+![Test](doc/images/MyS.gif)
 
 ## Tabla de uso de recursos
 Finalmente se adjunta la tabla de uso de recursos. Notar que del total de recursos utilizados, aproximadamente 1/3 corresponde al *Debug Hub* que comprende el ILA utilizado para validar el diseño, pero que no sería necesario para producción.
